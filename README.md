@@ -1,8 +1,8 @@
 # CS 171 Final Project
-## Yuqi Hou, Maria Lai, Tuongvan Le
-### Spring 2016
+Yuqi Hou, Maria Lai, Tuongvan Le
+Spring 2016
 
-##American Time Use: Who Spends How Long at What
+## American Time Use: Who Spends How Long at What
 
 ### Abstract
 We are interested in seeing how Americans use their time and how the hours spent on different activities have changed over time. Our goal is to understand how time spent on daily activities differs by gender, income, and age. We also would like to examine whether external factors (such as unemployment rates) influence how time is spent on daily activities by average Americans of different demographics groups. 
