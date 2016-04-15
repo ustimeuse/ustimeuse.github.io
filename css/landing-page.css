@@ -10,15 +10,27 @@ html {
     height: 100%;
 }
 
+.tag {
+    text-transform: uppercase;
+    color: #ff775c;
+    font-size: 12px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.tag2 {
+    color: black;
+}
 body,
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Book Antiqua";
     font-weight: 700;
+
 }
 
 .topnav {
