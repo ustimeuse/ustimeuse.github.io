@@ -1,27 +1,21 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Landing Page](http://startbootstrap.com/template-overviews/landing-page/)
+# CS 171 Final Project
+Yuqi Hou, Maria Lai, Tuongvan Le
+Spring 2016
 
-[Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+## American Time Use: Who Spends How Long at What
 
-## Getting Started
+### Abstract
+We are interested in seeing how Americans use their time and how the hours spent on different activities have changed over time. Our goal is to understand how time spent on daily activities differs by gender, income, and age. We also would like to examine whether external factors (such as unemployment rates) influence how time is spent on daily activities by average Americans of different demographics groups. 
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git`
-* Fork the repo
+### Data
+The dataset we plan to use is the American Time Use Survey from 2003-2014 provided by the Bureau of Labor Statistics. This data is freely downloadable from the website http://www.bls.gov/tus/. The dataset includes information on survey respondent's labor force status, earnings, total time spent doing each activity (as coded by the BLS), number of household members and non-household members, age, and sex. For unemployment rates, we will use Labor Force Statistics from the Current Population Survey which is also publicly available from the BLS.
 
-## Bugs and Issues
+### Goals
+A few questions that we would like to answer include: 
+- How does a typical American spend his or her day?‘
+- How do factors like income, education, age, and gender affect the leisure/work time distribution?
+- How has people’s use of time changed during and after the recession?
+- Which activities take the most time in a person's day? 
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-landing-page/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/).
-
-## Creator
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/gh-pages/LICENSE) license.
+### Credits
+Site based on Start Bootstrap. Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
