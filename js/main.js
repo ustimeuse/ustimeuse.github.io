@@ -8,9 +8,9 @@ queue()
   .await(analyze);
 
 function analyze(error, filteredData, allData, dataToUse){
-  console.log(filteredData);
-  console.log(allData);
-  console.log(datatouse);
+  //console.log(filteredData);
+  //console.log(allData);
+  //console.log(datatouse);
   data=dataToUse;
 
   createVis()
@@ -19,6 +19,6 @@ function analyze(error, filteredData, allData, dataToUse){
 function createVis() {
 
   // TO-DO: INSTANTIATE VISUALIZATION
-  bubbleChart = new BubbleChart("bubble-map",data);
+  //bubbleChart = new BubbleChart("bubble-map",data);
 
 }
