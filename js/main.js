@@ -34,5 +34,5 @@ function createVis() {
 }
 
 function updateChart(){
-  bubbleChart.wrangleData();
+  bubbleChart.updateVis();
 }

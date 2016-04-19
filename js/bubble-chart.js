@@ -19,8 +19,9 @@ BubbleChart = function(_parentElement, _data) {
  */
 
 BubbleChart.prototype.initVis = function() {
+
   var vis = this;
-  console.log("hitting this");
+
   vis.margin = { top: 40, right: 200, bottom: 60, left: 60 };
 
   vis.width = 1200 - vis.margin.left - vis.margin.right,
@@ -57,10 +58,11 @@ BubbleChart.prototype.initVis = function() {
   vis.svg.append("g")
     .attr("class", "y-axis axis");
 
-  // Add circles
-  vis.svg.selectAll("circle")
-    .data(vis.data)
-    .enter()
+  // Data-join (circle now contains the update selection)
+  vis.circle = vis.svg.selectAll("circle").data(vis.data);
+
+  // Enter (initialize the newly added elements)
+  vis.circle.enter()
     .append("circle")
     .attr("fill", function(d){
       return incomeColors(d.famincome);
@@ -68,13 +70,7 @@ BubbleChart.prototype.initVis = function() {
     .attr("r", function(d){
       return 2;
     })
-    .attr("stroke", "black")
-    .attr("cx", function(d){
-      return vis.x(d.age);
-    })
-    .attr("cy", function(d) {
-      return vis.y(d.act_leisure);
-    });
+    .attr("stroke", "black");
 
   vis.addLegend();
   vis.wrangleData();
@@ -104,28 +100,22 @@ BubbleChart.prototype.wrangleData = function() {
 BubbleChart.prototype.updateVis = function() {
   vis = this;
 
-  var selection = d3.select("#bubble-chart")
-    .selectAll("circle").data(vis.displayData);
+  vis.selected_value = d3.select("#plot-type").property("value");
 
-  // Enter selection: Create new DOM elements for added
-  // data items, resize and position them.
-  selection.enter()
-    .append("circle")
-    .attr("fill", function(d){
-      return incomeColors(d.famincome);
-    })
-    .attr("r", function(d){
-      return 2;
-    })
-    .attr("stroke", "black")
+  // Update (set the dynamic properties of the elements)
+  vis.circle
+    .transition()
+    .duration(800)
     .attr("cx", function(d){
       return vis.x(d.age);
     })
     .attr("cy", function(d) {
-      return vis.y(d.act_work);
+      console.log("Entering selection?");
+      return vis.y(d[vis.selected_value]);
     });
 
-  selection.exit().remove();
+  // Exit
+  vis.circle.exit().remove();
 
   // Call axis functions with the new domain
   vis.svg.select(".x-axis").call(vis.xAxis);
@@ -154,8 +144,6 @@ BubbleChart.prototype.addLegend = function() {
     'Refused',
     "Don't know",
     "Blank"];
-
-  console.log(vis.labels);
 
   // Create legend
   vis.legend = vis.svg.selectAll('rect')
