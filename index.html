@@ -400,6 +400,7 @@
     <div class="content-section-a">
 
         <div class="container">
+          <div class="row">
             <div class="col-md-6">
                 <form class="form-inline">
                     <div class="form-group">
@@ -413,9 +414,6 @@
                     </div>
                 </form>
                 <div id="visualization"></div>
-              <h1>Leisure Time (in average mins/day) by Age</h1>
-              <div id="bubble-chart"></div>
-              <div id="bubble-chart1"></div>
             </div>
             <div class="col-md-6">
                 <form class="form-inline">
@@ -432,6 +430,14 @@
                 <div id="visualization1"></div>
 
             </div>
+        </div>
+      <div class="row">
+        <h1>Time spent in <span><select id="plot-type" onchange="updateChart()">
+          <option value="leisure">Leisure</option>
+          <option value="work">Work</option>
+        </select></span> (in average mins/day) by Age</h1>
+        <div id="bubble-chart"></div>
+      </div>
         </div>
     </div>
 
