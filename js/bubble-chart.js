@@ -20,8 +20,8 @@ BubbleChart = function(_parentElement, _data) {
 
 BubbleChart.prototype.initVis = function() {
   var vis = this;
-
-  vis.margin = { top: 40, right: 0, bottom: 60, left: 60 };
+  console.log("hitting this");
+  vis.margin = { top: 40, right: 20, bottom: 60, left: 60 };
 
   vis.width = 800 - vis.margin.left - vis.margin.right,
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
@@ -66,13 +66,13 @@ BubbleChart.prototype.initVis = function() {
       return "red";
     })
     .attr("r", function(d){
-      return 5;
+      return 2;
     })
     .attr("stroke", "black")
-    .attr("cy", function(d){
+    .attr("cx", function(d){
       return vis.x(d.age);
     })
-    .attr("cx", function(d) {
+    .attr("cy", function(d) {
       return vis.y(d.act_leisure);
     });
 
@@ -101,6 +101,10 @@ BubbleChart.prototype.wrangleData = function() {
  */
 
 BubbleChart.prototype.updateVis = function() {
+  vis = this;
 
+  // Call axis functions with the new domain
+  vis.svg.select(".x-axis").call(vis.xAxis);
+  vis.svg.select(".y-axis").call(vis.yAxis);
 }
 

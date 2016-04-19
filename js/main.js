@@ -29,6 +29,6 @@ function analyze(error, filteredData, allData, dataToUse){
 function createVis() {
 
   // TO-DO: INSTANTIATE VISUALIZATION
-  //bubbleChart = new BubbleChart("bubble-chart",data);
+  bubbleChart = new BubbleChart("bubble-chart1",data);
 
 }
