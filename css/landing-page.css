@@ -4,6 +4,12 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+iframe {
+    width: 100%;
+    height: 2200px;
+}
+
+
 .typing {
     color: #ff775c;
     font-family: "Agency FB";
