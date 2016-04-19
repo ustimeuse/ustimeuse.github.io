@@ -400,8 +400,35 @@
     <div class="content-section-a">
 
         <div class="container">
-            <div id="visualization"></div>
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <br>
+                        <label for="rankingType">Category to Map by: </label>
+                        <select class="form-control" id="map-type" onchange="updateMap()">
+                            <option value="average_work">Average Working Time (min)</option>
+                            <option value="average_leisure">Average Leisure Time (min)</option>
+                        </select>
+                        <br><br><br><br>
+                    </div>
+                </form>
+                <div id="visualization"></div>
 
+            </div>
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <br>
+                        <label for="rankingType">Category to Map by: </label>
+                        <select class="form-control" id="map-type1" onchange="updateMap()">
+                            <option value="average_work">Average Working Time (min)</option>
+                            <option value="average_leisure">Average Leisure Time (min)</option>
+                        </select>
+                        <br><br><br><br>
+                    </div>
+                </form>
+                <div id="visualization1"></div>
+            </div>
         </div>
     </div>
 
@@ -473,7 +500,7 @@
     <script src="js/d3.min.js"></script>
     <script src="js/d3.tip.js"></script>
     <script src="js/colorbrewer.js"></script>
-    <script src="js/vis-choropleth.js"></script>
+    <script src="js/vis-choropleth1.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/main.js"></script>
 </body>
