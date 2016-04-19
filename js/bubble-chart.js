@@ -68,7 +68,7 @@ BubbleChart.prototype.initVis = function() {
       return incomeColors(d.famincome);
     })
     .attr("r", function(d){
-      return 2;
+      return 5;
     })
     .attr("stroke", "black");
 
