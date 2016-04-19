@@ -18,8 +18,63 @@ BubbleChart = function(_parentElement, _data) {
  *  Initialize station map
  */
 
-StationMap.prototype.initVis = function() {
+BubbleChart.prototype.initVis = function() {
   var vis = this;
+
+  vis.margin = { top: 40, right: 0, bottom: 60, left: 60 };
+
+  vis.width = 800 - vis.margin.left - vis.margin.right,
+    vis.height = 400 - vis.margin.top - vis.margin.bottom;
+
+  // SVG drawing area
+  vis.svg = d3.select("#" + vis.parentElement).append("svg")
+    .attr("width", vis.width + vis.margin.left + vis.margin.right)
+    .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+
+  // Scales and axes
+  vis.x = d3.scale.linear()
+    .range([0, vis.width])
+    .domain(d3.extent(vis.data, function(d) { return d.age; }));
+
+  vis.y = d3.scale.linear()
+    .range([vis.height, 0])
+    .domain(d3.extent(vis.data, function(d) { return d.act_leisure; }));
+
+  vis.xAxis = d3.svg.axis()
+    .scale(vis.x)
+    .orient("bottom");
+
+  vis.yAxis = d3.svg.axis()
+    .scale(vis.y)
+    .orient("left");
+
+  vis.svg.append("g")
+    .attr("class", "x-axis axis")
+    .attr("transform", "translate(0," + vis.height + ")");
+
+  vis.svg.append("g")
+    .attr("class", "y-axis axis");
+
+  // Add circles
+  vis.svg.selectAll("circle")
+    .data(vis.data)
+    .enter()
+    .append("circle")
+    .attr("fill", function(d){
+      return "red";
+    })
+    .attr("r", function(d){
+      return 5;
+    })
+    .attr("stroke", "black")
+    .attr("cy", function(d){
+      return vis.x(d.age);
+    })
+    .attr("cx", function(d) {
+      return vis.y(d.act_leisure);
+    });
 
   vis.wrangleData();
 }
@@ -29,7 +84,7 @@ StationMap.prototype.initVis = function() {
  *  Data wrangling
  */
 
-StationMap.prototype.wrangleData = function() {
+BubbleChart.prototype.wrangleData = function() {
   var vis = this;
 
   // Currently no data wrangling/filtering needed
@@ -45,7 +100,7 @@ StationMap.prototype.wrangleData = function() {
  *  The drawing function
  */
 
-StationMap.prototype.updateVis = function() {
+BubbleChart.prototype.updateVis = function() {
 
 }
 
