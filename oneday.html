@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>Time Use Simulation</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/sim_style.css" type="text/css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7626174/696048/css/fonts.css"/>
 <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
@@ -8,24 +9,24 @@
 <meta charset="utf-8">
 <style>.node{stroke-width:1.5px;}</style>
 <body>
-<div id="main-wrapper">
-<div id="sidebar">
-<div id="current_time">4:00am</div>
+<!--<div id="main-wrapper">-->
+
+<div id="current_time">4:00am</div><div class="center">
 <div id="speed">
 <div class="togglebutton slow current" data-val="slow">Slow</div>
 <div class="togglebutton medium" data-val="medium">Medium</div>
 <div class="togglebutton fast" data-val="fast">Fast</div>
-<div class="clr"></div>
-</div>
-<div id="note"></div>
-<div id="cite">
+<div class="clr"></div></div></div>
+
+<!--<div id="note"></div>-->
+<!--<div id="cite">
 This is a simulation of 1,000 people's average day. It's based on 2014 data from the <a href="http://www.bls.gov/tus/">American Time Use Survey</a>, made way more accessible by the <a href="https://www.atusdata.org/">ATUS Extract Builder</a>.
-</div>
-</div>
-<div id="chart"></div>
-<div id="bar-chart"></div>
+</div>-->
+
+<div id="chart" class="col-md-6"></div>
+<div id="bar-chart" class="col-md-6"></div>
 <div class="clr"></div>
-</div>
+
 <script src="js/d3-3-5-5.min.js"></script>
 <script>
 var USER_SPEED = "slow";
@@ -140,7 +141,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			radius: 3,
 			x: init_x,
 			y: init_y,
-			color: color(act),
+			color: "#e0d400", //color(act),
 			moves: 0,
 			next_move_time: o[0].duration,
 			sched: o,
@@ -254,7 +255,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		
 		// Update notes
 		// var true_minute = curr_minute % 1440;
-		if (true_minute == time_notes[notes_index].start_minute) {
+		/*if (true_minute == time_notes[notes_index].start_minute) {
 			d3.select("#note")
 				.style("top", "0px")
 			  .transition()
@@ -276,7 +277,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			if (notes_index == time_notes.length) {
 				notes_index = 0;
 			}
-		}
+		}*/
 		
 		
 		setTimeout(timer, speeds[USER_SPEED]);
@@ -299,7 +300,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		} else {
 			var damper = 1;
 		}
-		o.color = color(curr_act);
+		o.color = "#e0d400";//color(curr_act);
 	    o.y += (foci[curr_act].y - o.y) * k * damper;
 	    o.x += (foci[curr_act].x - o.x) * k * damper;
 	  });
