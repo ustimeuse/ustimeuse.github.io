@@ -23,8 +23,8 @@
 This is a simulation of 1,000 people's average day. It's based on 2014 data from the <a href="http://www.bls.gov/tus/">American Time Use Survey</a>, made way more accessible by the <a href="https://www.atusdata.org/">ATUS Extract Builder</a>.
 </div>-->
 
-<div id="chart" class="col-md-6"></div>
-<div id="bar-chart" class="col-md-6"></div>
+<div id="chart" class="col-md-7"></div>
+<div id="bar-chart" class="col-md-5"></div>
 <div class="clr"></div>
 
 <script src="js/d3-3-5-5.min.js"></script>
@@ -105,8 +105,8 @@ var svg = d3.select("#chart").append("svg")
 
 var margin = {top: 40, right: 10, bottom: 130, left: 60};
 
-var width2 = 780 - margin.left - margin.right,
-		height2 = 800 - margin.top - margin.bottom;
+var width2 = 500 - margin.left - margin.right,
+		height2 = 600 - margin.top - margin.bottom;
 
 var svg2 = d3.select("#bar-chart").append("svg")
 		.attr("width", width2 + margin.left + margin.right)
