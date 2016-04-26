@@ -207,6 +207,7 @@ function incomeColors(d) {
 }
 
 
+
 function labelColors(d) {
 
   var color = d3.rgb("green");

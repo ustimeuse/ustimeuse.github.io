@@ -5,10 +5,11 @@
  *  @param _data            -- Array with all stations of the bike-sharing network
  */
 
-Histogram = function(_parentElement, _data) {
+Histogram = function(_parentElement, _data, _activity) {
 
   this.parentElement = _parentElement;
   this.data = _data;
+  this.activity = _activity;
   this.initVis();
 
 }
@@ -27,7 +28,7 @@ Histogram.prototype.initVis = function() {
 
   vis.margin = { top: 40, right: 200, bottom: 60, left: 60 };
 
-  vis.width = 700 - vis.margin.left - vis.margin.right,
+  vis.width = 800 - vis.margin.left - vis.margin.right,
     vis.height = 500 - vis.margin.top - vis.margin.bottom;
 
   // SVG drawing area
@@ -42,15 +43,17 @@ Histogram.prototype.initVis = function() {
     .range([0, vis.width])
     .domain([0,24]); // 24 hours in a day
 
+  //vis.selected_value = d3.select("#plot-type").property("value");
+
   // Generate a histogram using 24 uniformly-spaced bins.
   vis.values = d3.layout.histogram()
     .bins(vis.x.ticks(24))
-    .value(function(d) { return d.act_leisure; })
+    .value(function(d) { return d[vis.activity]; })
     (vis.data);
 
   vis.y = d3.scale.linear()
     .domain([0, d3.max(vis.values, function(d) { return d.y; })])
-    .range([height, 0]);
+    .range([vis.height, 0]);
 
   vis.xAxis = d3.svg.axis()
     .scale(vis.x)
@@ -71,6 +74,7 @@ Histogram.prototype.initVis = function() {
 
   vis.bar.enter().append("g")
     .attr("class", "bar")
+    .attr("fill", "orange")
     .attr("transform", function(d) { return "translate(" + vis.x(d.x) + "," + vis.y(d.y) + ")"; });
 
   vis.bar.append("rect")
@@ -80,9 +84,10 @@ Histogram.prototype.initVis = function() {
 
   vis.bar.append("text")
     .attr("dy", ".75em")
-    .attr("y", 6)
+    .attr("y", -15)
     .attr("x", vis.x(vis.values[0].dx) / 2)
     .attr("text-anchor", "middle")
+    .attr("fill","black")
     .text(function(d) { return vis.formatCount(d.y); });
 
   vis.wrangleData();
@@ -111,7 +116,6 @@ Histogram.prototype.wrangleData = function() {
 Histogram.prototype.updateVis = function() {
   vis = this;
 
-  vis.selected_value = d3.select("#plot-type").property("value");
 
   // Update (set the dynamic properties of the elements)
   //vis.circle

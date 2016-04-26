@@ -1,11 +1,13 @@
 // Global datasets
 var data;
+var femaleData;
+var maleData;
 
 // Set ordinal color scale
 var colorScale = d3.scale.category20();
 
 // Variables for the visualization instances
-var areachart, histogram;
+var areachart, femalehistogram, malehistogram;
 
 // use the Queue.js library to read multiple files
 queue()
@@ -24,12 +26,12 @@ function analyze(error, dataToUse){
     data[i].act_social = Math.round(+dataToUse[i].act_social/60);
     data[i].act_sports = Math.round(+dataToUse[i].act_sports/60);
     data[i].act_work = Math.round(+dataToUse[i].act_work/60);
-    data[i].educ_mins = +dataToUse[i].act_educ;
-    data[i].leisure_mins = +dataToUse[i].act_leisure;
-    data[i].pcare_mins = +dataToUse[i].act_pcare;
-    data[i].social_mins = +dataToUse[i].act_social;
-    data[i].sports_mins = +dataToUse[i].act_sports;
-    data[i].work_mins = +dataToUse[i].act_work;
+    data[i].educ_perc = +dataToUse[i].act_educ;
+    data[i].leisure_perc = +dataToUse[i].act_leisure;
+    data[i].pcare_perc = +dataToUse[i].act_pcare;
+    data[i].social_perc = +dataToUse[i].act_social;
+    data[i].sports_perc = +dataToUse[i].act_sports;
+    data[i].work_perc = +dataToUse[i].act_work;
     data[i].age = +dataToUse[i].age;
   }
   //
@@ -53,7 +55,18 @@ function analyze(error, dataToUse){
   //  data[i].age = +dataToUse[i].age;
   //}
 
-  colorScale.domain(["educ_mins","leisure_mins","pcare_mins","social_mins","sports_mins","work_mins"]);
+  console.log(data[0]);
+
+  // Filter function
+  femaleData = data.filter(function(item){
+    return item.sex=="Female";
+  });
+
+  maleData = data.filter(function(item){
+    return item.sex=="Male";
+  });
+
+  colorScale.domain(["educ_perc","leisure_perc","pcare_perc","social_perc","sports_perc","work_perc"]);
 
   createVis()
 }
@@ -62,7 +75,10 @@ function createVis() {
 
   // TO-DO: INSTANTIATE VISUALIZATION
   //bubbleChart = new BubbleChart("bubble-chart",data);
-  //histogram = new Histogram("my-histogram",data);
+  femalehistogram = new Histogram("female-histogram",femaleData,"act_leisure");
+  malehistogram = new Histogram("male-histogram",maleData,"act_leisure");
+  femalehistogram2 = new Histogram("female-histogram-work",femaleData,"act_work");
+  malehistogram2 = new Histogram("male-histogram-work",maleData,"act_work");
   areachart = new StackedAreaChart("stacked-area-chart",data);
 }
 
