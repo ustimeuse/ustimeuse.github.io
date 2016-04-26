@@ -84,8 +84,9 @@ BubbleChart.prototype.initVis = function() {
 BubbleChart.prototype.wrangleData = function() {
   var vis = this;
 
-  // Currently no data wrangling/filtering needed
-  vis.displayData = vis.data;
+  vis.displayData = vis.data.filter(function(item){
+    return item.famincome!="Refused" || item.famincome!="Don't know" || item.famincome!="Blank";
+  });
 
   // Update the visualization
   vis.updateVis();
@@ -125,7 +126,8 @@ BubbleChart.prototype.updateVis = function() {
 BubbleChart.prototype.addLegend = function() {
   vis=this;
 
-  vis.labels = ['Less than $5,000',
+  vis.labels = [
+    'Less than $5,000',
     '$5,000 to $7,499',
     '$7,500 to $9,999',
     '$10,000 to $12,499',
@@ -159,7 +161,7 @@ BubbleChart.prototype.addLegend = function() {
     .attr("height", 20)
     .attr("stroke", "black")
     .style("fill", function(d){
-      return incomeColors(d);
+      return labelColors(d);
     });
 
   // Add labels for legend
@@ -175,30 +177,45 @@ BubbleChart.prototype.addLegend = function() {
     .text(function(d,i) {
       return vis.labels[i];
     });
-
-  console.log(vis.legend);
 }
 
 function incomeColors(d) {
+
+  var color = d3.rgb("green");
+
   switch (d) {
-    case 'Less than $5,000': return "rgb(245,245,245)";
-    case '$5,000 to $7,499': return "rgb(235,235,235)";
-    case '$7,500 to $9,999': return "rgb(225,225,225)";
-    case '$10,000 to $12,499': return "rgb(215,215,215)";
-    case '$12,500 to $14,999': return "rgb(205,205,205)";
-    case '$15,000 to $19,999': return "rgb(195,195,195)";
-    case '$20,000 to $24,999': return "rgb(175,175,175)";
-    case '$25,000 to $29,999': return "rgb(155,155,155)";
-    case '$30,000 to $34,999': return "rgb(125,125,125)";
-    case '$35,000 to $39,999': return "rgb(115,115,115)";
-    case '$40,000 to $49,999': return "rgb(100,100,100)";
-    case '$50,000 to $59,999': return "rgb(75,75,75)";
-    case '$60,000 to $74,999': return "rgb(55,55,55)";
-    case '$75,000 to $99,999': return "rgb(25,25,25)";
-    case '$100,000 to $149,999': return "rgb(15,15,15)";
-    case '$150,000 and over': return "rgb(0,0,0)";
+    case 'Less than $5,000': return "rgb(255,255,255)";
+    case '$5,000 to $7,499': return "rgb(255,255,255)";
+    case '$7,500 to $9,999': return "rgb(255,255,255)";
+    case '$10,000 to $12,499': return "rgb(255,255,255)";
+    case '$12,500 to $14,999': return "rgb(255,255,255)";
+    case '$15,000 to $19,999': return "rgb(255,255,255)";
+    case '$20,000 to $24,999': return "rgb(255,255,255)";
+    case '$25,000 to $29,999': return color.brighter(2);
+    case '$30,000 to $34,999': return color.brighter(2);
+    case '$35,000 to $39,999': return color.brighter(2);
+    case '$40,000 to $49,999': return color.brighter(2);
+    case '$50,000 to $59,999': return color;
+    case '$60,000 to $74,999': return color;
+    case '$75,000 to $99,999': return color;
+    case '$100,000 to $149,999': return color;
+    case '$150,000 and over': return color.darker(2);
     case 'Refused': return "rgb(255,255,255)";
     case "Don't know": return "rgb(255,255,255)";
     case "Blank": return "rgb(255,255,255)";
+  }
+}
+
+
+function labelColors(d) {
+
+  var color = d3.rgb("green");
+
+  switch (d) {
+    case 'Less than $25,000': return "rgb(255,255,255)";
+    case '$25,000 to $49,999': return color.brighter(2);
+    case '$50,000 to $74,999': return color;
+    case '$75,000 to $99,999': return color;
+    case '$100,000 and over': return color.darker(2);
   }
 }

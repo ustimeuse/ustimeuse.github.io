@@ -55,8 +55,6 @@ var color = d3.scale.quantize()
 var color1 = d3.scale.quantize()
     .range(colors);
 
-console.log("Hi");
-
 function updateMap(){
 
     // Exit previous objects
