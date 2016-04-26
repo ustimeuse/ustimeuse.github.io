@@ -53,7 +53,8 @@ var color = d3.scale.linear()
 // Upon hovering, show text
 function getText(d,selectedValue) {
     format = d3.format("0,000");
-    console.log(d);
+    console.log(d)
+    return("<p>" + "hi" +</p>);
     var temp=d.properties[selectedValue];
 }
 
