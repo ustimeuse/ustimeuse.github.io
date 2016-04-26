@@ -197,7 +197,13 @@ function showExplanation(selectedValue){
         summary= "Work includes..."
     }
     if (selectedValue=="Average Leisure"){
-        summary= "Leisure Activities include..."
+        summary= "Leisure activities include..."
+    }
+    if (selectedValue=="Average Educational Time"){
+        summary= "Educational time includes..."
+    }
+    if (selectedValue=="Average Personal Care"){
+        summary= "Personal Care activities include..."
     }
     document.getElementById("update").innerHTML=summary;
 }
