@@ -14,14 +14,9 @@
 <div id="current_time">4:00am</div><div class="center">
 <div id="speed">
 <div class="togglebutton slow current" data-val="slow">Slow</div>
-<div class="togglebutton medium" data-val="medium">Medium</div>
+<div class="togglebutton medium" data-val="medium">Pause</div>
 <div class="togglebutton fast" data-val="fast">Fast</div>
 <div class="clr"></div></div></div>
-
-<!--<div id="note"></div>-->
-<!--<div id="cite">
-This is a simulation of 1,000 people's average day. It's based on 2014 data from the <a href="http://www.bls.gov/tus/">American Time Use Survey</a>, made way more accessible by the <a href="https://www.atusdata.org/">ATUS Extract Builder</a>.
-</div>-->
 
 <div id="chart" class="col-md-7"></div>
 <div id="bar-chart" class="col-md-5"></div>
@@ -41,27 +36,20 @@ var sched_objs = [],
 	curr_minute = 0;
 
 var act_codes = [
-	{"index": "0", "short": "Sleeping", "desc": "Sleeping"},
-	{"index": "1", "short": "Personal Care", "desc": "Personal Care"},
-	{"index": "2", "short": "Eat & Drink", "desc": "Eating and Drinking"},
-	{"index": "3", "short": "Education", "desc": "Education"},
-	{"index": "4", "short": "Work", "desc": "Work and Work-Related Activities"},
-	{"index": "5", "short": "Housework", "desc": "Household Activities"},
-	{"index": "6", "short": "Household Care", "desc": "Caring for and Helping Household Members"},
-	{"index": "7", "short": "Non-Household Care", "desc": "Caring for and Helping Non-Household Members"},
-	{"index": "8", "short": "Shopping", "desc": "Consumer Purchases"},
-	{"index": "9", "short": "Pro. Care Services", "desc": "Professional and Personal Care Services"},
-	{"index": "10", "short": "Leisure", "desc": "Socializing, Relaxing, and Leisure"},
-	{"index": "11", "short": "Sports", "desc": "Sports, Exercise, and Recreation"},
-	{"index": "12", "short": "Religion", "desc": "Religious and Spiritual Activities"},
-	{"index": "13", "short": "Volunteering", "desc": "Volunteer Activities"},
-	{"index": "14", "short": "Phone Calls", "desc": "Telephone Calls"},
-	{"index": "15", "short": "Misc.", "desc": "Other"},
-	{"index": "16", "short": "Traveling", "desc": "Traveling"},
+    {"index": "0", "short": "Sleeping", "desc": "Sleeping"},
+    {"index": "1", "short": "Personal Care / Personal Tasks", "desc": "Personal Care"},
+    {"index": "2", "short": "Eat & Drink / Shopping", "desc": "Eating and Drinking"},
+    {"index": "3", "short": "Education", "desc": "Education"},
+    {"index": "4", "short": "Work", "desc": "Work and Work-Related Activities"},
+    {"index": "5", "short": "Housework", "desc": "Household Activities"},
+    {"index": "6", "short": "Volunteering / Caring for Others", "desc": "Care for others / Volunteer Activities"},
+    {"index": "7", "short": "Leisure / Sports", "desc": "Socializing, Relaxing, Leisure, Sports, Exercise, and Recreation"},
+    {"index": "8", "short": "Religion", "desc": "Religious and Spiritual Activities"},
+    {"index": "9", "short": "Misc.", "desc": "Telephone Calls, Other"},
+    {"index": "10", "short": "Traveling", "desc": "Traveling"}
 ];
 
-
-var speeds = { "slow": 1000, "medium": 200, "fast": 50 };
+var speeds = { "slow": 1000, "medium": 30000, "fast": 50 };
 
 
 var time_notes = [
@@ -121,14 +109,84 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		for (var i=0; i < day_array.length; i++) {
 			// Duration
 			if (i % 2 == 1) {
-				activities.push({'act': day_array[i-1], 'duration': +day_array[i]});
+                var act = day_array[i - 1];
+				var act_index = activities.findIndex(function (v) {
+					return v.act == act;
+				});
+                switch(+act) {
+                    case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
+                        if (act_index = -1) {
+                            activities.push({'act': act, 'duration': +day_array[i]});
+                        } else {
+                            activities[act_index].duration += +day_array[i];
+                        }
+                        break;
+                    case 7:
+					case 13:
+                        if (act_index = -1) {
+                            activities.push({'act': '6', 'duration': +day_array[i]});
+                        } else {
+                            activities['6'] += +day_array[i];
+                        }
+                        break;
+					case 8:
+						if (act_index = -1) {
+							activities.push({'act': '2', 'duration': +day_array[i]});
+						} else {
+							activities['2'] += +day_array[i];
+						}
+						break;
+					case 9:
+						if (act_index = -1) {
+							activities.push({'act': '1', 'duration': +day_array[i]});
+						} else {
+							activities['1'] += +day_array[i];
+						}
+						break;
+					case 10:
+					case 11:
+						if (act_index = -1) {
+							activities.push({'act': '7', 'duration': +day_array[i]});
+						} else {
+							activities['7'] += +day_array[i];
+						}
+						break;
+					case 12:
+						if (act_index = -1) {
+							activities.push({'act': '8', 'duration': +day_array[i]});
+						} else {
+							activities['8'] += +day_array[i];
+						}
+						break;
+					case 14:
+					case 15:
+						if (act_index = -1) {
+							activities.push({'act': '9', 'duration': +day_array[i]});
+						} else {
+							activities['9'] += +day_array[i];
+						}
+						break;
+					case 16:
+						if (act_index = -1) {
+							activities.push({'act': '10', 'duration': +day_array[i]});
+						} else {
+							activities['10'] += +day_array[i];
+						}
+						break;
+                }
 			}
 		}
 		sched_objs.push(activities);
 	});
-	
+console.log(sched_objs)
 	// Used for percentages by minute
-	var act_counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var act_counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	
 	// A node for each person's schedule
 	var nodes = sched_objs.map(function(o,i) {
@@ -225,7 +283,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			
 				// Move on to next activity
 				curr_node.act = curr_node.sched[ curr_moves ].act;
-			
+
 				// Add to new activity count
 				act_counts[+curr_node.act] += 1;
 			
@@ -252,33 +310,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		// Update times
 		var true_minute = curr_minute % 1440;
 		d3.select("#current_time").text(minutesToTime(true_minute));
-		
-		// Update notes
-		// var true_minute = curr_minute % 1440;
-		/*if (true_minute == time_notes[notes_index].start_minute) {
-			d3.select("#note")
-				.style("top", "0px")
-			  .transition()
-				.duration(600)
-				.style("top", "20px")
-				.style("color", "#000000")
-				.text(time_notes[notes_index].note);
-		} 
-		
-		// Make note disappear at the end.
-		else if (true_minute == time_notes[notes_index].stop_minute) {
-			
-			d3.select("#note").transition()
-				.duration(1000)
-				.style("top", "300px")
-				.style("color", "#ffffff");
-				
-			notes_index += 1;
-			if (notes_index == time_notes.length) {
-				notes_index = 0;
-			}
-		}*/
-		
 		
 		setTimeout(timer, speeds[USER_SPEED]);
 	}
@@ -376,6 +407,10 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			.domain([0,1000])
 			.range([height2, 0]);
 
+	var ylabel = d3.scale.linear()
+			.domain([0,1])
+			.range([height2, 0]);
+
 	// Axes
 
 	var xAxis = d3.svg.axis()
@@ -383,7 +418,8 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			.orient("bottom");
 
 	var yAxis = d3.svg.axis()
-			.scale(y)
+			.scale(ylabel)
+			.tickFormat(d3.format("%"))
 			.orient("left");
 
 	svg2.append("g")
