@@ -54,7 +54,7 @@ var color = d3.scale.linear()
 function getText(d,selectedValue) {
     format = d3.format("0,000");
     console.log(d)
-    return("<p>" + "hi" +</p>);
+    return("<p>" + "hi" +"</p>");
     var temp=d.properties[selectedValue];
 }
 
