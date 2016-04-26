@@ -401,7 +401,7 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <form class="form-inline">
                     <div class="form-group">
                         <br>
@@ -409,29 +409,26 @@
                         <select class="form-control" id="map-type" onchange="updateMap()">
                             <option value="average_work">Average Working Time (min)</option>
                             <option value="average_leisure">Average Leisure Time (min)</option>
+                            <option value="average_pcare">Average Personal Care Time (min)</option>
+                            <option value="average_educ">Average Education Time (min)</option>
                         </select>
                         <br><br><br><br>
                     </div>
                 </form>
+                <a href="choropleth.html">Click Here</a>
                 <div id="visualization"></div>
             </div>
-            <div class="col-md-6">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <br>
-                        <label for="rankingType">Category to Map by: </label>
-                        <select class="form-control" id="map-type1" onchange="updateMap()">
-                            <option value="average_work">Average Working Time (min)</option>
-                            <option value="average_leisure">Average Leisure Time (min)</option>
-                        </select>
-                        <br><br><br><br>
-                    </div>
-                </form>
-                <div id="visualization1"></div>
-
-            </div>
         </div>
-      <div class="row">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Explore Time Use Across The United States</h1>
+            <a href="choropleth.html">Click Here</a>
+            <!--<iframe src="oneday.html"></iframe>-->
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-md-12">
           <h1>Time spent in <span><select id="plot-type" onchange="updateChart()">
             <option value="act_leisure">Leisure</option>
@@ -439,14 +436,16 @@
           </select></span> (in average mins/day) by Age</h1>
           <div id="bubble-chart"></div>
         </div>
-      </div>
-          <div class="row">
-            <div class="col-md-12">
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
             <h1>Exploring 1000 Americans' time use of one day</h1>
             <a href="oneday.html">Click Here</a>
             <!--<iframe src="oneday.html"></iframe>-->
-            </div>
-          </div>
+        </div>
+    </div>
+
         </div>
     </div>
 

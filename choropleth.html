@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nation-wide examination of time use in work, leisure, education, and personal care</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <br>
+                        <label for="rankingType">Category to Map by: </label>
+                        <select class="form-control" id="map-type" onchange="updateMap()">
+                            <option value="average_work">Average Working Time (min)</option>
+                            <option value="average_leisure">Average Leisure Time (min)</option>
+                            <option value="average_pcare">Average Personal Care Time (min)</option>
+                            <option value="average_educ">Average Education Time (min)</option>
+                        </select>
+                        <br><br><br><br>
+                    </div>
+                </form>
+                <div id="visualization"></div>
+            </div>
+    </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/queue.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/topojson.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/d3.tip.js"></script>
+        <script src="js/colorbrewer.js"></script>
+        <script src="js/vis-choropleth1.js"></script>
+        <script src="js/bubble-chart.js"></script>
+        <script src="js/tab.js"></script>
+        <script src="js/main.js"></script>
+</body>
+</html>
