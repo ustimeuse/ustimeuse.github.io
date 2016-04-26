@@ -74,6 +74,7 @@ function updateMap(){
 
     // Get selected value
     selectedValue=d3.select("#map-type").property("value");
+    showExplanation(selectedValue);
     // Get selected value
 
     var min=d3.min(timeuse, function(d) {return +d[selectedValue]})
@@ -188,7 +189,21 @@ function updateMap(){
         .attr("y", leg_labels.length*40 + 15)
         .text("No Data")
 
-
-
 }
 
+function showExplanation(selectedValue){
+    var summary;
+    if (selectedValue=="Average Work"){
+        summary= "Work includes..."
+    }
+    if (selectedValue=="Average Leisure"){
+        summary= "Leisure activities include..."
+    }
+    if (selectedValue=="Average Educational Time"){
+        summary= "Educational time includes..."
+    }
+    if (selectedValue=="Average Personal Care"){
+        summary= "Personal Care activities include..."
+    }
+    document.getElementById("update").innerHTML=summary;
+}
