@@ -23,8 +23,11 @@ var svg = d3.select("#visualization").append("svg")
 
 
 function processData(d) {
+    console.log(d);
     d.average_work= +d.average_work;
     d.average_leisure= +d.average_leisure;
+    d.average_pcare= +d.average_pcare;
+    d.average_educ= +d.average_educ;
     return d;
 }
 
@@ -47,15 +50,14 @@ var path = d3.geo.path()
 var colors = ["#fef0d9","#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000"];
 // set up a scale that can take data values as input, and will return colors
 var color = d3.scale.linear()
-  .range(colors);
+    .range(colors);
 
 
 // Upon hovering, show text
 function getText(d,selectedValue) {
-    format = d3.format("0,000");
-    console.log(d)
-    return("<p>" + "hi" +"</p>");
-    var temp=d.properties[selectedValue];
+    console.log(d.properties);
+    return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
 }
 
 function updateMap(){
@@ -107,7 +109,6 @@ function updateMap(){
 
     // Draw tip
     tip1 = d3.tip().attr('class', 'd3-tip').html(function(d) {
-        console.log(selectedValue)
         return (getText(d,selectedValue));
     });
 
@@ -126,6 +127,8 @@ function updateMap(){
             }
             return "#e5e5e5";
         })
+        .on('mouseover', tip1.show)
+        .on('mouseout', tip1.hide)
 
 
     // Create legend
@@ -183,7 +186,7 @@ function updateMap(){
         .attr("class", "legend-labels")
         .attr("x", 40)
         .attr("y", leg_labels.length*40 + 15)
-        .text("No data")
+        .text("No Data")
 
 
 
