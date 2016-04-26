@@ -1,7 +1,5 @@
 // Global datasets
 var data;
-var femaleData;
-var maleData;
 
 // Set ordinal color scale
 var colorScale = d3.scale.category20();
@@ -11,17 +9,13 @@ var areachart, histogram;
 
 // use the Queue.js library to read multiple files
 queue()
-  .defer(d3.csv, "data/female.csv")
-  .defer(d3.csv, "data/male.csv")
   .defer(d3.csv, "data/datatouse.csv")
   .await(analyze);
 
-function analyze(error, female, male, dataToUse){
+function analyze(error, dataToUse){
   console.log(dataToUse);
 
   data=dataToUse;
-  femaleData=female;
-  maleData=male;
 
   for(var i=0; i<dataToUse.length; i++){
     data[i].act_educ = Math.round(+dataToUse[i].act_educ/60);
@@ -68,7 +62,7 @@ function createVis() {
 
   // TO-DO: INSTANTIATE VISUALIZATION
   //bubbleChart = new BubbleChart("bubble-chart",data);
-  histogram = new Histogram("my-histogram",data);
+  //histogram = new Histogram("my-histogram",data);
   areachart = new StackedAreaChart("stacked-area-chart",data);
 }
 
