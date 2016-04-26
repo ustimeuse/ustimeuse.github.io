@@ -44,9 +44,9 @@ var path = d3.geo.path()
 
 
 // Create color scale
-var colors = ["#fef0d9","#fdd49e","#fdbb84","#fc8d59"];
+var colors = ["#fef0d9","#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000"];
 // set up a scale that can take data values as input, and will return colors
-var color = d3.scale.quantize()
+var color = d3.scale.linear()
   .range(colors);
 
 
