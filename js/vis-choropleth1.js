@@ -23,7 +23,6 @@ var svg = d3.select("#visualization").append("svg")
 
 
 function processData(d) {
-    console.log(d);
     d.average_work= +d.average_work;
     d.average_leisure= +d.average_leisure;
     d.average_pcare= +d.average_pcare;
