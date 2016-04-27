@@ -62,6 +62,8 @@ function getText(d,selectedValue) {
 
 function updateMap(){
 
+    layeredhistogram.updateVis();
+
     // Exit previous objects
     s=d3.selectAll("path.countries")
     s.remove();
