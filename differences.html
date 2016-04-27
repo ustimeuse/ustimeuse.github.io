@@ -22,40 +22,6 @@
       <div id="stacked-area-chart"></div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Leisure</h2>
-      <!--<h2>Time spent on <span><select id="plot-type" onchange="updateChart()">-->
-        <!--<option value="act_leisure">Leisure</option>-->
-        <!--<option value="act_work">Work</option>-->
-      <!--</select></span> (in average mins/day) by Sex</h2>-->
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Females</h2>
-      <div id="female-histogram"></div>
-    </div>
-    <div class="col-md-6">
-      <h2>Males</h2>
-      <div id="male-histogram"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Work</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Females</h2>
-      <div id="female-histogram-work"></div>
-    </div>
-    <div class="col-md-6">
-      <h2>Males</h2>
-      <div id="male-histogram-work"></div>
-    </div>
-  </div>
 </div>
 <!-- Load JS libraries -->
 <script src="js/jquery.min.js"></script>
@@ -67,7 +33,70 @@
 <script src="js/colorbrewer.js"></script>
 <script src="js/bubble-chart.js"></script>
 <script src="js/stackedAreaChart.js"></script>
+<script src="js/layeredHistogram.js"></script>
 <script src="js/histogram.js"></script>
-<script src="js/main.js"></script>
+<script>
+  // Global datasets
+  var data;
+  var femaleData;
+  var maleData;
+  var dataByState;
+
+  // Set ordinal color scale
+  var colorScale = d3.scale.category20();
+
+  // Variables for the visualization instances
+  var areachart, femalehistogram, malehistogram, layeredhistogram;
+
+  // use the Queue.js library to read multiple files
+  queue()
+      .defer(d3.csv, "data/datatouse.csv")
+      .defer(d3.csv, "data/yuqi_new.csv")
+      .await(analyze);
+
+  function analyze(error, dataToUse, dataByStateCSV){
+
+    dataByState = dataByStateCSV;
+    data=dataToUse;
+
+    for(var i=0; i<dataToUse.length; i++){
+      data[i].act_educ = Math.round(+dataToUse[i].act_educ/60);
+      data[i].act_leisure = Math.round(+dataToUse[i].act_leisure/60);
+      data[i].act_pcare = Math.round(+dataToUse[i].act_pcare/60);
+      data[i].act_social = Math.round(+dataToUse[i].act_social/60);
+      data[i].act_sports = Math.round(+dataToUse[i].act_sports/60);
+      data[i].act_work = Math.round(+dataToUse[i].act_work/60);
+      data[i].educ_perc = +dataToUse[i].act_educ;
+      data[i].leisure_perc = +dataToUse[i].act_leisure;
+      data[i].pcare_perc = +dataToUse[i].act_pcare;
+      data[i].social_perc = +dataToUse[i].act_social;
+      data[i].sports_perc = +dataToUse[i].act_sports;
+      data[i].work_perc = +dataToUse[i].act_work;
+      data[i].age = +dataToUse[i].age;
+    }
+
+    console.log(dataByState[0]);
+    console.log(data[0]);
+
+    // Filter function
+    femaleData = data.filter(function(item){
+      return item.sex=="Female";
+    });
+
+    maleData = data.filter(function(item){
+      return item.sex=="Male";
+    });
+
+    colorScale.domain(["educ_perc","leisure_perc","pcare_perc","social_perc","sports_perc","work_perc"]);
+
+    createVis()
+  }
+
+  function createVis() {
+
+    // TO-DO: INSTANTIATE VISUALIZATION
+    areachart = new StackedAreaChart("stacked-area-chart",data);
+  }
+</script>
 </body>
 </html>
