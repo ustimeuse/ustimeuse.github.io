@@ -14,9 +14,9 @@ iframe {
 
 
 .typing {
-    color: #ff775c;
-    font-family: "Agency FB";
-    font-size: 20px;
+    /*color: #ff775c;*/
+    /*font-family: 'Playfair Display', serif;*/
+    /*font-size: 20px;*/
     white-space: nowrap;
     overflow: hidden;
     width: 30em;
@@ -449,19 +449,9 @@ body,
 html {
     width: 100%;
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.tag {
-    /*font-family: "Agency FB";*/
-    color: #ff775c;
-    /*font-size: 18px;*/
-    /*font-weight: bold;*/
-}
-
-.tag2 {
-    color: black;
-}
-body,
 h1,
 h2,
 h4,
@@ -472,11 +462,19 @@ h6 {
 
 }
 
+.tag {
+    color: #ff775c;
+}
+
+.tag2 {
+    color: black;
+}
+
 .descriptions{
     color: gray;
     font-size: 15px;
     font-weight: 300;
-    font-family: "Adobe Arabic";
+    font-family: 'Playfair Display', serif;
 }
 
 .mainpoint {
@@ -579,11 +577,7 @@ h6 {
 }
 
 .section-heading {
-    font-family: "Agency FB";
-    font-weight: 700;
-    margin-bottom: 30px;
     color: #ff775c;
-    font-size: 20px;
 }
 
 .sub-headings {
@@ -591,7 +585,7 @@ h6 {
     font-weight: 300;
     font-size: large;
     font-style: italic;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     color: #00cdc0;
 }
 
@@ -664,8 +658,11 @@ p.copyright {
     border: 0;
 }
 
+.padding {
+    width: 15px;
+}
 .clock {
-    position: relative;
+    /*position: relative;*/
     height: 200px;
     width: 200px;
     background: white;
@@ -673,7 +670,7 @@ p.copyright {
     border-radius: 100%;
     border: 10px solid #67D2C8;
     position: absolute;
-    top: 0;
+    top: 15px;
     left: 0;
     right: 0;
     bottom: 0;
