@@ -51,4 +51,4 @@ race.df=as.data.frame(aggregate(yuqi_new[, 8:13], list(yuqi_new$race.new), mean)
 new.df=rbind(gender.df, employment.df, income.df, race.df)
 
 write.csv(new.df,"group-avgs.csv",row.names=F)
-
+write.csv(yuqi_new,"yuqi_new.csv",row.names=F)
