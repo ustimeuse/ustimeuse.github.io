@@ -80,7 +80,7 @@ iframe {
 ul#tabs {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    /*text-align: center;*/
 }
 ul#tabs li {
     display: inline-block;
@@ -88,9 +88,9 @@ ul#tabs li {
     border-bottom: solid 5px #238b68;
     padding: 5px 20px;
     margin-bottom: 4px;
-    color: #fff;
     cursor: pointer;
 }
+
 ul#tabs li:hover {
     background-color: #238b68;
 }
@@ -107,6 +107,57 @@ ul#tab li {
 }
 ul#tab li.active {
     display: block;
+}
+
+ul#tabs li a {
+    font-family: "Open Sans";
+    font-weight: 700;
+    color: #fff;
+}
+ul#tabs li a:hover {
+    text-decoration: none;
+}
+
+/* Custom */
+ul#tabs {
+    list-style-type: none;
+    padding: 0;
+    /*text-align: center;*/
+}
+ul#tabs li {
+    display: inline-block;
+    background-color: #32c896;
+    border-bottom: solid 5px #238b68;
+    padding: 5px 20px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+ul#tabs li:hover {
+    background-color: #238b68;
+}
+ul#tabs li.active {
+    background-color: #238b68;
+}
+ul#tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul#tab li {
+    display: none;
+}
+ul#tab li.active {
+    display: block;
+}
+
+ul#tabs li a {
+    font-family: "Open Sans";
+    font-weight: 700;
+    color: #fff;
+}
+ul#tabs li a:hover {
+    text-decoration: none;
 }
 
 .accordion {
@@ -471,17 +522,17 @@ h6 {
 }
 
 .descriptions{
-    color: gray;
-    font-size: 15px;
-    font-weight: 300;
-    font-family: 'Playfair Display', serif;
+    color: darkslategray;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Open Sans", "sans-serif";
 }
 
 .mainpoint {
     color: #00cdc0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
-    font-family: "Helvetica Neue";
+    font-family: "Playfair Display", "serif";
 }
 
 .References{
@@ -1278,7 +1329,7 @@ Main components
 
 
 .loading {
-    position: absolute;
+    /*position: absolute;*/
     width: 200px;
     height: 250px;
     top: 50%;
