@@ -89,6 +89,21 @@ var time_notes = [
 ];
 var notes_index = 0;
 
+var matrix = [
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
+
+var matrix_array = [];
 
 // Activity to put in center of circle arrangement
 var center_act = "Traveling",
@@ -128,6 +143,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	data.forEach(function(d) {
 		var day_array = d.day.split(",");
 		var activities = [];
+//		var matrix = Array.prototype.slice.call(matrix_origin);
 		for (var i=0; i < day_array.length; i++) {
 			// Duration
 			if (i % 2 == 1) {
@@ -148,6 +164,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                         } else {
                             activities[act_index].duration += +day_array[i];
                         }
+						matrix[+act][+act+2] += 1;
                         break;
                     case 7:
 					case 13:
@@ -156,6 +173,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                         } else {
                             activities['6'] += +day_array[i];
                         }
+						matrix[6][+act+2] += 1;
                         break;
 					case 8:
 						if (act_index = -1) {
@@ -163,6 +181,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['2'] += +day_array[i];
 						}
+						matrix[2][+act+2] += 1;
 						break;
 					case 9:
 						if (act_index = -1) {
@@ -170,6 +189,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['1'] += +day_array[i];
 						}
+						matrix[1][+act+2] += 1;
 						break;
 					case 10:
 					case 11:
@@ -178,6 +198,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['7'] += +day_array[i];
 						}
+						matrix[7][+act+2] += 1;
 						break;
 					case 12:
 						if (act_index = -1) {
@@ -185,6 +206,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['8'] += +day_array[i];
 						}
+						matrix[8][+act+2] += 1;
 						break;
 					case 14:
 					case 15:
@@ -193,6 +215,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['9'] += +day_array[i];
 						}
+						matrix[9][+act+2] += 1;
 						break;
 					case 16:
 						if (act_index = -1) {
@@ -200,14 +223,17 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['10'] += +day_array[i];
 						}
+						matrix[10][+act+2] += 1;
 						break;
                 }
 			}
 		}
 		sched_objs.push(activities);
+//		matrix_array.push(matrix);
 	});
 
 	// Used for percentages by minute
+
 	var act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0}, {"index": 3, "count": 0},
 		              {"index": 4, "count": 0}, {"index": 5, "count": 0}, {"index": 6, "count": 0}, {"index": 7, "count": 0},
 		              {"index": 8, "count": 0}, {"index": 9, "count": 0}, {"index": 10, "count": 0}];
@@ -227,6 +253,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			moves: 0,
 			next_move_time: o[0].duration,
 			sched: o,
+			next_act: matrix_array[i]
 		}
 	});
 
@@ -285,7 +312,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		.text(function(d) {
 			return act_counts[d.index].count + "%";
 		});
-		
 
 	// Update nodes based on activity and duration
 	function timer() {
@@ -313,7 +339,10 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 				curr_node.moves = curr_moves;
 				curr_node.cx = foci[curr_node.act].x;
 				curr_node.cy = foci[curr_node.act].y;
-			
+
+				// Update Chord Diagram
+//				updateChord(nodes[i].next_act[curr_node.moves]);
+
 				nodes[i].next_move_time += nodes[i].sched[ curr_node.moves ].duration;
 			}
 		});
@@ -326,7 +355,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			.text(function(d) {
 				return readablePercent(act_counts[+d.index].count);
 			});
-		console.log(act_counts)
+
 		updateBars(act_counts);
 		updateRanking(act_counts);
 
@@ -424,8 +453,10 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		
 		USER_SPEED = d3.select(this).attr("data-val");
     });
-
-	// BAR CHART IMPLEMENTATOIN
+	updateChord(matrix);
+	/*********************/
+	/*  BAR CHART        */
+	/*********************/
 
 	// Scales
 	var x = d3.scale.ordinal()
@@ -521,7 +552,8 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	// Update Ranking
 	function updateRanking(data) {
 
-		var sortedData = data.sort( function(a,b) {
+//		var sortedData = data.sort( function(a,b) {
+		var sortedData = Array.prototype.slice.call(data).sort( function(a,b) {
 			//sort by count, descending.
 			return b.count - a.count;
 		});
@@ -529,6 +561,108 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		sortedData.forEach(function(d, index){
 			document.getElementById(index+1).innerHTML = act_codes[d.index].short;
 		});
+	}
+
+	/*********************/
+	/*  CHORD DIAGRAM    */
+	/*********************/
+
+	function updateChord (matrix) {
+
+		var chord = d3.layout.chord()
+				.padding(.05)
+				.sortSubgroups(d3.descending)
+				.matrix(matrix);
+
+		var innerRadius = Math.min(width2, height2) * .41,
+				outerRadius = innerRadius * 1.1;
+
+		var fill = d3.scale.ordinal()
+				.domain(d3.range(11))
+				.range(["#000000", "#FFDD89", "#957244", "#F26223","#e0d400","#1c8af9","#51BC05","#FF7F00","#DB32A4","#00CDF8","#E63B60"]);
+
+		var svg3 = d3.select("body").append("svg")
+				.attr("width", width2)
+				.attr("height", height2)
+				.append("g")
+				.attr("transform", "translate(" + width2 / 2 + "," + height2 / 2 + ")");
+
+		svg3.append("g").selectAll("path")
+				.data(chord.groups)
+				.enter().append("path")
+				.style("fill", function (d) {
+					return fill(d.index);
+				})
+				.style("stroke", function (d) {
+					return fill(d.index);
+				})
+				.attr("d", d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius))
+				.on("mouseover", fade(.1))
+				.on("mouseout", fade(1));
+
+		var ticks = svg3.append("g").selectAll("g")
+				.data(chord.groups)
+				.enter().append("g").selectAll("g")
+				.data(groupTicks)
+				.enter().append("g")
+				.attr("transform", function (d) {
+					return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+							+ "translate(" + outerRadius + ",0)";
+				});
+
+		ticks.append("line")
+				.attr("x1", 1)
+				.attr("y1", 0)
+				.attr("x2", 5)
+				.attr("y2", 0)
+				.style("stroke", "#000");
+
+		ticks.append("text")
+				.attr("x", 8)
+				.attr("dy", ".35em")
+				.attr("transform", function (d) {
+					return d.angle > Math.PI ? "rotate(180)translate(-16)" : null;
+				})
+				.style("text-anchor", function (d) {
+					return d.angle > Math.PI ? "end" : null;
+				})
+				.text(function (d) {
+					return d.label;
+				});
+
+		svg3.append("g")
+				.attr("class", "chord")
+				.selectAll("path")
+				.data(chord.chords)
+				.enter().append("path")
+				.attr("d", d3.svg.chord().radius(innerRadius))
+				.style("fill", function (d) {
+					return fill(d.target.index);
+				})
+				.style("opacity", 1);
+
+		// Returns an array of tick angles and labels, given a group.
+		function groupTicks(d) {
+			var k = (d.endAngle - d.startAngle) / d.value;
+			return d3.range(0, d.value, 1000).map(function (v, i) {
+				return {
+					angle: v * k + d.startAngle,
+					label: i % 5 ? null : v / 1000 + "k"
+				};
+			});
+		}
+
+		// Returns an event handler for fading a given chord group.
+		function fade(opacity) {
+			return function (g, i) {
+				svg.selectAll(".chord path")
+						.filter(function (d) {
+							return d.source.index != i && d.target.index != i;
+						})
+						.transition()
+						.style("opacity", opacity);
+			};
+		}
 	}
 
 }); // @end d3.tsv
