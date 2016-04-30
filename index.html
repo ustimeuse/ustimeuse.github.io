@@ -92,10 +92,9 @@
                   <li>
                     <a href="#data">Data</a>
                   </li>
-
-                    <!--<li>-->
-                        <!--<a href="#insights">Insights</a>-->
-                    <!--</li>-->
+                  <li>
+                      <a href="#insights">Visualizations</a>
+                  </li>
                     <li>
                         <a href="#our_team">Team</a>
                     </li>
@@ -128,7 +127,7 @@
                                 <a href="oneday.html" class="btn btn-default btn-lg"> <span class="network-name">A Day in the Life</span></a>
                             </li>
                             <li>
-                                <a href="choropleth.html" class="btn btn-default btn-lg"> <span class="network-name">Across the US</span></a>
+                                <a href="choropleth.html" class="btn btn-default btn-lg"> <span class="network-name">Across America</span></a>
                             </li>
                             <li>
                                 <a href="differences.html" class="btn btn-default btn-lg"> <span class="network-name">Group Differences</span></a>
@@ -147,7 +146,7 @@
     <!-- Page Content -->
 
 
-	<a  name="services"></a>
+  <a  name="services"></a>
     <div  id="time_management" class="content-section-a">
         <div class="container">
             <div class="row">
@@ -318,11 +317,6 @@
                                 to determine interesting variables to be feature in the data visualizations; Create dataframes and new csv files with narrowed list of
                                 relevant variables of interests such as states, sex, age, race, working time, educational time, leisure time, personal care time. </p>
                             <p> We use the data to create various visualizations as seen below.</p>
-                            <p> We use R extensively to clean the data. Major steps for cleaning the data include:
-                            Eliminating subjects with births (we are only interested in subjects with no children by choice); Eliminating
-                            rows with NIU values for employment status or school/college enrollment; Creating dataframes and new csv
-                            files with narrowed list of relevant variables of interests such as states, sex, age, race, working time, educational time,
-                            leisure time, personal care time. </p>
                         </li>
                         <li>
                             <input type="checkbox" checked>
@@ -354,8 +348,41 @@
         </div>
     </div>
 
-
-
+    <!--<div class="content-section">-->
+      <!--<div class="container">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-12">-->
+            <!--<h2 class="tag">Across America</h2>-->
+            <!--<form class="form-inline">-->
+              <!--<div class="form-group">-->
+                <!--<br>-->
+                <!--<label for="rankingType">Category to Map by: </label>-->
+                <!--<select class="form-control" id="map-type" onchange="updateMap()">-->
+                  <!--<option value="Average Work">Average Working Time (min)</option>-->
+                  <!--<option value="Average Leisure">Average Leisure Time (min)</option>-->
+                  <!--<option value="Average Personal Care">Average Personal Care Time (min)</option>-->
+                  <!--<option value="Average Educational Time">Average Education Time (min)</option>-->
+                <!--</select>-->
+                <!--<br><br><br><br>-->
+              <!--</div>-->
+            <!--</form>-->
+            <!--<div id="update"></div>-->
+            <!--<br><br><br><br>-->
+            <!--<div id="visualization"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-6">-->
+            <!--<h2>Females vs Males</h2>-->
+            <!--<div id="overlapping-histogram"></div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<h2>Text</h2>-->
+            <!--<div></div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
 
     <div class="content-section-b">
         <div class="container">
@@ -578,7 +605,6 @@
     <script src="js/donut1.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/parallelCoordinates.js"></script>
-    <script src="js/index.js"></script>
     <script>
         // performs smooth scrolling to anchor tags
         // reference: https://css-tricks.com/snippets/jquery/smooth-scrolling/

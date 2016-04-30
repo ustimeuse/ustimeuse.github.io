@@ -3,8 +3,10 @@
  */
 
 // --> CREATE SVG DRAWING AREA
-var width = 2000,
-    height = 1000;
+var width = 900,
+    height = 500;
+
+var format=d3.format(".1f");
 
 var USmap;
 var timeuse;
@@ -39,7 +41,7 @@ function loaded(error,map,data) {
 
 var projection = d3.geo.albersUsa()
     .scale(1000)
-    .translate([width/2.5, height /4]);
+    .translate([width/2.1, height/2]);
 
 var path = d3.geo.path()
     .projection(projection);
@@ -87,6 +89,8 @@ function updateMap(){
 
     // Save these labels for legend
     var leg_labels=d3.range(min, max, (max-min)/colors.length);
+    leg_labels.unshift("No Data"); // Add item to beginning of array
+
     var US = USmap.features
 
     // Reference: http://chimera.labs.oreilly.com/books/1230000000345/ch12.html#_choropleth
@@ -132,79 +136,67 @@ function updateMap(){
         .on('mouseover', tip1.show)
         .on('mouseout', tip1.hide)
 
+    var legend_group = svg.append("g")
+        .attr("class", "map_legend_group")
+        .attr("transform", "translate("+(width-120)+","+(height/2.5)+")");
 
     // Create legend
-    var legend = svg.selectAll('rect')
+    var legend = legend_group.selectAll('.rectangles')
         .data(leg_labels)
         .enter()
         .append('rect')
         .attr("class", "rectangles")
         .attr("x", 0)
         .attr("y", function(d, i){
-            return i*40;
+            return i*30;
         })
         .attr("width", 20)
         .attr("height", 20)
-        .style("fill", function(d){
-            return color(d);
+        .style("fill", function(d,i){
+            if(i==0){
+                return "#e5e5e5";
+            }
+            else{
+                return color(d);
+            }
         });
 
-
-    // Draw gray box for no data
-    legend
-        .data("No data")
-        .enter()
-        .append('rect')
-        .attr("class", "rectangles")
-        .attr("x", 0)
-        .attr("y", leg_labels.length*40)
-        .attr("width", 20)
-        .attr("height", 20)
-        .style("fill", "#e5e5e5")
-
     // Add labels for legend
-    svg.selectAll("text")
+    legend_group.selectAll("text")
         .data(leg_labels)
         .enter()
         .append('text')
         .attr("class", "legend-labels")
         .attr("x", 40)
         .attr("y", function(d, i) {
-            return i*40+15;
+            return i*30+15;
         })
         .text(function(d,i) {
-            format=d3.format(".1f")
-            if(i<(leg_labels.length-1)){
+            if(i<(leg_labels.length-1) && i!=0){
                 return ((format(leg_labels[i]))+ "-" + (format(leg_labels[i+1])));
             }
-            return ((format(leg_labels[i])) + "-" + (format(max)));
+            else if (i==0) {
+                return leg_labels[i];
+            }
+            else{
+                return ((format(leg_labels[i])) + "-" + (format(max)));
+            }
         });
-
-    // Append No Data in Legend
-    svg.selectAll("text")
-        .data("No data")
-        .enter()
-        .append("text")
-        .attr("class", "legend-labels")
-        .attr("x", 40)
-        .attr("y", leg_labels.length*40 + 15)
-        .text("No Data")
-
 }
 
 function showExplanation(selectedValue){
     var summary;
     if (selectedValue=="Average Work"){
-        summary= "Work includes..."
+        summary= "Work"
     }
     if (selectedValue=="Average Leisure"){
-        summary= "Leisure activities include..."
+        summary= "Leisure"
     }
     if (selectedValue=="Average Educational Time"){
-        summary= "Educational time includes..."
+        summary= "Education"
     }
     if (selectedValue=="Average Personal Care"){
-        summary= "Personal Care activities include..."
+        summary= "Personal Care"
     }
     document.getElementById("update").innerHTML=summary;
 }

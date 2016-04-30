@@ -95,7 +95,8 @@ StackedAreaChart.prototype.initVis = function(){
 
   // TO-DO: Stacked area layout
   vis.area = d3.svg.area()
-    .interpolate("step-before")
+    //.interpolate("step-before")
+    .interpolate("linear")
     .x(function(d) {return vis.x(d.age); })
     .y0(function(d) { return vis.y(d.y0); })
     .y1(function(d) { return vis.y(d.y0 + d.y); });

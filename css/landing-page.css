@@ -6,6 +6,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700,300,200);
+@import url(https://fonts.googleapis.com/css?family=Fauna+One);
+@import url(https://fonts.googleapis.com/css?family=Alice);
 
 iframe {
     width: 100%;
@@ -50,8 +54,14 @@ iframe {
     to{opacity: .0;}
 }
 
-::selection{
-    background: black;
+::selection {
+    background:#00cdc0; /* WebKit/Blink Browsers */
+    color: white;
+}
+
+::-moz-selection {
+    background:#00cdc0; /* Gecko Browsers */
+    color: white;
 }
 
 .polaroid {
@@ -161,12 +171,14 @@ ul#tabs li a:hover {
 }
 
 .accordion {
-    font-family: "Helvetica Neue";
-    font-size: large;
     color: #00cdc0;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Dosis", serif;
 }
+
 .ready {
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
     font-size: 16px;
     color: rgba(255, 65, 100, 0.43);
     font-style: italic;
@@ -508,17 +520,9 @@ h2,
 h4,
 h5,
 h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 700;
 
-}
-
-.tag {
-    color: #ff775c;
-}
-
-.tag2 {
-    color: black;
 }
 
 .descriptions{
@@ -532,8 +536,17 @@ h6 {
     color: #00cdc0;
     font-size: 22px;
     font-weight: 700;
-    font-family: "Playfair Display", "serif";
+    font-family: "Dosis", serif;
 }
+
+/*.sub-headings {*/
+    /*font-family: "Fauna One", serif;*/
+    /*font-weight: 400;*/
+    /*font-size: large;*/
+    /*!*font-style: italic;*!*/
+    /*!*margin-bottom: 30px;*!*/
+    /*color: #00cdc0;*/
+/*}*/
 
 .References{
     color: #ff775c;
@@ -564,6 +577,15 @@ h6 {
 .intro-message {
     position: relative;
     padding-top: 10%;
+}
+
+.intro-section {
+    position: relative;
+    padding-top: 20px;
+}
+
+.intro-section > h1 {
+    color: black;
 }
 
 .intro-message > h1 {
@@ -617,6 +639,11 @@ h6 {
     letter-spacing: 2px;
 }
 
+.content-section {
+    padding: 50px 0;
+    border-top: 2px dashed #00cdc0;
+}
+
 .content-section-a {
     padding: 50px 0;
     border-top: 2px dashed #00cdc0;
@@ -629,15 +656,6 @@ h6 {
 
 .section-heading {
     color: #ff775c;
-}
-
-.sub-headings {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    font-size: large;
-    font-style: italic;
-    /*margin-bottom: 30px;*/
-    color: #00cdc0;
 }
 
 .section-heading-spacer {
@@ -1382,4 +1400,12 @@ Main components
 
 .loading {
     animation-name: hgrotate;
+}
+
+.tag {
+    color: #ff775c;
+}
+
+.tag2 {
+    color: black;
 }
