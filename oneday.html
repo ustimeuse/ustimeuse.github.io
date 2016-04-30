@@ -42,10 +42,13 @@
 		<p><span>10: </span><span id="10"></span></p>
 		<p><span>11: </span><span id="11"></span></p>
 	</div>
+	<section id="diagram"></section>
+	<div id="tooltip"></div>
 	<div class="clr"></div>
 
 	<script src="js/d3-3-5-5.min.js"></script>
 	<script src="js/d3.tip.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 <script>
 var USER_SPEED = "slow";
 
@@ -75,6 +78,7 @@ var cat_key = [0,1,2,3,4,5,6,6,2,1,7,7,8,6,9,9,10];
 
 var speeds = { "slow": 1000, "medium": 30000, "fast": 50 };
 
+var treemap_arr = [];
 
 var time_notes = [
 	{ "start_minute": 1, "stop_minute": 40, "note": "The simulation kicks in, based on data from the American Time Use Survey." },
@@ -145,6 +149,12 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	data.forEach(function(d) {
 		var day_array = d.day.split(",");
 		var activities = [];
+
+		var treemap_obj = {
+			"name": "timeuse",
+			"children": []
+		};
+
 //		var matrix = Array.prototype.slice.call(matrix_origin);
 		for (var i=0; i < day_array.length; i++) {
 			// Duration
@@ -155,6 +165,8 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 				var act_index = activities.findIndex(function (v) {
 					return v.act == act;
 				});
+
+				var child_obj;
 
                 switch(+act) {
                     case 0:
@@ -170,6 +182,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                             activities[act_index].duration += +day_array[i];
                         }
 						matrix[+act][next_act] += 1;
+						child_obj = {"name": act, "size": +day_array[i]};
                         break;
                     case 7:
 					case 13:
@@ -179,6 +192,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                             activities['6'] += +day_array[i];
                         }
 						matrix[6][next_act] += 1;
+						child_obj = {"name": '6', "size": +day_array[i]};
                         break;
 					case 8:
 						if (act_index = -1) {
@@ -187,6 +201,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 							activities['2'] += +day_array[i];
 						}
 						matrix[2][next_act] += 1;
+						child_obj = {"name": '2', "size": +day_array[i]};
 						break;
 					case 9:
 						if (act_index = -1) {
@@ -195,6 +210,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 							activities['1'] += +day_array[i];
 						}
 						matrix[1][next_act] += 1;
+						child_obj = {"name": '1', "size": +day_array[i]};
 						break;
 					case 10:
 					case 11:
@@ -204,6 +220,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 							activities['7'] += +day_array[i];
 						}
 						matrix[7][next_act] += 1;
+						child_obj = {"name": '7', "size": +day_array[i]};
 						break;
 					case 12:
 						if (act_index = -1) {
@@ -212,6 +229,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 							activities['8'] += +day_array[i];
 						}
 						matrix[8][next_act] += 1;
+						child_obj = {"name": '8', "size": +day_array[i]};
 						break;
 					case 14:
 					case 15:
@@ -221,6 +239,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 							activities['9'] += +day_array[i];
 						}
 						matrix[9][next_act] += 1;
+						child_obj = {"name": '9', "size": +day_array[i]};
 						break;
 					case 16:
 						if (act_index = -1) {
@@ -229,14 +248,20 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 							activities['10'] += +day_array[i];
 						}
 						matrix[10][next_act] += 1;
+						child_obj = {"name": '10', "size": +day_array[i]};
 						break;
                 }
+
+				treemap_obj.children.push(child_obj);
+
 			}
 		}
 		sched_objs.push(activities);
+		treemap_arr.push(treemap_obj);
+
 //		matrix_array.push(matrix);
 	});
-
+	console.log(treemap_arr[0])
 	// Used for percentages by minute
 
 	var act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0}, {"index": 3, "count": 0},
@@ -254,7 +279,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			radius: 3,
 			x: init_x,
 			y: init_y,
-			color: "#e0d400", //color(act),
+			color: "#DB32A4", //color(act),
 			moves: 0,
 			next_move_time: o[0].duration,
 			sched: o
@@ -275,7 +300,10 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		.data(nodes)
 	  	.enter().append("circle")
 		.attr("r", function(d) { return d.radius; })
-		.style("fill", function(d) { return d.color; });
+		.style("fill", function(d) { return d.color; })
+		.on("click", function (d) {
+			updateTreemap(treemap_arr[d.index]);
+		});
 		// .call(force.drag);
 	
 	// Activity labels
@@ -454,7 +482,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		
 		USER_SPEED = d3.select(this).attr("data-val");
     });
-	updateChord(matrix);
+
 	/*********************/
 	/*  BAR CHART        */
 	/*********************/
@@ -568,103 +596,187 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	/*  CHORD DIAGRAM    */
 	/*********************/
 
-	function updateChord (matrix) {
+	//*******************************************************************
+	//  CREATE MATRIX AND MAP
+	//*******************************************************************
+	d3.csv('data/chordmatrix.csv', function (error, data) {
+		var mpr = chordMpr(data);
+
+		mpr
+				.addValuesToMap('current')
+				.setFilter(function (row, a, b) {
+					return (row.current === a.name && row.next === b.name)
+				})
+				.setAccessor(function (recs, a, b) {
+					if (!recs[0]) return 0;
+					return +recs[0].count;
+				});
+		drawChords(mpr.getMatrix(), mpr.getMap());
+	});
+	//*******************************************************************
+	//  DRAW THE CHORD DIAGRAM
+	//*******************************************************************
+	function drawChords (matrix, mmap) {
+		var w = 980, h = 800, r1 = h / 2, r0 = r1 - 100;
+
+		var fill = d3.scale.category10();
 
 		var chord = d3.layout.chord()
-				.padding(.05)
+				.padding(.02)
 				.sortSubgroups(d3.descending)
-				.matrix(matrix);
+				.sortChords(d3.descending);
 
-		var innerRadius = Math.min(width2, height2) * .41,
-				outerRadius = innerRadius * 1.1;
+		var arc = d3.svg.arc()
+				.innerRadius(r0)
+				.outerRadius(r0 + 20);
 
-		var fill = d3.scale.ordinal()
-				.domain(d3.range(11))
-				.range(["#000000", "#FFDD89", "#957244", "#F26223","#e0d400","#1c8af9","#51BC05","#FF7F00","#DB32A4","#00CDF8","#E63B60"]);
+		var svg = d3.select("#diagram").append("svg")
+				.attr("width", w)
+				.attr("height", h)
+				.append("svg:g")
+				.attr("id", "circle")
+				.attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
 
-		var svg3 = d3.select("body").append("svg")
-				.attr("width", width2)
-				.attr("height", height2)
-				.append("g")
-				.attr("transform", "translate(" + width2 / 2 + "," + height2 / 2 + ")");
+		svg.append("circle")
+				.attr("r", r0 + 20);
 
-		svg3.append("g").selectAll("path")
-				.data(chord.groups)
-				.enter().append("path")
-				.style("fill", function (d) {
-					return fill(d.index);
-				})
-				.style("stroke", function (d) {
-					return fill(d.index);
-				})
-				.attr("d", d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius))
-				.on("mouseover", fade(0))
-				.on("mouseout", fade(1));
+		var rdr = chordRdr(matrix, mmap);
+		chord.matrix(matrix);
 
-		var ticks = svg3.append("g").selectAll("g")
-				.data(chord.groups)
-				.enter().append("g").selectAll("g")
-				.data(groupTicks)
-				.enter().append("g")
-				.attr("transform", function (d) {
-					return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
-							+ "translate(" + outerRadius + ",0)";
-				});
+		var g = svg.selectAll("g.group")
+				.data(chord.groups())
+				.enter().append("svg:g")
+				.attr("class", "group")
+				.on("mouseover", mouseover)
+				.on("mouseout", function (d) { d3.select("#tooltip").style("visibility", "hidden") });
 
-		ticks.append("line")
-				.attr("x1", 1)
-				.attr("y1", 0)
-				.attr("x2", 5)
-				.attr("y2", 0)
-				.style("stroke", "#000");
+		g.append("svg:path")
+				.style("stroke", "none")
+				.style("fill", function(d) { return fill(d.index); })
+				.attr("d", arc);
 
-		ticks.append("text")
-				.attr("x", 8)
+		g.append("svg:text")
+				.each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
 				.attr("dy", ".35em")
-				.attr("transform", function (d) {
-					return d.angle > Math.PI ? "rotate(180)translate(-16)" : null;
+				.attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
+				.attr("transform", function(d) {
+					return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+							+ "translate(" + (r0 + 26) + ")"
+							+ (d.angle > Math.PI ? "rotate(180)" : "");
 				})
-				.style("text-anchor", function (d) {
-					return d.angle > Math.PI ? "end" : null;
-				})
-				.text(function (d) {
-					return d.label;
-				});
+				.text(function(d) { return act_codes[rdr(d).gname].short; });
 
-		svg3.append("g")
+		var chordPaths = svg.selectAll("path.chord")
+				.data(chord.chords())
+				.enter().append("svg:path")
 				.attr("class", "chord")
-				.selectAll("path")
-				.data(chord.chords)
-				.enter().append("path")
-				.attr("d", d3.svg.chord().radius(innerRadius))
-				.style("fill", function (d) {
-					return fill(d.target.index);
+				.style("stroke", function(d) { return d3.rgb(fill(d.target.index)).darker(); })
+				.style("fill", function(d) { return fill(d.target.index); })
+				.attr("d", d3.svg.chord().radius(r0))
+				.on("mouseover", function (d) {
+					d3.select("#tooltip")
+							.style("visibility", "visible")
+							.html(chordTip(rdr(d)))
+							.style("top", function () { return (d3.event.pageY - 100)+"px"})
+							.style("left", function () { return (d3.event.pageX - 100)+"px";})
 				})
-				.style("opacity", 1);
+				.on("mouseout", function (d) { d3.select("#tooltip").style("visibility", "hidden") });
 
-		// Returns an array of tick angles and labels, given a group.
-		function groupTicks(d) {
-			var k = (d.endAngle - d.startAngle) / d.value;
-			return d3.range(0, d.value, 1000).map(function (v, i) {
-				return {
-					angle: v * k + d.startAngle,
-					label: v/1000 + "k"
-				};
+		function chordTip (d) {
+			var p = d3.format(".0%");
+			q = d3.format("0d");
+			return act_codes[d.sname].short + " &#8594; " + act_codes[d.tname].short + ":<br>"
+					+ q(d.svalue) + " occurrences<br>" + act_codes[d.tname].short + " &#8594; " +
+					act_codes[d.sname].short + ":<br>" + q(d.tvalue) + " occurrences"
+		}
+
+		function groupTip (d) {
+			return act_codes[d.gname].short + "<br>" + d.gvalue.toFixed() + " total occurences";
+		}
+
+
+		function mouseover(d, i) {
+			d3.select("#tooltip")
+					.style("visibility", "visible")
+					.html(groupTip(rdr(d)))
+					.style("top", function () { return (d3.event.pageY - 80)+"px"})
+					.style("left", function () { return (d3.event.pageX - 130)+"px";})
+
+			chordPaths.classed("fade", function(p) {
+				return p.source.index != i
+						&& p.target.index != i;
 			});
 		}
-
-		// Returns an event handler for fading a given chord group.
-		function fade(opacity) {
-			return function (g, i) {
-				svg3.selectAll(".chord path")
-						.filter(function (d) {
-							return d.source.index != i && d.target.index != i;
-						})
-						.transition()
-						.style("opacity", opacity);
-			};
-		}
 	}
+
+	/*********************/
+	/*  Tree Map         */
+	/*********************/
+	var margin_t = {top: 40, right: 10, bottom: 10, left: 10},
+			width_t = 960 - margin_t.left - margin_t.right,
+			height_t = 500 - margin_t.top - margin_t.bottom;
+
+	var color = d3.scale.category10();
+
+	var treemap = d3.layout.treemap()
+			.size([width_t, height_t])
+			.sticky(false)
+			.value(function(d) { return d.size; });
+
+	var div = d3.select("body").append("div")
+			.style("position", "relative")
+			.style("width", (width_t + margin_t.left + margin_t.right) + "px")
+			.style("height", (height_t + margin_t.top + margin_t.bottom) + "px")
+			.style("left", margin_t.left + "px")
+			.style("top", margin_t.top + "px");
+
+	function updateTreemap (root) {
+
+//		var node = div.datum(root).selectAll(".node")
+//				.data(treemap.nodes)
+//				.enter().append("div")
+//				.attr("class", "node")
+//				.call(position)
+//				.style("background", function(d) { return color(d.name); })
+//				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
+
+		var node = div.datum(root).selectAll(".node")
+				.data(treemap.nodes);
+
+		var enter = node
+				.enter().append("div")
+				.attr("class", "node");
+		enter
+				.call(position)
+				.style("background", function(d) { return color(d.name); })
+				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
+		node.
+				exit().remove();
+
+//		enter
+//				.call(position)
+//				.style("background", function(d) { return color(d.name); })
+//				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
+//		d3.selectAll("input").on("change", function change() {
+//			var value = this.value === "count"
+//					? function() { return 1; }
+//					: function(d) { return d.size; };
+
+//			node
+//					.data(treemap.value(value).nodes)
+//					.transition()
+//					.duration(1500)
+//					.call(position);
+//		});
+	}
+
+	function position() {
+		this.style("left", function(d) { return d.x + "px"; })
+				.style("top", function(d) { return d.y + "px"; })
+				.style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
+				.style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+	}
+
 
 }); // @end d3.tsv
 
