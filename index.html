@@ -91,10 +91,9 @@
                   <li>
                     <a href="#data">Data</a>
                   </li>
-
-                    <!--<li>-->
-                        <!--<a href="#insights">Insights</a>-->
-                    <!--</li>-->
+                  <li>
+                      <a href="#insights">Visualizations</a>
+                  </li>
                     <li>
                         <a href="#our_team">Team</a>
                     </li>
@@ -127,7 +126,7 @@
                                 <a href="oneday.html" class="btn btn-default btn-lg"> <span class="network-name">A Day in the Life</span></a>
                             </li>
                             <li>
-                                <a href="choropleth.html" class="btn btn-default btn-lg"> <span class="network-name">Across the US</span></a>
+                                <a href="choropleth.html" class="btn btn-default btn-lg"> <span class="network-name">Across America</span></a>
                             </li>
                             <li>
                                 <a href="differences.html" class="btn btn-default btn-lg"> <span class="network-name">Group Differences</span></a>
@@ -146,7 +145,7 @@
     <!-- Page Content -->
 
 
-	<a  name="services"></a>
+  <a  name="services"></a>
     <div  id="time_management" class="content-section-a">
         <div class="container">
             <div class="row">
@@ -300,7 +299,7 @@
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data</>
+                            <h2 class="accordion mainpoint">Data</>
                             <p class="descriptions">Our data is derived from American Time Use Survey (ATUS) database, sponsored by the Bureau of Labor Statistics and conducted by the US Census Bureau, tracking the amount of time people spend doing various activities such as sleeping, volunteering, travelling, working, playing sports.
                             </p>
                             <p class="descriptions">The data is huge, consisting of data from 2003 to 2014. To avoid the burden of analyzing such a huge database, we decide to pick data from 2014.
@@ -310,7 +309,7 @@
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data Analysis</h2>
+                            <h2 class="accordion mainpoint">Data Analysis</h2>
                             <p class="descriptions">We use R extensively to clean the data. Major steps for cleaning the data include:
                             Eliminating subjects with births (we are only interested in subjects with no children by choice); Eliminating
                             rows with NIU values for employment status or school/college enrollment; Creating dataframes and new csv
@@ -320,7 +319,7 @@
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data References</h2>
+                            <h2 class="accordion mainpoint">Data References</h2>
                             <p class="descriptions"> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
                         </li>
                     </ul>
@@ -347,8 +346,41 @@
         </div>
     </div>
 
-
-
+    <div class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="tag">Across America</h2>
+            <form class="form-inline">
+              <div class="form-group">
+                <br>
+                <label for="rankingType">Category to Map by: </label>
+                <select class="form-control" id="map-type" onchange="updateMap()">
+                  <option value="Average Work">Average Working Time (min)</option>
+                  <option value="Average Leisure">Average Leisure Time (min)</option>
+                  <option value="Average Personal Care">Average Personal Care Time (min)</option>
+                  <option value="Average Educational Time">Average Education Time (min)</option>
+                </select>
+                <br><br><br><br>
+              </div>
+            </form>
+            <div id="update"></div>
+            <br><br><br><br>
+            <div id="visualization"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Females vs Males</h2>
+            <div id="overlapping-histogram"></div>
+          </div>
+          <div class="col-md-6">
+            <h2>Text</h2>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="content-section-b">
         <div class="container">
@@ -571,7 +603,10 @@
     <script src="js/donut1.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/parallelCoordinates.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/layeredHistogram.js"></script>
+    <script src="js/vis-choropleth1.js"></script>
+    <script src="js/main.js"></script>
+
     <script>
         // performs smooth scrolling to anchor tags
         // reference: https://css-tricks.com/snippets/jquery/smooth-scrolling/

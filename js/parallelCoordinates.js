@@ -1,5 +1,4 @@
 var pdata;
-var ppath;
 var format = d3.format("%")
 
 d3.csv("data/group-avgs.csv", function(error, csv) {
@@ -51,7 +50,8 @@ function updatePath(selectedValue) {
   // Extract the list of dimensions and create a scale for each.
   x.domain(dimensions = d3.keys(pdata[0]).filter(function(d) {
     return d != "Group.1" && d != "type" && (y[d] = d3.scale.linear()
-        .domain(d3.extent(pdata, function(p) { return +p[d]; }))
+        //.domain(d3.extent(pdata, function(p) { return +p[d]; }))
+        .domain([0,.5])
         .range([height, 0]));
   }));
 

@@ -38,13 +38,12 @@ layeredHistogram.prototype.initVis = function() {
 
   var vis = this;
 
-  // A formatter for counts.
-  vis.formatCount = d3.format(",.0f");
+  vis.margin = { top: 40, right: 10, bottom: 60, left: 60 },
+    vis.padding= vis.margin.top+vis.margin.bottom;
 
-  vis.margin = { top: 40, right: 200, bottom: 60, left: 60 };
-
-  vis.width = 800 - vis.margin.left - vis.margin.right,
-    vis.height = 500 - vis.margin.top - vis.margin.bottom;
+  //console.log(vis.padding);
+  vis.width = 400 - vis.margin.left - vis.margin.right,
+    vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
   // SVG drawing area
   vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -67,7 +66,8 @@ layeredHistogram.prototype.initVis = function() {
 
   vis.yAxis = d3.svg.axis()
     .scale(vis.y)
-    .orient("left");
+    .orient("left")
+    .tickFormat(d3.format("%"));
 
   vis.svg.append("g")
     .attr("class", "x-axis axis")
@@ -76,13 +76,41 @@ layeredHistogram.prototype.initVis = function() {
   vis.svg.append("g")
     .attr("class", "y-axis axis");
 
+  // label http://bl.ocks.org/phoebebright/3061203
   vis.svg.append("text")
     .attr("class", "title")
     .attr("x", (vis.width / 2))
     .attr("y", 0 - (vis.margin.top / 2))
-    .attr("text-anchor", "middle")
-    .style("font-size", "16px")
-    .style("text-decoration", "underline");
+    .attr("text-anchor", "middle");
+
+  // now add titles to the axes
+  vis.svg.append("text")
+      .attr("class", "axis-label")
+      .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+      .attr("transform", "translate("+(-vis.margin.left/1.5)+","+(vis.height/2)+") rotate(-90)")  // text is drawn off the screen top left, move down and out and rotate
+      .text("Frequency");
+
+  vis.svg.append("text")
+      .attr("class", "axis-label")
+      .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+      .attr("transform", "translate("+ (vis.width/2) +","+(vis.height+vis.margin.bottom/1.5)+")")  // centre below axis
+      .text("Number of Hours in a 24-Hour Day");
+
+  // Add a legend d3-legend.susielu.com/#usage
+  vis.ordinal = d3.scale.ordinal()
+      .domain(["Female", "Male", "Overlap"])
+      .range(["rgba(255, 0, 0, 0.5)","rgba(0, 0, 255, 0.5)", "rgb(160, 32, 240)"]);
+
+  vis.svg.append("g")
+      .attr("class", "legendOrdinal")
+      .attr("transform", "translate("+(vis.width-70)+",0)");
+
+  vis.legendOrdinal = d3.legend.color()
+      .shapePadding(10)
+      .scale(vis.ordinal);
+
+  vis.svg.select(".legendOrdinal")
+      .call(vis.legendOrdinal);
 
   vis.wrangleData();
 }
@@ -114,24 +142,32 @@ layeredHistogram.prototype.updateVis = function() {
 
   // Generate a histogram using 24 uniformly-spaced bins.
   vis.values = d3.layout.histogram()
+    .frequency(false)
     .bins(vis.x.ticks(24))
     .value(function(d) { return d[vis.activity]; })
     (vis.data);
 
   // Female data values
   vis.femaleValues = d3.layout.histogram()
+    .frequency(false)
     .bins(vis.x.ticks(24))
     .value(function(d) { return d[vis.activity]; })
     (vis.femaleData);
 
   // Male data values
   vis.maleValues = d3.layout.histogram()
+    .frequency(false)
     .bins(vis.x.ticks(24))
     .value(function(d) { return d[vis.activity]; })
     (vis.maleData);
 
+  var femaleMax = d3.max(vis.femaleValues, function(d) { return d.y; });
+  var maleMax = d3.max(vis.maleValues, function(d) { return d.y; });
+  var yMax = d3.max([femaleMax,maleMax])+.05;
+  console.log(yMax);
+
   // Update y domain
-  vis.y.domain([0, d3.max(vis.values, function(d) { return d.y; })])
+  vis.y.domain([0, yMax]);
 
   vis.bar1 = vis.svg.selectAll(".bar1").data(vis.femaleValues);
 

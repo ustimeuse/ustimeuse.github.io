@@ -58,10 +58,10 @@ function createVis() {
 
   // TO-DO: INSTANTIATE VISUALIZATION
   //bubbleChart = new BubbleChart("bubble-chart",data);
-  femalehistogram = new Histogram("female-histogram",femaleData,"act_leisure");
-  malehistogram = new Histogram("male-histogram",maleData,"act_leisure");
+  //femalehistogram = new Histogram("female-histogram",femaleData,"act_leisure");
+  //malehistogram = new Histogram("male-histogram",maleData,"act_leisure");
   layeredhistogram = new layeredHistogram("overlapping-histogram",data,"act_leisure");
-  areachart = new StackedAreaChart("stacked-area-chart",data);
+  //areachart = new StackedAreaChart("stacked-area-chart",data);
 }
 
 function updateChart(){
