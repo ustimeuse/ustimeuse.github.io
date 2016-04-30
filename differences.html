@@ -22,6 +22,15 @@
       <div id="stacked-area-chart"></div>
     </div>
   </div>
+  <!--<div class="row">-->
+    <!--<div class="col-md-12">-->
+      <!--<h1>Time spent in <span><select id="plot-type" onchange="updateChart()">-->
+        <!--<option value="leisure">Leisure</option>-->
+        <!--<option value="work">Work</option>-->
+      <!--</select></span> (in average mins/day) by Age</h1>-->
+      <!--<div id="bubble-chart"></div>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
 <!-- Load JS libraries -->
 <script src="js/jquery.min.js"></script>
@@ -40,7 +49,7 @@
   var data;
   var femaleData;
   var maleData;
-  var dataByState;
+  var cleanData;
 
   // Set ordinal color scale
   var colorScale = d3.scale.category20();
@@ -54,9 +63,9 @@
       .defer(d3.csv, "data/yuqi_new.csv")
       .await(analyze);
 
-  function analyze(error, dataToUse, dataByStateCSV){
+  function analyze(error, dataToUse, csv){
 
-    dataByState = dataByStateCSV;
+    cleanData = csv;
     data=dataToUse;
 
     for(var i=0; i<dataToUse.length; i++){
@@ -75,8 +84,16 @@
       data[i].age = +dataToUse[i].age;
     }
 
-    console.log(dataByState[0]);
-    console.log(data[0]);
+    for(var i=0; i<cleanData.length; i++){
+      cleanData[i].educ = +cleanData[i].educ/1440;
+      cleanData[i].leisure = +cleanData[i].leisure/1440;
+      cleanData[i].pcare = +cleanData[i].pcare/1440;
+      cleanData[i].social = +cleanData[i].social/1440;
+      cleanData[i].sports = +cleanData[i].sports/1440;
+      cleanData[i].work = +cleanData[i].work/1440;
+    }
+
+    console.log(cleanData[0]);
 
     // Filter function
     femaleData = data.filter(function(item){
@@ -96,6 +113,11 @@
 
     // TO-DO: INSTANTIATE VISUALIZATION
     areachart = new StackedAreaChart("stacked-area-chart",data);
+//    scatterplot = new BubbleChart("bubble-chart",cleanData);
+  }
+
+  function updateChart(){
+    scatterplot.updateVis();
   }
 </script>
 </body>

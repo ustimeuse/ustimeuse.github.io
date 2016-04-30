@@ -1,8 +1,8 @@
-var Gender = { label: 'Gender', pct: [49.45,50.55,0,0,0]},
-    Races = { label: 'Race',   pct: [11.4,80.4,5.5,2.7,0]},
-    Income = { label: 'Income',   pct: [14.2,23.9, 20.3, 15.4, 26.2]},
-    Employment = { label: 'Employment', pct: [82.5,17.5,0,0,0]};
-    data = Gender;
+var gender = { label: 'Gender', pct: [49.45,50.55,0,0,0]},
+    race = { label: 'Race',   pct: [11.4,80.4,5.5,2.7,0]},
+    income = { label: 'Income',   pct: [14.2,23.9, 20.3, 15.4, 26.2]},
+    employment = { label: 'Employment', pct: [82.5,17.5,0,0,0]};
+    data = gender;
 
 var labels={Gender: ["Female","Male"], Race: ["Black only","White only","Asian only", "Mixed"],
     Income: ["Below $25k","$25k-$50k","$50k-$75k", "$75k-$100k","$100k+"], Employment: ["Full Time", "Part Time"]};
@@ -77,9 +77,9 @@ updateInfo(data);
 function updateChart(model) {
 
     data = eval(model); // which model?
-    console.log(data);
-    console.log(data.label)
-    console.log(labels[data.label][1]);
+    //console.log(data);
+    //console.log(data.label)
+    //console.log(labels[data.label][1]);
 
     arcs.data(donut(data.pct)); // recompute angles, rebind data
     arcs.transition().ease("elastic").duration(dur).attrTween("d", arcTween);
@@ -94,7 +94,6 @@ function updateChart(model) {
 
     updateInfo(data);
 
-    console.log(arc.centroid(data.pct[1]));
 
     pieLabel.text(data.label);
 }
@@ -102,6 +101,7 @@ function updateChart(model) {
 // click handler
 $("#donut a").click(function() {
     updateChart(this.href.slice(this.href.indexOf('#') + 1));
+    updatePath(this.href.slice(this.href.indexOf('#') + 1));
 });
 
 function updateInfo(data){
@@ -109,7 +109,6 @@ function updateInfo(data){
     var summary="";
      for (i=0; i<labels[data.label].length; i++ ){
         summary = summary + "<li>" + labels[data.label][i] + ": " + data.pct[i] +"%</li>";
-        console.log(summary);
     }
     document.getElementById("updateInfo").innerHTML=summary;
 }

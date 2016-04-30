@@ -83,7 +83,7 @@ layeredHistogram.prototype.initVis = function() {
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .style("text-decoration", "underline");
-  
+
   vis.wrangleData();
 }
 

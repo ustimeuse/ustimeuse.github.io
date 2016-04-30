@@ -10,7 +10,6 @@ BubbleChart = function(_parentElement, _data) {
   this.parentElement = _parentElement;
   this.data = _data;
   this.initVis();
-
 }
 
 
@@ -41,7 +40,7 @@ BubbleChart.prototype.initVis = function() {
 
   vis.y = d3.scale.linear()
     .range([vis.height, 0])
-    .domain(d3.extent(vis.data, function(d) { return d.act_leisure; }));
+    .domain(d3.extent(vis.data, function(d) { return d.leisure; }));
 
   vis.xAxis = d3.svg.axis()
     .scale(vis.x)
@@ -65,7 +64,7 @@ BubbleChart.prototype.initVis = function() {
   vis.circle.enter()
     .append("circle")
     .attr("fill", function(d){
-      return incomeColors(d.famincome);
+      return incomeColors(d["income.new"]);
     })
     .attr("r", function(d){
       return 5;
@@ -84,9 +83,7 @@ BubbleChart.prototype.initVis = function() {
 BubbleChart.prototype.wrangleData = function() {
   var vis = this;
 
-  vis.displayData = vis.data.filter(function(item){
-    return item.famincome!="Refused" || item.famincome!="Don't know" || item.famincome!="Blank";
-  });
+  vis.displayData = vis.data;
 
   // Update the visualization
   vis.updateVis();
@@ -102,7 +99,7 @@ BubbleChart.prototype.updateVis = function() {
   vis = this;
 
   vis.selected_value = d3.select("#plot-type").property("value");
-
+  console.log(vis.selected_value);
   // Update (set the dynamic properties of the elements)
   vis.circle
     .transition()
@@ -111,7 +108,7 @@ BubbleChart.prototype.updateVis = function() {
       return vis.x(d.age);
     })
     .attr("cy", function(d) {
-      console.log("Entering selection?");
+      console.log(d[vis.selected_value]);
       return vis.y(d[vis.selected_value]);
     });
 
@@ -126,26 +123,7 @@ BubbleChart.prototype.updateVis = function() {
 BubbleChart.prototype.addLegend = function() {
   vis=this;
 
-  vis.labels = [
-    'Less than $5,000',
-    '$5,000 to $7,499',
-    '$7,500 to $9,999',
-    '$10,000 to $12,499',
-    '$12,500 to $14,999',
-    '$15,000 to $19,999',
-    '$20,000 to $24,999',
-    '$25,000 to $29,999',
-    '$30,000 to $34,999',
-    '$35,000 to $39,999',
-    '$40,000 to $49,999',
-    '$50,000 to $59,999',
-    '$60,000 to $74,999',
-    '$75,000 to $99,999',
-    '$100,000 to $149,999',
-    '$150,000 and over',
-    'Refused',
-    "Don't know",
-    "Blank"];
+  vis.labels=["Below $25k","$25k-$50k","$50k-$75k", "$75k-$100k","$100k+"];
 
   // Create legend
   vis.legend = vis.svg.selectAll('rect')
@@ -161,7 +139,7 @@ BubbleChart.prototype.addLegend = function() {
     .attr("height", 20)
     .attr("stroke", "black")
     .style("fill", function(d){
-      return labelColors(d);
+      return incomeColors(d);
     });
 
   // Add labels for legend
@@ -184,39 +162,10 @@ function incomeColors(d) {
   var color = d3.rgb("green");
 
   switch (d) {
-    case 'Less than $5,000': return "rgb(255,255,255)";
-    case '$5,000 to $7,499': return "rgb(255,255,255)";
-    case '$7,500 to $9,999': return "rgb(255,255,255)";
-    case '$10,000 to $12,499': return "rgb(255,255,255)";
-    case '$12,500 to $14,999': return "rgb(255,255,255)";
-    case '$15,000 to $19,999': return "rgb(255,255,255)";
-    case '$20,000 to $24,999': return "rgb(255,255,255)";
-    case '$25,000 to $29,999': return color.brighter(2);
-    case '$30,000 to $34,999': return color.brighter(2);
-    case '$35,000 to $39,999': return color.brighter(2);
-    case '$40,000 to $49,999': return color.brighter(2);
-    case '$50,000 to $59,999': return color;
-    case '$60,000 to $74,999': return color;
-    case '$75,000 to $99,999': return color;
-    case '$100,000 to $149,999': return color;
-    case '$150,000 and over': return color.darker(2);
-    case 'Refused': return "rgb(255,255,255)";
-    case "Don't know": return "rgb(255,255,255)";
-    case "Blank": return "rgb(255,255,255)";
-  }
-}
-
-
-
-function labelColors(d) {
-
-  var color = d3.rgb("green");
-
-  switch (d) {
-    case 'Less than $25,000': return "rgb(255,255,255)";
-    case '$25,000 to $49,999': return color.brighter(2);
-    case '$50,000 to $74,999': return color;
-    case '$75,000 to $99,999': return color;
-    case '$100,000 and over': return color.darker(2);
+    case "Below $25k": return "white";
+    case "$25k-$50k": return color.brighter(2);
+    case "$50k-$75k": return color;
+    case "$75k-$100k": return color.darker(2);
+    case "$100k+": return color.darker(4);
   }
 }

@@ -30,7 +30,39 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        svg {
+            font: 10px sans-serif;
+        }
 
+        .background path {
+            fill: none;
+            stroke: #ddd;
+            shape-rendering: crispEdges;
+        }
+
+        .foreground path {
+            fill: none;
+        }
+
+        .brush .extent {
+            fill-opacity: .3;
+            stroke: #fff;
+            shape-rendering: crispEdges;
+        }
+
+        .axis line,
+        .axis path {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .axis text {
+            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+            cursor: move;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,12 +86,13 @@
                     <li>
                         <a href="#time_management">Motivation</a>
                     </li>
-                  <li>
-                    <a href="#data">Data</a>
-                  </li>
+
                   <li>
                         <a href="#objectives">Goals</a>
                     </li>
+                  <li>
+                    <a href="#data">Data</a>
+                  </li>
 
                     <!--<li>-->
                         <!--<a href="#insights">Insights</a>-->
@@ -87,7 +120,7 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <img src="img/American.png">
-                        <p class="typing" style="margin-left: auto; margin-right: auto">America: A Land of Freedom... <span class="tag2">BUT maybe NOT Free Time?</span><span class="type">|</span></p>
+                        <h2 class="typing tag" style="margin-left: auto; margin-right: auto">America: A Land of Freedom... <span class="tag2">But Maybe Not Free Time?</span><span class="type">|</span></h2>
                         <br>
                         <hr class="intro-divider">
                         <br>
@@ -153,22 +186,95 @@
                                 </p>
                             </li>
                         </ul>
-                </div>
 
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <div class="col-md-12">
+                    <h1 class="section-heading">Motivation</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                    <h2 class="mainpoint">Why is it important?</h2>
+                    <p>As society progresses, we hear and tell others the word “busy” more often.
+                    We read more articles about “time-management” and maintaining “work-life balance” to explore
+                    how to best maximize the limited 24-hour day that we all have.</p>
+                    <h2 class="mainpoint">Personal Use</h2><p>The amount of time we spend within
+                    24-hour affects our mental, physical, and emotional health. We track how we use time to assess how
+                    well we are spending our days for future improvement and to make the most out of the time we have each day.
+                    </p>
+                </div>
+                <!--<div class="col-lg-5 col-sm-6">-->
+                    <!--<div class="clearfix"></div>-->
+                    <!--<h1 class="section-heading">Motivation</h1>-->
+                    <!--<h2 class="sub-headings">Why is it important?</h2>-->
+                        <!--<ul id="tabs">-->
+                            <!--<li class="active">Personal Use</li>-->
+                            <!--<li>Nation's Progress</li>-->
+                            <!--<li>Companies & Business</li>-->
+                        <!--</ul>-->
+                        <!--<ul id="tab">-->
+                            <!--<li class="active">-->
+                                <!--<p class="descriptions">As society progresses, we hear and tell others the word “busy” more often.-->
+                                    <!--We read more articles about “time-management” and maintaining “work-life balance” to explore-->
+                                    <!--how to best maximize the limited 24-hour day that we all have. The amount of time we spend within-->
+                                    <!--24-hour affects our mental, physical, and emotional health. We track how we use time to assess how-->
+                                    <!--well we are spending our days for future improvement and to make the most out of the time we have each day.-->
+                                <!--</p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<p class="descriptions">Beyond ourselves, the pattern of how Americans spend their time has tremendous influence-->
+                                    <!--on the US economy, culture, family life, future development, and much more. Understanding a nation’s-->
+                                    <!--time use allows policy makers, economists, sociologists, demographers, and individuals to better serve-->
+                                    <!--the nation and better understand people’s behaviors. Time-use data can reveal interesting insights on how-->
+                                    <!--different demographic groups spend their time and possibly enable in-depth discovery of evidence supporting-->
+                                    <!--or opposing popular conceptions regarding gender inequality, poverty, and other social problems exist in the community.-->
+                                <!--</p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<p class="descriptions">Companies and businesses can also utilize this knowledge of time use to devise optimal strategies to advertise their-->
+                                    <!--products by gaining insights into their customers’ behaviors.-->
+                                <!--</p>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                <!--</div>-->
+                <div class="col-md-4">
+                    <h2 class="mainpoint">Demographic Insights</h2>
+
+                    <p>Time-use data can reveal interesting insights on how
+                        different demographic groups spend their time and possibly enable in-depth discovery of evidence supporting
+                        or opposing popular conceptions regarding gender inequality, poverty, and other social problems exist in the community.
+                    </p>
+                    <p>Companies and businesses can also utilize this knowledge of time use to devise optimal strategies to advertise their
+                        products by gaining insights into their customers’ behaviors.</p>
+
+                </div>
+                <div class="col-md-4">
+                    <h2 class="mainpoint">Policy Implications</h2>
+                    <!--<p>Beyond ourselves, the pattern of how Americans spend their time has tremendous influence-->
+                        <!--on the US economy, culture, family life, future development, and much more.-->
+                    <!--</p>-->
+                    <p>Understanding a nation’s
+                        time use allows policy makers, economists, sociologists, demographers, and individuals to better serve
+                        the nation and better understand people’s behaviors.</p>
+
                     <br><br><br><br><br><br><br><br><br><br>
                     <br><br><br><br><br><br><br><br><br><br>
-                    <div class="clock">
-                        <div class="top"></div>
-                        <div class="right"></div>
-                        <div class="bottom"></div>
-                        <div class="left"></div>
-                        <div class="center"></div>
-                        <div class="shadow"></div>
-                        <div class="hour"></div>
-                        <div class="minute"></div>
-                        <div class="second"></div>
-                    </div>
+                    <p></p>
+                    <p></p>
+                    <div class="padding"></div>
+                        <div class="clock">
+                            <div class="top"></div>
+                            <div class="right"></div>
+                            <div class="bottom"></div>
+                            <div class="left"></div>
+                            <div class="center"></div>
+                            <div class="shadow"></div>
+                            <div class="hour"></div>
+                            <div class="minute"></div>
+                            <div class="second"></div>
+                        </div>
+
+
                 </div>
             </div>
 
@@ -178,33 +284,70 @@
     </div>
     <!-- /.content-section-a -->
 
+    <div class="content-section-b">
+        <div class="container">
+            <div id="objectives" class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h2 class="section-heading">Goals & Objectives</h2>
+                    <ul>
+                        <li class="descriptions"><span class="mainpoint">Explore</span>
+                            how groups of various demographics based on age, employment, gender, income level spend time differently
+                        </li>
+                        <br>
+                        <li class="descriptions"><span class="mainpoint">Gain Insights</span>
+                            into the time distribution of various activities a typical/average American spends doing
+                        </li>
+                        <br>
+                        <li class="descriptions"><span class="mainpoint">Visualize and compare </span>
+                            duration and movements/transitions of activities throughout the day of various groups
+                        </li>
+                        <br>
+                        <li class="descriptions"><span class="mainpoint">Map out and compare </span>
+                            spending habits of people across different states in the US
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+                <!--<div class="col-lg-6">-->
+                <!--<div id="floatingCirclesG">-->
+                <!--<div class="f_circleG" id="frotateG_01"></div>-->
+                <!--<div class="f_circleG" id="frotateG_02"></div>-->
+                <!--<div class="f_circleG" id="frotateG_03"></div>-->
+                <!--<div class="f_circleG" id="frotateG_04"></div>-->
+                <!--<div class="f_circleG" id="frotateG_05"></div>-->
+                <!--<div class="f_circleG" id="frotateG_06"></div>-->
+                <!--<div class="f_circleG" id="frotateG_07"></div>-->
+                <!--<div class="f_circleG" id="frotateG_08"></div>-->
+                <!--</div>-->
+                <!--<p class="ready">Get Set. Ready. Explore</p>-->
+                <!--</div>-->
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
 
     <div id="data" class="content-section-a">
-
         <div class="container">
-
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <p class="section-heading">Explore Our Data</p>
+                <div class="col-lg-6 col-sm-push-6 col-sm-6">
+                    <h2 class="section-heading">Data & Methodology</h2>
                     <ul>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data</>
+                            <h2 class="accordion">Data</h2>
                             <p class="descriptions">Our data is derived from American Time Use Survey (ATUS) database, sponsored by the Bureau of Labor Statistics and conducted by the US Census Bureau, tracking the amount of time people spend doing various activities such as sleeping, volunteering, travelling, working, playing sports.
                             </p>
                             <p class="descriptions">The data is huge, consisting of data from 2003 to 2014. To avoid the burden of analyzing such a huge database, we decide to pick data from 2014.
                                 The survey was conducted by randomly selecting individuals from a subset of households. Subjects are interviewed only once about how they spent their time on the previous day. Demographic information on the subjects (age, sex, race, zip code of location, gender, etc…) was also collected.
                             </p>
-                            <p class="descriptions"> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
                         </li>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
                             <h2 class="accordion">Data Analysis</h2>
-                            <div class="help-tip">
-                                <p>This is the same tooltip, but with <b>HTML tags!</b> <a href="http://tutorialzine.com/">And a links!</a> You could do <i><strike>even more</strike></i>!</p>
-                            </div>
                             <p class="descriptions">We use R extensively to clean and format the data. Major steps for cleaning the data include:
                             Reformat data; Draw histograms to see overall distributions of various categories of time spent by people of
                             different demographic groups; Eliminate rows with NIU values for employment status or school/college enrollment;
@@ -212,18 +355,22 @@
                             to determine interesting variables to be feature in the data visualizations; Create dataframes and new csv files with narrowed list of
                             relevant variables of interests such as states, sex, age, race, working time, educational time, leisure time, personal care time. </p>
                             <p class="descriptions"> We use the data to create various visualizations as seen below.</p>
+                            <p class="descriptions">We use R extensively to clean the data. Major steps for cleaning the data include:
+                            Eliminating subjects with births (we are only interested in subjects with no children by choice); Eliminating
+                            rows with NIU values for employment status or school/college enrollment; Creating dataframes and new csv
+                            files with narrowed list of relevant variables of interests such as states, sex, age, race, working time, educational time,
+                            leisure time, personal care time. </p>
                         </li>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">How to read data</h2>
-                            <p class="descriptions"></p>
+                            <h2 class="accordion">Data References</h2>
+                            <p class="descriptions"> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <br><br><br><br><br><br><br>
+                <div class="col-lg-6 col-sm-pull-6  col-sm-6">
                     <br><br><br><br><br><br><br>
                     <div class="loading">
                         <div class="hourglass">
@@ -245,66 +392,38 @@
     </div>
 
 
-    <div class="content-section-b">
 
-        <div class="container">
-
-            <div id="objectives" class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Goals & Objectives</h2>
-                    <ul>
-                        <li class="descriptions"><span class="mainpoint">Explore</span>
-                            how groups of various demographics based on age, employment, gender, income level spend time differently
-                        </li>
-                        <br>
-                        <li class="descriptions"><span class="mainpoint">Gain Insights</span>
-                            into the time distribution of various activities a typical/average American spends doing
-                        </li>
-                        <br>
-                        <li class="descriptions"><span class="mainpoint">Visualize and compare </span>
-                            duration and movements/transitions of activities throughout the day of various groups
-                        </li>
-                        <br>
-                        <li class="descriptions"><span class="mainpoint">Map out and compare </span>
-                            spending habits of people across different states in the US
-                        </li>
-                        <br>
-                    </ul>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <div id="floatingCirclesG">
-                        <div class="f_circleG" id="frotateG_01"></div>
-                        <div class="f_circleG" id="frotateG_02"></div>
-                        <div class="f_circleG" id="frotateG_03"></div>
-                        <div class="f_circleG" id="frotateG_04"></div>
-                        <div class="f_circleG" id="frotateG_05"></div>
-                        <div class="f_circleG" id="frotateG_06"></div>
-                        <div class="f_circleG" id="frotateG_07"></div>
-                        <div class="f_circleG" id="frotateG_08"></div>
-                    </div>
-                    <p class="ready">Get Set. Ready. Explore</p>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
 
     <div class="content-section-b">
         <div class="container">
-            <div id="donut">
-                <form>
-                    <a href="#Gender" checked> Gender</a>
-                    <a href="#Races"> Race</a>
-                    <a href="#Income"> Income</a>
-                    <a href="#Employment"> Employment</a>
-                </form>
+            <div class="row">
+
+                <div id="donut" class="col-md-12">
+                  <h2 class="tag">Insights</h2>
+                  <p>We found that...</p>
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                    <form>
+                        <ul id="tabs">
+                            <li class="active"><a onchange="updatePath()" href="#gender" checked> Gender</a></li>
+                            <li><a onchange="updatePath()" href="#race"> Race</a></li>
+                            <li><a onchange="updatePath()" href="#income"> Income</a></li>
+                            <li><a onchange="updatePath()" href="#employment"> Employment</a></li>
+                        </ul>
+                    </form>
+                </div>
             </div>
-            <div id="show_data"  class="col-md-4"></div>
-            <div class="col-md-4" id="updateInfo"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="show_data"></div>
+                    <div id="updateInfo"></div>
+                </div>
+
+                <div class="col-md-8">
+                    <div id="parallel-coordinates"></div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- /.content-section-b -->
@@ -465,10 +584,10 @@
                         <a href="#time_management">Motivation</a>
                       </li>
                       <li>
-                        <a href="#data">Data</a>
+                        <a href="#objectives">Goals</a>
                       </li>
                       <li>
-                        <a href="#objectives">Goals</a>
+                        <a href="#data">Data</a>
                       </li>
 
                       <!--<li>-->
@@ -494,9 +613,27 @@
     <script src="js/d3.tip.js"></script>
     <script src="js/colorbrewer.js"></script>
     <script src="js/donut1.js"></script>
-    <script src="js/vis-choropleth1.js"></script>
     <script src="js/tab.js"></script>
-
+    <script src="js/parallelCoordinates.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        // performs smooth scrolling to anchor tags
+        // reference: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 
