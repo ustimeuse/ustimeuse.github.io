@@ -14,7 +14,7 @@ var line = d3.svg.line(),
     background,
     foreground;
 
-d3.csv("data/group-avgs.csv", function(error, csv) {
+d3.csv("data/group-avgs1.csv", function(error, csv) {
   var data = csv;
 
   for(var i=0; i<data.length; i++){
@@ -52,8 +52,8 @@ function updatePath(selectedValue) {
       //d3.keys(pdata[0])
           .filter(function(d) {
     return d != "Group.1" && d != "type" && (y[d] = d3.scale.linear()
-        .domain(d3.extent(pdata, function(p) { return +p[d]; }))
-        //.domain([0,.45])
+        //.domain(d3.extent(pdata, function(p) { return +p[d]; }))
+        .domain([0,.45])
         .range([height, 0]));
   }));
 
