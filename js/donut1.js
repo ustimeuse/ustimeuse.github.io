@@ -107,7 +107,7 @@ $("#donut a").click(function() {
 function updateInfo(data){
 
     var summary="";
-    for (i=0; i<labels[data.label].length; i++ ){
+     for (i=0; i<labels[data.label].length; i++ ){
         summary = summary + "<li>" + labels[data.label][i] + ": " + data.pct[i] +"%</li>";
     }
     document.getElementById("updateInfo").innerHTML=summary;
