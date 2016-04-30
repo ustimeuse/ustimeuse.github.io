@@ -71,6 +71,8 @@ var act_codes = [
     {"index": "10", "short": "Traveling", "desc": "Traveling"}
 ];
 
+var cat_key = [0,1,2,3,4,5,6,6,2,1,7,7,8,6,9,9,10];
+
 var speeds = { "slow": 1000, "medium": 30000, "fast": 50 };
 
 
@@ -148,9 +150,12 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			// Duration
 			if (i % 2 == 1) {
                 var act = day_array[i - 1];
+				var next_act = cat_key[ +day_array[i + 1] ];
+
 				var act_index = activities.findIndex(function (v) {
 					return v.act == act;
 				});
+
                 switch(+act) {
                     case 0:
 					case 1:
@@ -164,7 +169,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                         } else {
                             activities[act_index].duration += +day_array[i];
                         }
-						matrix[+act][+act+2] += 1;
+						matrix[+act][next_act] += 1;
                         break;
                     case 7:
 					case 13:
@@ -173,7 +178,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                         } else {
                             activities['6'] += +day_array[i];
                         }
-						matrix[6][+act+2] += 1;
+						matrix[6][next_act] += 1;
                         break;
 					case 8:
 						if (act_index = -1) {
@@ -181,7 +186,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['2'] += +day_array[i];
 						}
-						matrix[2][+act+2] += 1;
+						matrix[2][next_act] += 1;
 						break;
 					case 9:
 						if (act_index = -1) {
@@ -189,7 +194,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['1'] += +day_array[i];
 						}
-						matrix[1][+act+2] += 1;
+						matrix[1][next_act] += 1;
 						break;
 					case 10:
 					case 11:
@@ -198,7 +203,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['7'] += +day_array[i];
 						}
-						matrix[7][+act+2] += 1;
+						matrix[7][next_act] += 1;
 						break;
 					case 12:
 						if (act_index = -1) {
@@ -206,7 +211,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['8'] += +day_array[i];
 						}
-						matrix[8][+act+2] += 1;
+						matrix[8][next_act] += 1;
 						break;
 					case 14:
 					case 15:
@@ -215,7 +220,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['9'] += +day_array[i];
 						}
-						matrix[9][+act+2] += 1;
+						matrix[9][next_act] += 1;
 						break;
 					case 16:
 						if (act_index = -1) {
@@ -223,7 +228,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['10'] += +day_array[i];
 						}
-						matrix[10][+act+2] += 1;
+						matrix[10][next_act] += 1;
 						break;
                 }
 			}
@@ -252,8 +257,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			color: "#e0d400", //color(act),
 			moves: 0,
 			next_move_time: o[0].duration,
-			sched: o,
-			next_act: matrix_array[i]
+			sched: o
 		}
 	});
 
@@ -339,9 +343,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 				curr_node.moves = curr_moves;
 				curr_node.cx = foci[curr_node.act].x;
 				curr_node.cy = foci[curr_node.act].y;
-
-				// Update Chord Diagram
-//				updateChord(nodes[i].next_act[curr_node.moves]);
 
 				nodes[i].next_move_time += nodes[i].sched[ curr_node.moves ].duration;
 			}
@@ -569,6 +570,8 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 
 	function updateChord (matrix) {
 
+		console.log(matrix)
+
 		var chord = d3.layout.chord()
 				.padding(.05)
 				.sortSubgroups(d3.descending)
@@ -655,7 +658,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		// Returns an event handler for fading a given chord group.
 		function fade(opacity) {
 			return function (g, i) {
-				svg.selectAll(".chord path")
+				svg3.selectAll(".chord path")
 						.filter(function (d) {
 							return d.source.index != i && d.target.index != i;
 						})
@@ -731,5 +734,87 @@ function minutesToTime(m) {
 	return hh + ":" + mm + ampm
 }
 
+//*******************************************************************
+//  CHORD MAPPER
+//*******************************************************************
+function chordMpr (data) {
+	var mpr = {}, mmap = {}, n = 0,
+			matrix = [], filter, accessor;
+
+	mpr.setFilter = function (fun) {
+		filter = fun;
+		return this;
+	},
+			mpr.setAccessor = function (fun) {
+				accessor = fun;
+				return this;
+			},
+			mpr.getMatrix = function () {
+				matrix = [];
+				_.each(mmap, function (a) {
+					if (!matrix[a.id]) matrix[a.id] = [];
+					_.each(mmap, function (b) {
+						var recs = _.filter(data, function (row) {
+							return filter(row, a, b);
+						})
+						matrix[a.id][b.id] = accessor(recs, a, b);
+					});
+				});
+				return matrix;
+			},
+			mpr.getMap = function () {
+				return mmap;
+			},
+			mpr.printMatrix = function () {
+				_.each(matrix, function (elem) {
+					console.log(elem);
+				})
+			},
+			mpr.addToMap = function (value, info) {
+				if (!mmap[value]) {
+					mmap[value] = { name: value, id: n++, data: info }
+				}
+			},
+			mpr.addValuesToMap = function (varName, info) {
+				var values = _.uniq(_.pluck(data, varName));
+				_.map(values, function (v) {
+					if (!mmap[v]) {
+						mmap[v] = { name: v, id: n++, data: info }
+					}
+				});
+				return this;
+			}
+	return mpr;
+}
+//*******************************************************************
+//  CHORD READER
+//*******************************************************************
+function chordRdr (matrix, mmap) {
+	return function (d) {
+		var i,j,s,t,g,m = {};
+		if (d.source) {
+			i = d.source.index; j = d.target.index;
+			s = _.where(mmap, {id: i });
+			t = _.where(mmap, {id: j });
+			m.sname = s[0].name;
+			m.sdata = d.source.value;
+			m.svalue = +d.source.value;
+			m.stotal = _.reduce(matrix[i], function (k, n) { return k + n }, 0);
+			m.tname = t[0].name;
+			m.tdata = d.target.value;
+			m.tvalue = +d.target.value;
+			m.ttotal = _.reduce(matrix[j], function (k, n) { return k + n }, 0);
+		} else {
+			g = _.where(mmap, {id: d.index });
+			m.gname = g[0].name;
+			m.gdata = g[0].data;
+			m.gvalue = d.value;
+		}
+		m.mtotal = _.reduce(matrix, function (m1, n1) {
+			return m1 + _.reduce(n1, function (m2, n2) { return m2 + n2}, 0);
+		}, 0);
+		return m;
+	}
+}
 
 </script>
