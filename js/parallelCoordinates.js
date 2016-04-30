@@ -1,5 +1,4 @@
 var pdata;
-var format = d3.format("%")
 
 var margin = {top: 30, right: 10, bottom: 10, left: 10},
     width = 800 - margin.left - margin.right,
@@ -10,7 +9,7 @@ var x = d3.scale.ordinal().rangePoints([0, width], 1),
     dragging = {};
 
 var line = d3.svg.line(),
-    axis = d3.svg.axis().orient("left").tickFormat(format),
+    axis = d3.svg.axis().orient("left"),
     background,
     foreground;
 
@@ -18,11 +17,11 @@ d3.csv("data/group-avgs1.csv", function(error, csv) {
   var data = csv;
 
   for(var i=0; i<data.length; i++){
-    data[i].leisure = +data[i].leisure/1440;
-    data[i].pcare = +data[i].pcare/1440;
-    data[i].household = +data[i].household/1440;
-    data[i].travel = +data[i].travel/1440;
-    data[i].work = +data[i].work/1440;
+    data[i].leisure = +data[i].leisure/60;
+    data[i].pcare = +data[i].pcare/60;
+    data[i].household = +data[i].household/60;
+    data[i].travel = +data[i].travel/60;
+    data[i].work = +data[i].work/60;
   }
 
   pdata=data;
@@ -53,7 +52,7 @@ function updatePath(selectedValue) {
           .filter(function(d) {
     return d != "Group.1" && d != "type" && (y[d] = d3.scale.linear()
         //.domain(d3.extent(pdata, function(p) { return +p[d]; }))
-        .domain([0,.45])
+        .domain([1,10.5])
         .range([height, 0]));
   }));
 
