@@ -5,7 +5,7 @@
  *  @param _data            -- Array with all stations of the bike-sharing network
  */
 
-BubbleChart = function(_parentElement, _data) {
+scatterPlot = function(_parentElement, _data) {
 
   this.parentElement = _parentElement;
   this.data = _data;
@@ -17,7 +17,7 @@ BubbleChart = function(_parentElement, _data) {
  *  Initialize station map
  */
 
-BubbleChart.prototype.initVis = function() {
+scatterPlot.prototype.initVis = function() {
 
   var vis = this;
 
@@ -80,7 +80,7 @@ BubbleChart.prototype.initVis = function() {
  *  Data wrangling
  */
 
-BubbleChart.prototype.wrangleData = function() {
+scatterPlot.prototype.wrangleData = function() {
   var vis = this;
 
   vis.displayData = vis.data;
@@ -95,7 +95,7 @@ BubbleChart.prototype.wrangleData = function() {
  *  The drawing function
  */
 
-BubbleChart.prototype.updateVis = function() {
+scatterPlot.prototype.updateVis = function() {
   vis = this;
 
   vis.selected_value = d3.select("#plot-type").property("value");
@@ -120,7 +120,7 @@ BubbleChart.prototype.updateVis = function() {
   vis.svg.select(".y-axis").call(vis.yAxis);
 }
 
-BubbleChart.prototype.addLegend = function() {
+scatterPlot.prototype.addLegend = function() {
   vis=this;
 
   vis.labels=["Below $25k","$25k-$50k","$50k-$75k", "$75k-$100k","$100k+"];

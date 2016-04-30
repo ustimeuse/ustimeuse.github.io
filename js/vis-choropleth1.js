@@ -56,7 +56,6 @@ var color = d3.scale.linear()
 
 // Upon hovering, show text
 function getText(d,selectedValue) {
-    console.log(d.properties);
     return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
     "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
 }
@@ -133,8 +132,14 @@ function updateMap(){
             }
             return "#e5e5e5";
         })
-        .on('mouseover', tip1.show)
-        .on('mouseout', tip1.hide)
+        //.on('mouseover', tip1.show)
+        .on('mouseover', function(d){
+            layeredhistogram.wrangleData(d.properties.NAME);
+        })
+        //.on('mouseout', tip1.hide)
+        .on('mouseout', function(d){
+            layeredhistogram.wrangleData("All States");
+        })
 
     var legend_group = svg.append("g")
         .attr("class", "map_legend_group")
