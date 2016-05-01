@@ -10,25 +10,6 @@ title: A Day in the Life
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7626174/696048/css/fonts.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Custom CSS -->
-	<link href="css/landing-page.css" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="css/style1.css">
-
-	<!-- Custom Fonts -->
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
 </head>
 
 <meta charset="utf-8">
@@ -39,9 +20,9 @@ title: A Day in the Life
 <!--<div id="main-wrapper">-->
 
 	<div id="current_time">4:00am</div><div class="center">
-	<div id = "controls">
-		<!--<input type="image" src="img/reset.png" name="reset" class="button" id = "reset" />-->
-		<input type="image" src="img/play.png" name="play" class="button" id = "play" />
+	<div id = "controls" style="float: left">
+		<input type="image" src="img/reset.png" name="reset" class="button" id = "reset" />
+		<input type="image" src="img/play.png" name="play" class="button" style="display: initial" id = "play" />
 		<input type="image" src="img/pause.png" name="pause" class="button" style="display: none" id = "pause" />
 	</div>
 	<div id="speed">
@@ -81,13 +62,7 @@ title: A Day in the Life
 <script>
 var USER_SPEED = "slow";
 
-var width = 780,
-    height = 800,
-	padding = 1,
-	maxRadius = 3;
-	
-var sched_objs = [],
-	curr_minute = 0;
+var sched_objs = [];
 
 var act_codes = [
     {"index": "0", "short": "Sleeping", "desc": "Sleeping"},
@@ -102,8 +77,6 @@ var act_codes = [
     {"index": "9", "short": "Misc.", "desc": "Telephone Calls, Other"},
     {"index": "10", "short": "Traveling", "desc": "Traveling"}
 ];
-
-var act_codes_origin = Array.prototype.slice.call(act_codes);
 
 var cat_key = [0,1,2,3,4,5,6,6,2,1,7,7,8,6,9,9,10];
 
@@ -126,41 +99,9 @@ var time_notes = [
 ];
 var notes_index = 0;
 
-// Activity to put in center of circle arrangement
-var center_act = "Traveling",
-	center_pt = { "x": 380, "y": 365 };
+var pause = true, isReset = false;
 
-
-// Coordinates for activities
-var foci = {};
-var act_index = [];
-act_codes.forEach(function(code, i) {
-	act_index.push(code.short);
-	if (code.desc == center_act) {
-		foci[code.index] = center_pt;
-	} else {
-		var theta = 2 * Math.PI / (act_codes.length-1);
-		foci[code.index] = {x: 250 * Math.cos(i * theta)+380, y: 250 * Math.sin(i * theta)+365 };
-	}
-});
-
-// Start the SVG
-var svg = d3.select("#chart").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var margin = {top: 40, right: 10, bottom: 130, left: 60};
-
-var width2 = 500 - margin.left - margin.right,
-		height2 = 600 - margin.top - margin.bottom;
-
-var svg2 = d3.select("#bar-chart").append("svg")
-		.attr("width", width2 + margin.left + margin.right)
-		.attr("height", height2 + margin.top + margin.bottom);
-
-var pause = true;
-
-// Load data and let's do it.
+// Load data
 d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	
 	data.forEach(function(d) {
@@ -269,55 +210,93 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 
 	});
 
-	// Used for percentages by minute
+	runVis();
+	function runVis () {
 
-	var act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0}, {"index": 3, "count": 0},
-		              {"index": 4, "count": 0}, {"index": 5, "count": 0}, {"index": 6, "count": 0}, {"index": 7, "count": 0},
-		              {"index": 8, "count": 0}, {"index": 9, "count": 0}, {"index": 10, "count": 0}];
+		var width = 780,
+				height = 800,
+				padding = 1,
+				maxRadius = 3;
 
+		var curr_minute = 0;
 
-//	function initVis () {
+		// Activity to put in center of circle arrangement
+		var center_act = "Traveling",
+				center_pt = { "x": 380, "y": 365 };
+
+		// Coordinates for activities
+		var foci = {};
+		var act_index = [];
+		act_codes.forEach(function(code, i) {
+			act_index.push(code.short);
+			if (code.desc == center_act) {
+				foci[code.index] = center_pt;
+			} else {
+				var theta = 2 * Math.PI / (act_codes.length-1);
+				foci[code.index] = {x: 250 * Math.cos(i * theta)+380, y: 250 * Math.sin(i * theta)+365 };
+			}
+		});
+
+		// Start the SVG
+		var svg = d3.select("#chart").append("svg")
+				.attr("width", width)
+				.attr("height", height);
+
+		var margin = {top: 40, right: 10, bottom: 130, left: 60};
+
+		var width2 = 500 - margin.left - margin.right,
+				height2 = 600 - margin.top - margin.bottom;
+
+		var svg2 = d3.select("#bar-chart").append("svg")
+				.attr("width", width2 + margin.left + margin.right)
+				.attr("height", height2 + margin.top + margin.bottom);
+
+		// Used for percentages by minute
+		var act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0},
+						  {"index": 3, "count": 0}, {"index": 4, "count": 0}, {"index": 5, "count": 0},
+						  {"index": 6, "count": 0}, {"index": 7, "count": 0}, {"index": 8, "count": 0},
+						  {"index": 9, "count": 0}, {"index": 10, "count": 0}];
+
 		// A node for each person's schedule
 		var nodes = sched_objs.map(function (o, i) {
-		var act = o[0].act;
-		act_counts[+act].count += 1;
-		var init_x = foci[act].x + Math.random();
-		var init_y = foci[act].y + Math.random();
-		return {
-			act: act,
-			radius: 3,
-			x: init_x,
-			y: init_y,
-			color: "#00cdc0", //color(act),
-			moves: 0,
-			next_move_time: o[0].duration,
-			sched: o
-		}
-	});
+			var act = o[0].act;
+			act_counts[+act].count += 1;
+			var init_x = foci[act].x + Math.random();
+			var init_y = foci[act].y + Math.random();
+			return {
+				act: act,
+				radius: 3,
+				x: init_x,
+				y: init_y,
+				color: "#00cdc0", //color(act),
+				moves: 0,
+				next_move_time: o[0].duration,
+				sched: o
+			}
+		});
 
-	var force = d3.layout.force()
-			.nodes(nodes)
-			.size([width, height])
-			// .links([])
-			.gravity(0)
-			.charge(0)
-			.friction(.9)
-			.on("tick", tick)
-			.start();
+		var force = d3.layout.force()
+				.nodes(nodes)
+				.size([width, height])
+				// .links([])
+				.gravity(0)
+				.charge(0)
+				.friction(.9)
+				.on("tick", tick)
+				.start();
 
-	var circle = svg.selectAll("circle")
-			.data(nodes)
-			.enter().append("circle")
-			.attr("r", function (d) {
-				return d.radius;
-			})
-			.style("fill", function (d) {
-				return d.color;
-			})
-			.on("click", function (d) {
-				updateTreemap(treemap_arr[d.index]);
-			});
-		// .call(force.drag);
+		var circle = svg.selectAll("circle")
+				.data(nodes)
+				.enter().append("circle")
+				.attr("r", function (d) {
+					return d.radius;
+				})
+				.style("fill", function (d) {
+					return d.color;
+				})
+				.on("click", function (d) {
+					updateTreemap(treemap_arr[d.index]);
+				});
 
 		// Activity labels
 		var label = svg.selectAll("text")
@@ -362,399 +341,351 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 					return readablePercent(act_counts[d.index].count);
 				});
 //	}
-	/*********************/
-	/*  BAR CHART        */
-	/*********************/
+		/*********************/
+		/*  BAR CHART        */
+		/*********************/
 
-	// Scales
-	var x = d3.scale.ordinal()
-			.domain(act_index)
-			.rangeRoundBands([0, width2], .1);
+		// Scales
+		var x = d3.scale.ordinal()
+				.domain(act_index)
+				.rangeRoundBands([0, width2], .1);
 
-	var y = d3.scale.linear()
-			.domain([0,1000])
-			.range([height2, 0]);
+		var y = d3.scale.linear()
+				.domain([0, 1000])
+				.range([height2, 0]);
 
-	var ylabel = d3.scale.linear()
-			.domain([0,1])
-			.range([height2, 0]);
+		var ylabel = d3.scale.linear()
+				.domain([0, 1])
+				.range([height2, 0]);
 
-	// Axes
+		// Axes
 
-	var xAxis = d3.svg.axis()
-			.scale(x)
-			.orient("bottom");
+		var xAxis = d3.svg.axis()
+				.scale(x)
+				.orient("bottom");
 
-	var yAxis = d3.svg.axis()
-			.scale(ylabel)
-			.tickFormat(d3.format("%"))
-			.orient("left");
+		var yAxis = d3.svg.axis()
+				.scale(ylabel)
+				.tickFormat(d3.format("%"))
+				.orient("left");
 
-	svg2.append("g")
-			.attr("class", "x-axis axis")
-			.attr("transform", "translate("+margin.left+","+(margin.top+height2)+")");
+		svg2.append("g")
+				.attr("class", "x-axis axis")
+				.attr("transform", "translate(" + margin.left + "," + (margin.top + height2) + ")");
 
-	svg2.append("g")
-			.attr("class", "y-axis axis")
-			.attr("transform", "translate("+margin.left+","+margin.top+")");
+		svg2.append("g")
+				.attr("class", "y-axis axis")
+				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	svg2.select(".x-axis").transition().duration(1000)
-			.call(xAxis)
-			.selectAll("text")
-			.style("text-anchor", "end")
-			.attr("dx", "-.8em")
-			.attr("dy", ".15em")
-			.attr("transform", "rotate(-65)");
+		svg2.select(".x-axis").transition().duration(1000)
+				.call(xAxis)
+				.selectAll("text")
+				.style("text-anchor", "end")
+				.attr("dx", "-.8em")
+				.attr("dy", ".15em")
+				.attr("transform", "rotate(-65)");
 
-	svg2.select(".y-axis")
-			.transition().duration(1000)
-			.call(yAxis);
+		svg2.select(".y-axis")
+				.transition().duration(1000)
+				.call(yAxis);
 
-	// axis label
+		// axis label
 
-	svg2.append("text")
-			.attr("x", -height/2) //x and y positions swap after rotation
-			.attr("y", 12)
-			.attr("dy", ".7em")
-			.attr("transform", "rotate(-90)")
-			.style("text-anchor", "middle")
-			.text("% of 1000 people");
+		svg2.append("text")
+				.attr("x", -height / 2) //x and y positions swap after rotation
+				.attr("y", 12)
+				.attr("dy", ".7em")
+				.attr("transform", "rotate(-90)")
+				.style("text-anchor", "middle")
+				.text("% of 1000 people");
 
-	var tip = d3.tip()
-			.attr('class', 'd3-tip');
+		var tip = d3.tip()
+				.attr('class', 'd3-tip');
 
-	// Update Bar Chart
-	function updateBars(data) {
+		// Update Bar Chart
+		function updateBars(data) {
 
-		// Data-join (rect now contains the update selection)
-		var rect = svg2.selectAll("rect")
-				.data(data);
+			// Data-join (rect now contains the update selection)
+			var rect = svg2.selectAll("rect")
+					.data(data);
 
-		tip
-				.html(function(d) {
-					return (d.count/10)+"%";
-				});
+			tip
+					.html(function (d) {
+						return (d.count / 10) + "%";
+					});
 
-		svg2.call(tip);
+			svg2.call(tip);
 
-		// Enter (initialize the newly added elements)
-		rect
-				.enter().append("rect")
-				.attr("class", "bar")
-				.on("mouseover", tip.show)
-				.on('mouseout', tip.hide);
+			// Enter (initialize the newly added elements)
+			rect
+					.enter().append("rect")
+					.attr("class", "bar")
+					.on("mouseover", tip.show)
+					.on('mouseout', tip.hide);
 
-		// Update (set the dynamic properties of the elements)
-		rect
-				.transition().duration(40)
-				.attr("x", function(d, index) { return x(act_index[index]); })
-				.attr("y", function(d) { return y(d.count); })
-				.attr("width", x.rangeBand())
-				.attr("height", function(d) { return height2 - y(d.count); })
-				.attr("transform", "translate("+margin.left+","+margin.top+")");
+			// Update (set the dynamic properties of the elements)
+			rect
+					.transition().duration(40)
+					.attr("x", function (d, index) {
+						return x(act_index[index]);
+					})
+					.attr("y", function (d) {
+						return y(d.count);
+					})
+					.attr("width", x.rangeBand())
+					.attr("height", function (d) {
+						return height2 - y(d.count);
+					})
+					.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-		// Exit
-		rect.exit().remove();
-	}
+			// Exit
+			rect.exit().remove();
+		}
 
-	// Update Ranking
-	function updateRanking(data) {
+		// Update Ranking
+		function updateRanking(data) {
 
-		var sortedData = Array.prototype.slice.call(data).sort( function(a,b) {
-			//sort by count, descending.
-			return b.count - a.count;
-		});
-
-		sortedData.forEach(function(d, index){
-			document.getElementById(index+1).innerHTML = act_codes[d.index].short;
-		});
-	}
-
-	updateBars(act_counts);
-	updateRanking(act_counts);
-
-	// Update nodes based on activity and duration
-	function timer() {
-		d3.range(nodes.length).map(function(i) {
-			var curr_node = nodes[i],
-				curr_moves = curr_node.moves; 
-
-			// Time to go to next activity
-			if (curr_node.next_move_time == curr_minute) {
-				if (curr_node.moves == curr_node.sched.length-1) {
-					curr_moves = 0;
-				} else {
-					curr_moves += 1;
-				}
-			
-				// Subtract from current activity count
-				act_counts[+curr_node.act].count -= 1;
-			
-				// Move on to next activity
-				curr_node.act = curr_node.sched[ curr_moves ].act;
-
-				// Add to new activity count
-				act_counts[+curr_node.act].count += 1;
-			
-				curr_node.moves = curr_moves;
-				curr_node.cx = foci[curr_node.act].x;
-				curr_node.cy = foci[curr_node.act].y;
-
-				nodes[i].next_move_time += nodes[i].sched[ curr_node.moves ].duration;
-			}
-		});
-
-		force.resume();
-		curr_minute += 1;
-
-		// Update percentages
-		label.selectAll("tspan.actpct")
-			.text(function(d) {
-				return readablePercent(act_counts[+d.index].count);
+			var sortedData = Array.prototype.slice.call(data).sort(function (a, b) {
+				//sort by count, descending.
+				return b.count - a.count;
 			});
+
+			sortedData.forEach(function (d, index) {
+				document.getElementById(index + 1).innerHTML = act_codes[d.index].short;
+			});
+		}
 
 		updateBars(act_counts);
 		updateRanking(act_counts);
 
-		// Update times
-		var true_minute = curr_minute % 1440;
-		d3.select("#current_time").text(minutesToTime(true_minute));
+		// Update nodes based on activity and duration
+		function timer() {
+			d3.range(nodes.length).map(function (i) {
+				var curr_node = nodes[i],
+						curr_moves = curr_node.moves;
 
-		if (! pause) {
-			setTimeout(timer, speeds[USER_SPEED]);
-		}
-	}
+				// Time to go to next activity
+				if (curr_node.next_move_time == curr_minute) {
+					if (curr_node.moves == curr_node.sched.length - 1) {
+						curr_moves = 0;
+					} else {
+						curr_moves += 1;
+					}
 
-	// Time Control
-	var bomb;
-	d3.select("#play").style("display", "initial").on("click", function() {
-		bomb = setTimeout(timer, speeds[USER_SPEED]);
-		pause = false;
-		d3.select("#play").style("display", "none");
-		d3.select("#pause").style("display", "initial");
-	});
-	d3.select("#pause").on("click", function() {
-		clearTimeout(bomb);
-		pause = true;
-		d3.select("#play").style("display", "initial");
-		d3.select("#pause").style("display", "none");
-	});
-//	d3.select("#reset").style("display", "initial").on("click", reset);
+					// Subtract from current activity count
+					act_counts[+curr_node.act].count -= 1;
 
-	function reset() {
-		console.log("rest");
-//		if (! pause) {
-			clearTimeout(bomb);
-//		}
-//		act_codes = Array.prototype.slice.call(act_codes_origin);
-		curr_minute = 0;
-		// Update times
-		var true_minute = curr_minute % 1440;
-		d3.select("#current_time").text(minutesToTime(true_minute));
+					// Move on to next activity
+					curr_node.act = curr_node.sched[curr_moves].act;
 
-		act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0}, {"index": 3, "count": 0},
-			{"index": 4, "count": 0}, {"index": 5, "count": 0}, {"index": 6, "count": 0}, {"index": 7, "count": 0},
-			{"index": 8, "count": 0}, {"index": 9, "count": 0}, {"index": 10, "count": 0}];
+					// Add to new activity count
+					act_counts[+curr_node.act].count += 1;
 
-		// Rebind the nodes to the array
+					curr_node.moves = curr_moves;
+					curr_node.cx = foci[curr_node.act].x;
+					curr_node.cy = foci[curr_node.act].y;
 
-//		nodes = [];
-//		circle =
-//		svg.selectAll("circle")
-//				.data(nodes);
-//
-//		circle.exit().remove();
-		console.log(circle);
-		nodes = sched_objs.map(function (o, i) {
-			var act = o[0].act;
-			act_counts[+act].count += 1;
-			var init_x = foci[act].x + Math.random();
-			var init_y = foci[act].y + Math.random();
-			return {
-				act: act,
-				radius: 3,
-				x: init_x,
-				y: init_y,
-				color: "#00cdc0", //color(act),
-				moves: 0,
-				next_move_time: o[0].duration,
-				sched: o
+					nodes[i].next_move_time += nodes[i].sched[curr_node.moves].duration;
+				}
+			});
+
+			force.resume();
+			curr_minute += 1;
+
+			// Update percentages
+			label.selectAll("tspan.actpct")
+					.text(function (d) {
+						return readablePercent(act_counts[+d.index].count);
+					});
+
+			updateBars(act_counts);
+			updateRanking(act_counts);
+
+			// Update times
+			var true_minute = curr_minute % 1440;
+			d3.select("#current_time").text(minutesToTime(true_minute));
+
+			if (!pause) {
+				setTimeout(timer, speeds[USER_SPEED]);
 			}
-		});
-
-		force
-				.nodes(nodes);
-
-		circle = svg.selectAll("circle")
-				.data(nodes)
-				.enter().append("circle")
-				.attr("r", function (d) {
-					return d.radius;
-				})
-				.style("fill", function (d) {
-					return d.color;
-				})
-				.on("click", function (d) {
-					updateTreemap(treemap_arr[d.index]);
-				});
-console.log(circle);
-//		bomb = setTimeout(timer, speeds[USER_SPEED]);
-		d3.select("#play").style("display", "none");
-		d3.select("#pause").style("display", "initial");
-	}
-
-	function tick(e) {
-	  var k = 0.04 * e.alpha;
-  
-	  // Push nodes toward their designated focus.
-	  nodes.forEach(function(o, i) {
-		var curr_act = o.act;
-		
-		// Make sleep more sluggish moving.
-		if (curr_act == "0") {
-			var damper = 0.6;
-		} else {
-			var damper = 1;
 		}
-		o.color = "#00cdc0";//color(curr_act);
-	    o.y += (foci[curr_act].y - o.y) * k * damper;
-	    o.x += (foci[curr_act].x - o.x) * k * damper;
-	  });
 
-	  circle
-	  	  .each(collide(.5))
-	  	  .style("fill", function(d) { return d.color; })
-	      .attr("cx", function(d) { return d.x; })
-	      .attr("cy", function(d) { return d.y; });
+		// Time Control
+		d3.select("#play").style("display", "initial").on("click", function () {
+			setTimeout(timer, speeds[USER_SPEED]);
+			pause = false;
+			d3.select("#play").style("display", "none");
+			d3.select("#pause").style("display", "initial");
+		});
+		d3.select("#pause").on("click", function () {
+			pause = true;
+			d3.select("#play").style("display", "initial");
+			d3.select("#pause").style("display", "none");
+		});
+		d3.select("#reset").style("display", "initial").on("click", reset);
+
+		function tick(e) {
+			var k = 0.04 * e.alpha;
+
+			// Push nodes toward their designated focus.
+			nodes.forEach(function (o, i) {
+				var curr_act = o.act;
+
+				// Make sleep more sluggish moving.
+				if (curr_act == "0") {
+					var damper = 0.6;
+				} else {
+					var damper = 1;
+				}
+				o.color = "#00cdc0";//color(curr_act);
+				o.y += (foci[curr_act].y - o.y) * k * damper;
+				o.x += (foci[curr_act].x - o.x) * k * damper;
+			});
+
+			circle
+					.each(collide(.5))
+					.style("fill", function (d) {
+						return d.color;
+					})
+					.attr("cx", function (d) {
+						return d.x;
+					})
+					.attr("cy", function (d) {
+						return d.y;
+					});
+		}
+
+		// Resolve collisions between nodes.
+		function collide(alpha) {
+			var quadtree = d3.geom.quadtree(nodes);
+			return function (d) {
+				var r = d.radius + maxRadius + padding,
+						nx1 = d.x - r,
+						nx2 = d.x + r,
+						ny1 = d.y - r,
+						ny2 = d.y + r;
+				quadtree.visit(function (quad, x1, y1, x2, y2) {
+					if (quad.point && (quad.point !== d)) {
+						var x = d.x - quad.point.x,
+								y = d.y - quad.point.y,
+								l = Math.sqrt(x * x + y * y),
+								r = d.radius + quad.point.radius + (d.act !== quad.point.act) * padding;
+						if (l < r) {
+							l = (l - r) / l * alpha;
+							d.x -= x *= l;
+							d.y -= y *= l;
+							quad.point.x += x;
+							quad.point.y += y;
+						}
+					}
+					return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+				});
+			};
+		}
+
+		// Speed toggle
+		d3.selectAll(".togglebutton")
+				.on("click", function () {
+					if (d3.select(this).attr("data-val") == "slow") {
+						d3.select(".slow").classed("current", true);
+						d3.select(".medium").classed("current", false);
+						d3.select(".fast").classed("current", false);
+					} else if (d3.select(this).attr("data-val") == "medium") {
+						d3.select(".slow").classed("current", false);
+						d3.select(".medium").classed("current", true);
+						d3.select(".fast").classed("current", false);
+					}
+					else {
+						d3.select(".slow").classed("current", false);
+						d3.select(".medium").classed("current", false);
+						d3.select(".fast").classed("current", true);
+					}
+
+					USER_SPEED = d3.select(this).attr("data-val");
+				});
+
+		/*********************/
+		/*  Tree Map         */
+		/*********************/
+		var margin_t = {top: 40, right: 10, bottom: 10, left: 10},
+				width_t = 960 - margin_t.left - margin_t.right,
+				height_t = 500 - margin_t.top - margin_t.bottom;
+
+		var color = d3.scale.category10();
+
+		var treemap = d3.layout.treemap()
+				.size([width_t, height_t])
+				.sticky(false)
+				.value(function (d) {
+					return d.size;
+				});
+
+		var div = d3.select("body").append("div")
+				.style("position", "relative")
+				.style("width", (width_t + margin_t.left + margin_t.right) + "px")
+				.style("height", (height_t + margin_t.top + margin_t.bottom) + "px")
+				.style("left", margin_t.left + "px")
+				.style("top", margin_t.top + "px");
+
+		function updateTreemap(root) {
+
+			var node = div.datum(root).selectAll(".node")
+					.data(treemap.nodes);
+
+			var enter = node
+					.enter().append("div")
+					.attr("class", "node");
+			enter.transition().duration(1500)
+					.call(position)
+					.style("background", function (d) {
+						return color(d.name);
+					})
+					.text(function (d) {
+						return d.children ? null : act_codes[d.name].short;
+					});
+			node.exit().remove();
+
+			node
+					.call(position)
+					.style("background", function (d) {
+						return color(d.name);
+					})
+					.text(function (d) {
+						return d.children ? null : act_codes[d.name].short;
+					});
+
+		}
+
+		function position() {
+			this.style("left", function (d) {
+						return d.x + "px";
+					})
+					.style("top", function (d) {
+						return d.y + "px";
+					})
+					.style("width", function (d) {
+						return Math.max(0, d.dx - 1) + "px";
+					})
+					.style("height", function (d) {
+						return Math.max(0, d.dy - 1) + "px";
+					});
+		}
+
+		function reset() {
+			if (! pause) {
+				d3.select("#play").style("display", "initial");
+				d3.select("#pause").style("display", "none");
+				pause = true;
+			}
+			d3.select("#current_time").html("4:00am");
+			d3.selectAll("svg").remove();
+			curr_minute = -1;
+			runVis();
+		}
+
 	}
-
-	// Resolve collisions between nodes.
-	function collide(alpha) {
-	  var quadtree = d3.geom.quadtree(nodes);
-	  return function(d) {
-	    var r = d.radius + maxRadius + padding,
-	        nx1 = d.x - r,
-	        nx2 = d.x + r,
-	        ny1 = d.y - r,
-	        ny2 = d.y + r;
-	    quadtree.visit(function(quad, x1, y1, x2, y2) {
-	      if (quad.point && (quad.point !== d)) {
-	        var x = d.x - quad.point.x,
-	            y = d.y - quad.point.y,
-	            l = Math.sqrt(x * x + y * y),
-	            r = d.radius + quad.point.radius + (d.act !== quad.point.act) * padding;
-	        if (l < r) {
-	          l = (l - r) / l * alpha;
-	          d.x -= x *= l;
-	          d.y -= y *= l;
-	          quad.point.x += x;
-	          quad.point.y += y;
-	        }
-	      }
-	      return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
-	    });
-	  };
-	}
-
-	// Speed toggle
-	d3.selectAll(".togglebutton")
-      .on("click", function() {
-        if (d3.select(this).attr("data-val") == "slow") {
-            d3.select(".slow").classed("current", true);
-			d3.select(".medium").classed("current", false);
-            d3.select(".fast").classed("current", false);
-        } else if (d3.select(this).attr("data-val") == "medium") {
-            d3.select(".slow").classed("current", false);
-			d3.select(".medium").classed("current", true);
-            d3.select(".fast").classed("current", false);
-        } 
-		else {
-            d3.select(".slow").classed("current", false);
-			d3.select(".medium").classed("current", false);
-			d3.select(".fast").classed("current", true);
-        }
-		
-		USER_SPEED = d3.select(this).attr("data-val");
-    });
-
-	/*********************/
-	/*  Tree Map         */
-	/*********************/
-	var margin_t = {top: 40, right: 10, bottom: 10, left: 10},
-			width_t = 960 - margin_t.left - margin_t.right,
-			height_t = 500 - margin_t.top - margin_t.bottom;
-
-	var color = d3.scale.category10();
-
-	var treemap = d3.layout.treemap()
-			.size([width_t, height_t])
-			.sticky(false)
-			.value(function(d) { return d.size; });
-
-	var div = d3.select("body").append("div")
-			.style("position", "relative")
-			.style("width", (width_t + margin_t.left + margin_t.right) + "px")
-			.style("height", (height_t + margin_t.top + margin_t.bottom) + "px")
-			.style("left", margin_t.left + "px")
-			.style("top", margin_t.top + "px");
-
-	function updateTreemap (root) {
-
-		var node = div.datum(root).selectAll(".node")
-				.data(treemap.nodes);
-
-		var enter = node
-				.enter().append("div")
-				.attr("class", "node");
-		enter.transition().duration(1500)
-				.call(position)
-				.style("background", function(d) { return color(d.name); })
-				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
-		node.
-				exit().remove();
-
-		node
-				.call(position)
-				.style("background", function(d) { return color(d.name); })
-				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
-
-	}
-
-	function position() {
-		this.style("left", function(d) { return d.x + "px"; })
-				.style("top", function(d) { return d.y + "px"; })
-				.style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
-				.style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
-	}
-
 
 }); // @end d3.tsv
-
-function color(activity) {
-	
-	var colorByActivity = {
-		"0": "#e0d400",
-		"1": "#1c8af9",
-		"2": "#51BC05",
-		"3": "#FF7F00",
-		"4": "#DB32A4",
-		"5": "#00CDF8",
-		"6": "#E63B60",
-		"7": "#8E5649",
-		"8": "#68c99e",
-		"9": "#a477c8",
-		"10": "#5C76EC",
-		"11": "#E773C3",
-		"12": "#799fd2",
-		"13": "#038a6c",
-		"14": "#cc87fa",
-		"15": "#ee8e76",
-		"16": "#bbbbbb"
-	};
-	
-	return colorByActivity[activity];
-	
-}
 
 // Output readable percent based on count.
 function readablePercent(n) {
