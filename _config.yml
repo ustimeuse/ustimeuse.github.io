@@ -2,5 +2,5 @@ baseurl: ""
 relative_permalinks: false
 markdown: kramdown
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 encoding: utf-8

@@ -68,50 +68,7 @@
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="#top">American Time Use</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#time_management">Motivation</a>
-                    </li>
-
-                  <li>
-                        <a href="#objectives">Goals</a>
-                    </li>
-                  <li>
-                    <a href="#data">Data</a>
-                  </li>
-                  <li>
-                      <a href="#insights">Visualizations</a>
-                  </li>
-                    <li>
-                        <a href="#our_team">Team</a>
-                    </li>
-                    <!--<li>-->
-                        <!--<a href="#references">References</a>-->
-                    <!--</li>-->
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-
+    {% include header.html %}
     <!-- Header -->
     <a name="about"></a>
     <div id="top" class="intro-header">
@@ -123,19 +80,7 @@
                         <img src="img/American.png">
                         <h2 class="typing tag" style="margin-left: auto; margin-right: auto">America: A Land of Freedom... <span class="tag2">But Maybe Not Free Time?</span><span class="type">|</span></h2>
                         <br>
-                        <hr class="intro-divider">
-                        <br>
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="oneday.html" class="btn btn-default btn-lg"> <span class="network-name">A Day in the Life</span></a>
-                            </li>
-                            <li>
-                                <a href="choropleth.html" class="btn btn-default btn-lg"> <span class="network-name">Across America</span></a>
-                            </li>
-                            <li>
-                                <a href="differences.html" class="btn btn-default btn-lg"> <span class="network-name">Group Differences</span></a>
-                            </li>
-                        </ul>
+                        {% include buttons.html %}
                     </div>
                 </div>
 
@@ -305,43 +250,34 @@
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data</h2>
+                            <h2 class="accordion">Survey Methodology</h2>
 
-                            <p class="descriptions">The data is huge, consisting of data from 2003 to 2014. To avoid the burden of analyzing such a huge database, we decide to pick data from 2014.
+                            <p>The data is huge, consisting of data from 2003 to 2014. To avoid the burden of analyzing such a huge database, we decide to pick data from 2014.
                                 The survey was conducted by randomly selecting individuals from a subset of households. Subjects are interviewed only once about how they spent their time on the previous day. Demographic information on the subjects (age, sex, race, zip code of location, gender, etc…) was also collected.
                             </p>
                         </li>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data Analysis</h2>
+                            <h2 class="accordion">Data Cleaning</h2>
                             <p>We use R extensively to clean and format the data. Major steps for cleaning the data include:
                                 Reformat data; Draw histograms to see overall distributions of various categories of time spent by people of
                                 different demographic groups; Eliminate rows with NIU values for employment status or school/college enrollment;
                                 Subgroup data into various demographic groups based on gender, races, employment status, family income, and various other factors
                                 to determine interesting variables to be featured in the data visualizations; Create dataframes and new csv files with narrowed list of
                                 relevant variables of interests such as states, sex, age, race, working time, educational time, leisure time, personal care time. </p>
-                            <p> We use the data to create various visualizations as seen above.</p>
                         </li>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2 class="accordion">Data References</h2>
-                            <p class="descriptions"> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
+                            <h2 class="accordion">References</h2>
+                            <p> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
                         </li>
-                        {% for item in site.data.activities %}
-                        <li>
-                          <input type="checkbox" checked>
-                          <i></i>
-                          <h2 class="accordion">{{ item.act }}</h2>
-                          <p class="descriptions">{{ item.detail }}</p>
-                        </li>
-                        {% endfor %}
                     </ul>
                 </div>
 
                 <div class="col-lg-6 col-sm-pull-6  col-sm-6">
-                    <br><br><br><br><br><br><br>
+                    <br><br><br>
                     <div class="loading">
                         <div class="hourglass">
                             <div class="hourglass-top">
@@ -360,153 +296,25 @@
 
         </div>
     </div>
-
     <div class="content-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h1 class="tag">Activity Categories</h1>
           </div>
-          <div class="col-md-3">
-            <h2 class="mainpoint">Work and Work- Related Activities</h2>
-            <p>This category includes time spent working in one’s job, engaging in income-earning activities (not as part of one’s job), interviewing, and looking for jobs. Work-related activities involve those that are not obviously work but are parts of one’s job, such as attending meetings with business partners, getting dinner with potential clients, playing golf with customers, etc.</p>
-          </div>
-          <div class="col-md-3">
-            <h2 class="mainpoint">Personal Care Activities</h2>
-            <p>Personal Care Activities: This category includes self-care, showering, grooming, and sleeping.</p>
-          </div>
-          <div class="col-md-3">
-            <h2 class="mainpoint">Household Activities</h2>
-            <p>This category includes housework, yard care, pet care, vehicle and home maintenance and repair, home decorations and renovation, cooking, and other activities that revolve around household management (checking mail, filling out paperwork, planning party).</p>
-          </div>
-          <div class="col-md-3">
-            <h2 class="mainpoint">Leisure Activities</h2>
-            <p>This category includes socializing, relaxing, engaging in leisure activities, doing sports, exercising, and engaging in recreational activities.</p>
-          </div>
+          {% for item in site.data.activities %}
+            <div class="col-md-15">
+              <h2 class="mainpoint">{{ item.act }}</h2>
+              <p>{{ item.detail }}</p>
+            </div>
+          {% endfor %}
         </div>
       </div>
-      </div>
-        <!--<div class="row">-->
-          <!--<div class="col-md-12">-->
-            <!--<h2 class="tag">Across America</h2>-->
-            <!--<form class="form-inline">-->
-              <!--<div class="form-group">-->
-                <!--<br>-->
-                <!--<label for="rankingType">Category to Map by: </label>-->
-                <!--<select class="form-control" id="map-type" onchange="updateMap()">-->
-                  <!--<option value="Average Work">Average Working Time (min)</option>-->
-                  <!--<option value="Average Leisure">Average Leisure Time (min)</option>-->
-                  <!--<option value="Average Personal Care">Average Personal Care Time (min)</option>-->
-                  <!--<option value="Average Educational Time">Average Education Time (min)</option>-->
-                <!--</select>-->
-                <!--<br><br><br><br>-->
-              <!--</div>-->
-            <!--</form>-->
-            <!--<div id="update"></div>-->
-            <!--<br><br><br><br>-->
-            <!--<div id="visualization"></div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-          <!--<div class="col-md-6">-->
-            <!--<h2>Females vs Males</h2>-->
-            <!--<div id="overlapping-histogram"></div>-->
-          <!--</div>-->
-          <!--<div class="col-md-6">-->
-            <!--<h2>Text</h2>-->
-            <!--<div></div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!-- /.content-section-b -->
-
-    <!--<section id="cd-timeline" class="cd-container">-->
-        <!--<div class="cd-timeline-block">-->
-            <!--<div class="cd-timeline-img cd-picture">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture">-->
-            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
-
-            <!--<div class="cd-timeline-content">-->
-                <!--<h2 id="insights">Insights 1</h2>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>-->
-                <!--<a href="#0" class="cd-read-more">Read more</a>-->
-                <!--<span class="cd-date">Jan 14</span>-->
-            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
-        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
-
-        <!--<div class="cd-timeline-block">-->
-            <!--<div class="cd-timeline-img cd-movie">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg" alt="Movie">-->
-            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
-
-            <!--<div class="cd-timeline-content">-->
-                <!--<h2>Insights 2</h2>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>-->
-                <!--<a href="#0" class="cd-read-more">Read more</a>-->
-                <!--<span class="cd-date">Jan 18</span>-->
-            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
-        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
-
-        <!--<div class="cd-timeline-block">-->
-            <!--<div class="cd-timeline-img cd-picture">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture">-->
-            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
-
-            <!--<div class="cd-timeline-content">-->
-                <!--<h2>Insights 3</h2>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>-->
-                <!--<a href="#0" class="cd-read-more">Read more</a>-->
-                <!--<span class="cd-date">Jan 24</span>-->
-            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
-        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
-
-        <!--<div class="cd-timeline-block">-->
-            <!--<div class="cd-timeline-img cd-location">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg" alt="Location">-->
-            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
-
-            <!--<div class="cd-timeline-content">-->
-                <!--<h2>Insights 4</h2>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>-->
-                <!--<a href="#0" class="cd-read-more">Read more</a>-->
-                <!--<span class="cd-date">Feb 14</span>-->
-            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
-        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
-
-        <!--<div class="cd-timeline-block">-->
-            <!--<div class="cd-timeline-img cd-location">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg" alt="Location">-->
-            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
-
-            <!--<div class="cd-timeline-content">-->
-                <!--<h2>Insights 5</h2>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>-->
-                <!--<a href="#0" class="cd-read-more">Read more</a>-->
-                <!--<span class="cd-date">Feb 18</span>-->
-            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
-        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
-
-        <!--<div class="cd-timeline-block">-->
-            <!--<div class="cd-timeline-img cd-movie">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg" alt="Movie">-->
-            <!--</div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
-
-            <!--<div class="cd-timeline-content">-->
-                <!--<h2>Final Section</h2>-->
-                <!--<p>This is the content of the last section</p>-->
-                <!--<span class="cd-date">Feb 26</span>-->
-            <!--</div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
-        <!--</div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
-    <!--</section> &lt;!&ndash; cd-timeline &ndash;&gt;-->
+    </div>
 
     <div class="content-section-a">
 
         <div id="our_team" class="container">
-
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
             <div class="row">
                 <div class="col-md-3">
                     <p class="typing">We are Team Triple Treat<span class="type">|</span></p>
@@ -514,7 +322,7 @@
 
                 <div class="col-md-3">
                     <div class="polaroid">
-                        <p>Yuqi Hou, '16</p>
+                        <p>Yuqi Hou, '15-16</p>
                         <img src="img/Yuqi.jpg" />
                     </div>
                 </div>

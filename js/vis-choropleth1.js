@@ -52,14 +52,6 @@ var colors = ["#fef0d9","#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000"];
 var color = d3.scale.linear()
     .range(colors);
 
-
-// Upon hovering, show text
-//function getText(d,selectedValue) {
-//    return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
-//    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
-//}
-
-//Upon hovering, show text
 function getText(d,selectedValue) {
     var summary=
         "<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +

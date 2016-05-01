@@ -138,7 +138,8 @@ function updatePath(selectedValue) {
       .append("text")
       .style("text-anchor", "middle")
       .attr("y", -9)
-      .text(function(d) { return d; });
+      .text(function(d) { return formatLabel(d); })
+      .attr("cursor","move");
 
    //Add and store a brush for each axis.
   //g.append("g")
@@ -153,6 +154,19 @@ function updatePath(selectedValue) {
 
 
 
+}
+
+String.prototype.capitalize = function() {
+  return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+function formatLabel(d){
+  if(d=="pcare"){
+    return "Personal Care (hrs/day)"
+  }
+  else{
+    return d.capitalize() + " (hrs/day)";
+  }
 }
 
 function position(d) {
