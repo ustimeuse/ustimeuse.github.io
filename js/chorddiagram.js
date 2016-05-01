@@ -59,7 +59,8 @@ function drawChords (matrix, mmap) {
         .attr("transform", "translate(" + w / 1.9 + "," + h / 2 + ")");
 
     svg.append("circle")
-        .attr("r", r0 + 20);
+        .attr("r", r0 + 20)
+        .attr("transform", "translate(50,0)");
 
     var rdr = chordRdr(matrix, mmap);
     chord.matrix(matrix);
