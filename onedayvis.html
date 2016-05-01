@@ -24,21 +24,24 @@
         <div class="clr"></div></div>
 </div>
 <div id="chart" class="col-md-7"></div>
-<div id="bar-chart" class="col-md-5"></div>
-<div id="ranking">
-    <h1>Ranking of activities:</h1>
-    <p><span>01: </span><span id="1"></span></p>
-    <p><span>02: </span><span id="2"></span></p>
-    <p><span>03: </span><span id="3"></span></p>
-    <p><span>04: </span><span id="4"></span></p>
-    <p><span>05: </span><span id="5"></span></p>
-    <p><span>06: </span><span id="6"></span></p>
-    <p><span>07: </span><span id="7"></span></p>
-    <p><span>08: </span><span id="8"></span></p>
-    <p><span>09: </span><span id="9"></span></p>
-    <p><span>10: </span><span id="10"></span></p>
-    <p><span>11: </span><span id="11"></span></p>
+<div class="col-md-5">
+    <div id="bar-chart" style="float: left"></div>
+    <div id="ranking">
+        <h1>Ranking of activities:</h1>
+        <p><span>01: </span><span id="1"></span></p>
+        <p><span>02: </span><span id="2"></span></p>
+        <p><span>03: </span><span id="3"></span></p>
+        <p><span>04: </span><span id="4"></span></p>
+        <p><span>05: </span><span id="5"></span></p>
+        <p><span>06: </span><span id="6"></span></p>
+        <p><span>07: </span><span id="7"></span></p>
+        <p><span>08: </span><span id="8"></span></p>
+        <p><span>09: </span><span id="9"></span></p>
+        <p><span>10: </span><span id="10"></span></p>
+        <p><span>11: </span><span id="11"></span></p>
+    </div>
 </div>
+<div id="treemap"></div>
 <div class="clr"></div>
 
 <script src="js/d3-3-5-5.min.js"></script>
@@ -227,10 +230,10 @@
                     .attr("width", width)
                     .attr("height", height);
 
-            var margin = {top: 40, right: 10, bottom: 130, left: 60};
+            var margin = {top: 40, right: 10, bottom: 160, left: 60};
 
-            var width2 = 500 - margin.left - margin.right,
-                    height2 = 600 - margin.top - margin.bottom;
+            var width2 = 300 - margin.left - margin.right,
+                    height2 = 430 - margin.top - margin.bottom;
 
             var svg2 = d3.select("#bar-chart").append("svg")
                     .attr("width", width2 + margin.left + margin.right)
@@ -366,6 +369,7 @@
                     .call(xAxis)
                     .selectAll("text")
                     .style("text-anchor", "end")
+                    .style("font-size", "12px")
                     .attr("dx", "-.8em")
                     .attr("dy", ".15em")
                     .attr("transform", "rotate(-65)");
@@ -377,8 +381,8 @@
             // axis label
 
             svg2.append("text")
-                    .attr("x", -height / 2) //x and y positions swap after rotation
-                    .attr("y", 12)
+                    .attr("x", -height2 / 2) //x and y positions swap after rotation
+                    .attr("y", 5)
                     .attr("dy", ".7em")
                     .attr("transform", "rotate(-90)")
                     .style("text-anchor", "middle")
@@ -593,8 +597,8 @@
             /*  Tree Map         */
             /*********************/
             var margin_t = {top: 40, right: 10, bottom: 10, left: 10},
-                    width_t = 960 - margin_t.left - margin_t.right,
-                    height_t = 500 - margin_t.top - margin_t.bottom;
+                    width_t = 400 - margin_t.left - margin_t.right,
+                    height_t = 320 - margin_t.top - margin_t.bottom;
 
             var color = d3.scale.category10();
 
@@ -605,12 +609,12 @@
                         return d.size;
                     });
 
-            var div = d3.select("body").append("div")
+            var div = d3.select("#treemap").append("div")
                     .style("position", "relative")
                     .style("width", (width_t + margin_t.left + margin_t.right) + "px")
                     .style("height", (height_t + margin_t.top + margin_t.bottom) + "px")
-                    .style("left", margin_t.left + "px")
-                    .style("top", margin_t.top + "px");
+                    .style("left", (width + margin.left) + "px")
+                    .style("top", "440px");
 
             function updateTreemap(root) {
 
@@ -620,7 +624,7 @@
                 var enter = node
                         .enter().append("div")
                         .attr("class", "node");
-                enter.transition().duration(1500)
+                enter
                         .call(position)
                         .style("background", function (d) {
                             return color(d.name);
