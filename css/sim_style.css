@@ -4,7 +4,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .center {
     display: block;
     width: 20%;
-	margin: 0 auto;
+    margin: 0 auto;
+}
+
+.bar {
+    fill: #ff775c;
 }
 
 /*********************/
@@ -59,25 +63,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     pointer-events: none;
 }
 
-/* Chord Diagram */
-
-#circle circle {
-    fill: none;
-    pointer-events: all;
-}
-path.group {
-    fill-opacity: .8;
-}
-path.chord {
-    fill-opacity: .8;
-    stroke: #000;
-    stroke-width: .25px;
-}
-#circle:hover path.fade {
-    display: none;
-}
-aside {padding: 20px;}
-
+/* Tree Diagram */
 
 form {
     position: absolute;
