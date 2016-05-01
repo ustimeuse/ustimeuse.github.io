@@ -15,13 +15,12 @@
 
 	<div id="current_time">4:00am</div><div class="center">
 	<div id = "controls">
-		<input type="image" src="img/reset.png" name="reset" class="button" id = "reset" />
+		<!--<input type="image" src="img/reset.png" name="reset" class="button" id = "reset" />-->
 		<input type="image" src="img/play.png" name="play" class="button" id = "play" />
-		<input type="image" src="img/pause.png" name="pause" class="button" id = "pause" />
+		<input type="image" src="img/pause.png" name="pause" class="button" style="display: none" id = "pause" />
 	</div>
 	<div id="speed">
 		<div class="togglebutton slow current" data-val="slow">Slow</div>
-		<div class="togglebutton medium" data-val="medium">Pause</div>
 		<div class="togglebutton fast" data-val="fast">Fast</div>
 		<div class="clr"></div></div>
 	</div>
@@ -60,21 +59,23 @@ var sched_objs = [],
 
 var act_codes = [
     {"index": "0", "short": "Sleeping", "desc": "Sleeping"},
-    {"index": "1", "short": "Personal Care / Personal Tasks", "desc": "Personal Care"},
-    {"index": "2", "short": "Eat & Drink / Shopping", "desc": "Eating and Drinking"},
+    {"index": "1", "short": "Personal Care & Tasks", "desc": "Personal Care"},
+    {"index": "2", "short": "Eat/Drink & Shopping", "desc": "Eating and Drinking"},
     {"index": "3", "short": "Education", "desc": "Education"},
     {"index": "4", "short": "Work", "desc": "Work and Work-Related Activities"},
     {"index": "5", "short": "Housework", "desc": "Household Activities"},
-    {"index": "6", "short": "Volunteering / Caring for Others", "desc": "Care for others / Volunteer Activities"},
+    {"index": "6", "short": "Volunteer / Care for Others", "desc": "Care for others / Volunteer Activities"},
     {"index": "7", "short": "Leisure / Sports", "desc": "Socializing, Relaxing, Leisure, Sports, Exercise, and Recreation"},
     {"index": "8", "short": "Religion", "desc": "Religious and Spiritual Activities"},
     {"index": "9", "short": "Misc.", "desc": "Telephone Calls, Other"},
     {"index": "10", "short": "Traveling", "desc": "Traveling"}
 ];
 
+var act_codes_origin = Array.prototype.slice.call(act_codes);
+
 var cat_key = [0,1,2,3,4,5,6,6,2,1,7,7,8,6,9,9,10];
 
-var speeds = { "slow": 1000, "medium": 30000, "fast": 50 };
+var speeds = { "slow": 1000, "fast": 50 };
 
 var treemap_arr = [];
 
@@ -92,22 +93,6 @@ var time_notes = [
 	{ "start_minute": 1210, "stop_minute": 1300, "note": "Goodnight. More than 80% of people are asleep and it peaks at 96% around 3:00am." },
 ];
 var notes_index = 0;
-
-var matrix = [
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-];
-
-var matrix_array = [];
 
 // Activity to put in center of circle arrangement
 var center_act = "Traveling",
@@ -141,6 +126,8 @@ var svg2 = d3.select("#bar-chart").append("svg")
 		.attr("width", width2 + margin.left + margin.right)
 		.attr("height", height2 + margin.top + margin.bottom);
 
+var pause = true;
+
 // Load data and let's do it.
 d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	
@@ -153,7 +140,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			"children": []
 		};
 
-//		var matrix = Array.prototype.slice.call(matrix_origin);
 		for (var i=0; i < day_array.length; i++) {
 			// Duration
 			if (i % 2 == 1) {
@@ -179,7 +165,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                         } else {
                             activities[act_index].duration += +day_array[i];
                         }
-						matrix[+act][next_act] += 1;
 						child_obj = {"name": act, "size": +day_array[i]};
                         break;
                     case 7:
@@ -189,7 +174,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
                         } else {
                             activities['6'] += +day_array[i];
                         }
-						matrix[6][next_act] += 1;
 						child_obj = {"name": '6', "size": +day_array[i]};
                         break;
 					case 8:
@@ -198,7 +182,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['2'] += +day_array[i];
 						}
-						matrix[2][next_act] += 1;
 						child_obj = {"name": '2', "size": +day_array[i]};
 						break;
 					case 9:
@@ -207,7 +190,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['1'] += +day_array[i];
 						}
-						matrix[1][next_act] += 1;
 						child_obj = {"name": '1', "size": +day_array[i]};
 						break;
 					case 10:
@@ -217,7 +199,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['7'] += +day_array[i];
 						}
-						matrix[7][next_act] += 1;
 						child_obj = {"name": '7', "size": +day_array[i]};
 						break;
 					case 12:
@@ -226,7 +207,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['8'] += +day_array[i];
 						}
-						matrix[8][next_act] += 1;
 						child_obj = {"name": '8', "size": +day_array[i]};
 						break;
 					case 14:
@@ -236,7 +216,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['9'] += +day_array[i];
 						}
-						matrix[9][next_act] += 1;
 						child_obj = {"name": '9', "size": +day_array[i]};
 						break;
 					case 16:
@@ -245,7 +224,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 						} else {
 							activities['10'] += +day_array[i];
 						}
-						matrix[10][next_act] += 1;
 						child_obj = {"name": '10', "size": +day_array[i]};
 						break;
                 }
@@ -257,17 +235,18 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		sched_objs.push(activities);
 		treemap_arr.push(treemap_obj);
 
-//		matrix_array.push(matrix);
 	});
-	console.log(treemap_arr[0])
+
 	// Used for percentages by minute
 
 	var act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0}, {"index": 3, "count": 0},
 		              {"index": 4, "count": 0}, {"index": 5, "count": 0}, {"index": 6, "count": 0}, {"index": 7, "count": 0},
 		              {"index": 8, "count": 0}, {"index": 9, "count": 0}, {"index": 10, "count": 0}];
 
-	// A node for each person's schedule
-	var nodes = sched_objs.map(function(o,i) {
+
+//	function initVis () {
+		// A node for each person's schedule
+		var nodes = sched_objs.map(function (o, i) {
 		var act = o[0].act;
 		act_counts[+act].count += 1;
 		var init_x = foci[act].x + Math.random();
@@ -277,7 +256,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 			radius: 3,
 			x: init_x,
 			y: init_y,
-			color: "#DB32A4", //color(act),
+			color: "#00cdc0", //color(act),
 			moves: 0,
 			next_move_time: o[0].duration,
 			sched: o
@@ -285,63 +264,182 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 	});
 
 	var force = d3.layout.force()
-		.nodes(nodes)
-		.size([width, height])
-		// .links([])
-		.gravity(0)
-		.charge(0)
-		.friction(.9)
-		.on("tick", tick)
-		.start();
+			.nodes(nodes)
+			.size([width, height])
+			// .links([])
+			.gravity(0)
+			.charge(0)
+			.friction(.9)
+			.on("tick", tick)
+			.start();
 
 	var circle = svg.selectAll("circle")
-		.data(nodes)
-	  	.enter().append("circle")
-		.attr("r", function(d) { return d.radius; })
-		.style("fill", function(d) { return d.color; })
-		.on("click", function (d) {
-			updateTreemap(treemap_arr[d.index]);
-		});
+			.data(nodes)
+			.enter().append("circle")
+			.attr("r", function (d) {
+				return d.radius;
+			})
+			.style("fill", function (d) {
+				return d.color;
+			})
+			.on("click", function (d) {
+				updateTreemap(treemap_arr[d.index]);
+			});
 		// .call(force.drag);
-	
-	// Activity labels
-	var label = svg.selectAll("text")
-		.data(act_codes)
-	  	.enter().append("text")
-		.attr("class", "actlabel")
-		.attr("x", function(d, i) {
-			if (d.desc == center_act) {
-				return center_pt.x;
-			} else {
-				var theta = 2 * Math.PI / (act_codes.length-1);
-				return 340 * Math.cos(i * theta)+380;
-			}
-			
-		})
-		.attr("y", function(d, i) {
-			if (d.desc == center_act) {
-				return center_pt.y;
-			} else {
-				var theta = 2 * Math.PI / (act_codes.length-1);
-				return 340 * Math.sin(i * theta)+365;
-			}
+
+		// Activity labels
+		var label = svg.selectAll("text")
+				.data(act_codes)
+				.enter().append("text")
+				.attr("class", "actlabel")
+				.attr("x", function (d, i) {
+					if (d.desc == center_act) {
+						return center_pt.x;
+					} else {
+						var theta = 2 * Math.PI / (act_codes.length - 1);
+						return 340 * Math.cos(i * theta) + 380;
+					}
+
+				})
+				.attr("y", function (d, i) {
+					if (d.desc == center_act) {
+						return center_pt.y;
+					} else {
+						var theta = 2 * Math.PI / (act_codes.length - 1);
+						return 340 * Math.sin(i * theta) + 365;
+					}
+				});
+
+		label.append("tspan")
+				.attr("x", function () {
+					return d3.select(this.parentNode).attr("x");
+				})
+				// .attr("dy", "1.3em")
+				.attr("text-anchor", "middle")
+				.text(function (d) {
+					return d.short;
+				});
+		label.append("tspan")
+				.attr("dy", "1.3em")
+				.attr("x", function () {
+					return d3.select(this.parentNode).attr("x");
+				})
+				.attr("text-anchor", "middle")
+				.attr("class", "actpct")
+				.text(function (d) {
+					return readablePercent(act_counts[d.index].count);
+				});
+//	}
+	/*********************/
+	/*  BAR CHART        */
+	/*********************/
+
+	// Scales
+	var x = d3.scale.ordinal()
+			.domain(act_index)
+			.rangeRoundBands([0, width2], .1);
+
+	var y = d3.scale.linear()
+			.domain([0,1000])
+			.range([height2, 0]);
+
+	var ylabel = d3.scale.linear()
+			.domain([0,1])
+			.range([height2, 0]);
+
+	// Axes
+
+	var xAxis = d3.svg.axis()
+			.scale(x)
+			.orient("bottom");
+
+	var yAxis = d3.svg.axis()
+			.scale(ylabel)
+			.tickFormat(d3.format("%"))
+			.orient("left");
+
+	svg2.append("g")
+			.attr("class", "x-axis axis")
+			.attr("transform", "translate("+margin.left+","+(margin.top+height2)+")");
+
+	svg2.append("g")
+			.attr("class", "y-axis axis")
+			.attr("transform", "translate("+margin.left+","+margin.top+")");
+
+	svg2.select(".x-axis").transition().duration(1000)
+			.call(xAxis)
+			.selectAll("text")
+			.style("text-anchor", "end")
+			.attr("dx", "-.8em")
+			.attr("dy", ".15em")
+			.attr("transform", "rotate(-65)");
+
+	svg2.select(".y-axis")
+			.transition().duration(1000)
+			.call(yAxis);
+
+	// axis label
+
+	svg2.append("text")
+			.attr("x", -height/2) //x and y positions swap after rotation
+			.attr("y", 12)
+			.attr("dy", ".7em")
+			.attr("transform", "rotate(-90)")
+			.style("text-anchor", "middle")
+			.text("% of 1000 people");
+
+	var tip = d3.tip()
+			.attr('class', 'd3-tip');
+
+	// Update Bar Chart
+	function updateBars(data) {
+
+		// Data-join (rect now contains the update selection)
+		var rect = svg2.selectAll("rect")
+				.data(data);
+
+		tip
+				.html(function(d) {
+					return (d.count/10)+"%";
+				});
+
+		svg2.call(tip);
+
+		// Enter (initialize the newly added elements)
+		rect
+				.enter().append("rect")
+				.attr("class", "bar")
+				.on("mouseover", tip.show)
+				.on('mouseout', tip.hide);
+
+		// Update (set the dynamic properties of the elements)
+		rect
+				.transition().duration(40)
+				.attr("x", function(d, index) { return x(act_index[index]); })
+				.attr("y", function(d) { return y(d.count); })
+				.attr("width", x.rangeBand())
+				.attr("height", function(d) { return height2 - y(d.count); })
+				.attr("transform", "translate("+margin.left+","+margin.top+")");
+
+		// Exit
+		rect.exit().remove();
+	}
+
+	// Update Ranking
+	function updateRanking(data) {
+
+		var sortedData = Array.prototype.slice.call(data).sort( function(a,b) {
+			//sort by count, descending.
+			return b.count - a.count;
 		});
-		
-	label.append("tspan")
-		.attr("x", function() { return d3.select(this.parentNode).attr("x"); })
-		// .attr("dy", "1.3em")
-		.attr("text-anchor", "middle")
-		.text(function(d) {
-			return d.short;
+
+		sortedData.forEach(function(d, index){
+			document.getElementById(index+1).innerHTML = act_codes[d.index].short;
 		});
-	label.append("tspan")
-		.attr("dy", "1.3em")
-		.attr("x", function() { return d3.select(this.parentNode).attr("x"); })
-		.attr("text-anchor", "middle")
-		.attr("class", "actpct")
-		.text(function(d) {
-			return act_counts[d.index].count + "%";
-		});
+	}
+
+	updateBars(act_counts);
+	updateRanking(act_counts);
 
 	// Update nodes based on activity and duration
 	function timer() {
@@ -389,23 +487,89 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		// Update times
 		var true_minute = curr_minute % 1440;
 		d3.select("#current_time").text(minutesToTime(true_minute));
-		
-		setTimeout(timer, speeds[USER_SPEED]);
+
+		if (! pause) {
+			setTimeout(timer, speeds[USER_SPEED]);
+		}
 	}
-	setTimeout(timer, speeds[USER_SPEED]);
 
 	// Time Control
-//	var bomb;
-//	d3.select("#play").style("display", "initial").on("click", function() {
-//		timer();
-//		d3.select("#play").style("display", "none");
-//		d3.select("#pause").style("display", "initial");
-//	});
-//	d3.select("#pause").on("click", function() { clearInterval();
-//		d3.select("#play").style("display", "initial");
-//		d3.select("#pause").style("display", "none");
-//	});
-//	d3.select("#reset").style("display", "initial").on("click", );
+	var bomb;
+	d3.select("#play").style("display", "initial").on("click", function() {
+		bomb = setTimeout(timer, speeds[USER_SPEED]);
+		pause = false;
+		d3.select("#play").style("display", "none");
+		d3.select("#pause").style("display", "initial");
+	});
+	d3.select("#pause").on("click", function() {
+		clearTimeout(bomb);
+		pause = true;
+		d3.select("#play").style("display", "initial");
+		d3.select("#pause").style("display", "none");
+	});
+//	d3.select("#reset").style("display", "initial").on("click", reset);
+
+	function reset() {
+		console.log("rest");
+//		if (! pause) {
+			clearTimeout(bomb);
+//		}
+//		act_codes = Array.prototype.slice.call(act_codes_origin);
+		curr_minute = 0;
+		// Update times
+		var true_minute = curr_minute % 1440;
+		d3.select("#current_time").text(minutesToTime(true_minute));
+
+		act_counts = [{"index": 0, "count": 0}, {"index": 1, "count": 0}, {"index": 2, "count": 0}, {"index": 3, "count": 0},
+			{"index": 4, "count": 0}, {"index": 5, "count": 0}, {"index": 6, "count": 0}, {"index": 7, "count": 0},
+			{"index": 8, "count": 0}, {"index": 9, "count": 0}, {"index": 10, "count": 0}];
+
+		// Rebind the nodes to the array
+
+//		nodes = [];
+//		circle =
+//		svg.selectAll("circle")
+//				.data(nodes);
+//
+//		circle.exit().remove();
+		console.log(circle);
+		nodes = sched_objs.map(function (o, i) {
+			var act = o[0].act;
+			act_counts[+act].count += 1;
+			var init_x = foci[act].x + Math.random();
+			var init_y = foci[act].y + Math.random();
+			return {
+				act: act,
+				radius: 3,
+				x: init_x,
+				y: init_y,
+				color: "#00cdc0", //color(act),
+				moves: 0,
+				next_move_time: o[0].duration,
+				sched: o
+			}
+		});
+
+		force
+				.nodes(nodes);
+
+		circle = svg.selectAll("circle")
+				.data(nodes)
+				.enter().append("circle")
+				.attr("r", function (d) {
+					return d.radius;
+				})
+				.style("fill", function (d) {
+					return d.color;
+				})
+				.on("click", function (d) {
+					updateTreemap(treemap_arr[d.index]);
+				});
+console.log(circle);
+//		bomb = setTimeout(timer, speeds[USER_SPEED]);
+		d3.select("#play").style("display", "none");
+		d3.select("#pause").style("display", "initial");
+	}
 
 	function tick(e) {
 	  var k = 0.04 * e.alpha;
@@ -420,7 +584,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 		} else {
 			var damper = 1;
 		}
-		o.color = "#e0d400";//color(curr_act);
+		o.color = "#00cdc0";//color(curr_act);
 	    o.y += (foci[curr_act].y - o.y) * k * damper;
 	    o.x += (foci[curr_act].x - o.x) * k * damper;
 	  });
@@ -482,114 +646,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
     });
 
 	/*********************/
-	/*  BAR CHART        */
-	/*********************/
-
-	// Scales
-	var x = d3.scale.ordinal()
-		.domain(act_index)
-		.rangeRoundBands([0, width2], .1);
-
-	var y = d3.scale.linear()
-		.domain([0,1000])
-		.range([height2, 0]);
-
-	var ylabel = d3.scale.linear()
-		.domain([0,1])
-		.range([height2, 0]);
-
-	// Axes
-
-	var xAxis = d3.svg.axis()
-		.scale(x)
-		.orient("bottom");
-
-	var yAxis = d3.svg.axis()
-		.scale(ylabel)
-		.tickFormat(d3.format("%"))
-		.orient("left");
-
-	svg2.append("g")
-		.attr("class", "x-axis axis")
-		.attr("transform", "translate("+margin.left+","+(margin.top+height2)+")");
-
-	svg2.append("g")
-		.attr("class", "y-axis axis")
-		.attr("transform", "translate("+margin.left+","+margin.top+")");
-
-	svg2.select(".x-axis").transition().duration(1000)
-		.call(xAxis)
-			.selectAll("text")
-			.style("text-anchor", "end")
-			.attr("dx", "-.8em")
-			.attr("dy", ".15em")
-			.attr("transform", "rotate(-65)");
-
-	svg2.select(".y-axis")
-		.transition().duration(1000)
-		.call(yAxis);
-
-	// axis label
-
-	svg2.append("text")
-		.attr("x", -height/2) //x and y positions swap after rotation
-		.attr("y", 12)
-		.attr("dy", ".7em")
-		.attr("transform", "rotate(-90)")
-		.style("text-anchor", "middle")
-		.text("# of people");
-
-	var tip = d3.tip()
-			.attr('class', 'd3-tip');
-
-	// Update Bar Chart
-	function updateBars(data) {
-
-		// Data-join (rect now contains the update selection)
-		var rect = svg2.selectAll("rect")
-			.data(data);
-
-		tip
-			.html(function(d) {
-				return (d.count/10)+"%";
-			});
-
-		svg2.call(tip);
-
-		// Enter (initialize the newly added elements)
-		rect
-			.enter().append("rect")
-			.attr("class", "bar")
-			.on("mouseover", tip.show)
-			.on('mouseout', tip.hide);
-
-		// Update (set the dynamic properties of the elements)
-		rect
-			.transition().duration(40)
-			.attr("x", function(d, index) { return x(act_index[index]); })
-			.attr("y", function(d) { return y(d.count); })
-			.attr("width", x.rangeBand())
-			.attr("height", function(d) { return height2 - y(d.count); })
-			.attr("transform", "translate("+margin.left+","+margin.top+")");
-
-		// Exit
-		rect.exit().remove();
-	}
-
-	// Update Ranking
-	function updateRanking(data) {
-
-		var sortedData = Array.prototype.slice.call(data).sort( function(a,b) {
-			//sort by count, descending.
-			return b.count - a.count;
-		});
-
-		sortedData.forEach(function(d, index){
-			document.getElementById(index+1).innerHTML = act_codes[d.index].short;
-		});
-	}
-
-	/*********************/
 	/*  Tree Map         */
 	/*********************/
 	var margin_t = {top: 40, right: 10, bottom: 10, left: 10},
@@ -612,14 +668,6 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 
 	function updateTreemap (root) {
 
-//		var node = div.datum(root).selectAll(".node")
-//				.data(treemap.nodes)
-//				.enter().append("div")
-//				.attr("class", "node")
-//				.call(position)
-//				.style("background", function(d) { return color(d.name); })
-//				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
-
 		var node = div.datum(root).selectAll(".node")
 				.data(treemap.nodes);
 
@@ -637,17 +685,7 @@ d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
 				.call(position)
 				.style("background", function(d) { return color(d.name); })
 				.text(function(d) { return d.children ? null : act_codes[d.name].short; });
-//		d3.selectAll("input").on("change", function change() {
-//			var value = this.value === "count"
-//					? function() { return 1; }
-//					: function(d) { return d.size; };
 
-//			node
-//					.data(treemap.value(value).nodes)
-//					.transition()
-//					.duration(1500)
-//					.call(position);
-//		});
 	}
 
 	function position() {
