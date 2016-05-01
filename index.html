@@ -1,3 +1,6 @@
+---
+
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,9 +153,11 @@
     <div  id="time_management" class="content-section-a">
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+                  <h2 class="section-heading">Time Use & Time Management</h2>
+                </div>
                 <div class="col-md-4">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Time Use & Time Management</h2>
                     <h2 class="mainpoint">Why is it important?</h2>
                     <p>As society progresses, being busy is a norm. People incur in more responsibilities and keep growing their to-do lists while time remains fixed.
                     Books written on “time-management” and maintaining “work-life balance” gain popularity as people explore
@@ -295,13 +300,13 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-push-6 col-sm-6">
                     <h2 class="section-heading">Data & Methodology</h2>
-                    <ul>
+                    <p>Our data is derived from American Time Use Survey (ATUS) database, sponsored by the Bureau of Labor Statistics and conducted by the US Census Bureau, tracking the amount of time people spend doing various activities such as sleeping, volunteering, travelling, working, playing sports.</p>
+                  <ul>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
                             <h2 class="accordion">Data</h2>
-                            <p class="descriptions">Our data is derived from American Time Use Survey (ATUS) database, sponsored by the Bureau of Labor Statistics and conducted by the US Census Bureau, tracking the amount of time people spend doing various activities such as sleeping, volunteering, travelling, working, playing sports.
-                            </p>
+
                             <p class="descriptions">The data is huge, consisting of data from 2003 to 2014. To avoid the burden of analyzing such a huge database, we decide to pick data from 2014.
                                 The survey was conducted by randomly selecting individuals from a subset of households. Subjects are interviewed only once about how they spent their time on the previous day. Demographic information on the subjects (age, sex, race, zip code of location, gender, etc…) was also collected.
                             </p>
@@ -324,6 +329,14 @@
                             <h2 class="accordion">Data References</h2>
                             <p class="descriptions"> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
                         </li>
+                        {% for item in site.data.activities %}
+                        <li>
+                          <input type="checkbox" checked>
+                          <i></i>
+                          <h2 class="accordion">{{ item.act }}</h2>
+                          <p class="descriptions">{{ item.detail }}</p>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
 
@@ -348,8 +361,31 @@
         </div>
     </div>
 
-    <!--<div class="content-section">-->
-      <!--<div class="container">-->
+    <div class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="tag">Activity Categories</h1>
+          </div>
+          <div class="col-md-3">
+            <h2 class="mainpoint">Work and Work- Related Activities</h2>
+            <p>This category includes time spent working in one’s job, engaging in income-earning activities (not as part of one’s job), interviewing, and looking for jobs. Work-related activities involve those that are not obviously work but are parts of one’s job, such as attending meetings with business partners, getting dinner with potential clients, playing golf with customers, etc.</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="mainpoint">Personal Care Activities</h2>
+            <p>Personal Care Activities: This category includes self-care, showering, grooming, and sleeping.</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="mainpoint">Household Activities</h2>
+            <p>This category includes housework, yard care, pet care, vehicle and home maintenance and repair, home decorations and renovation, cooking, and other activities that revolve around household management (checking mail, filling out paperwork, planning party).</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="mainpoint">Leisure Activities</h2>
+            <p>This category includes socializing, relaxing, engaging in leisure activities, doing sports, exercising, and engaging in recreational activities.</p>
+          </div>
+        </div>
+      </div>
+      </div>
         <!--<div class="row">-->
           <!--<div class="col-md-12">-->
             <!--<h2 class="tag">Across America</h2>-->
@@ -384,38 +420,6 @@
       <!--</div>-->
     <!--</div>-->
 
-    <div class="content-section-b">
-        <div class="container">
-            <div class="row">
-
-                <div id="donut" class="col-md-12">
-                  <h2 class="tag">Insights</h2>
-                  <p>We found that...</p>
-                  <hr class="section-heading-spacer">
-                  <div class="clearfix"></div>
-                    <form>
-                        <ul id="tabs">
-                            <li class="active"><a onchange="updatePath()" href="#gender" checked> Gender</a></li>
-                            <li><a onchange="updatePath()" href="#race"> Race</a></li>
-                            <li><a onchange="updatePath()" href="#income"> Income</a></li>
-                            <li><a onchange="updatePath()" href="#employment"> Employment</a></li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div id="show_data"></div>
-                    <div id="updateInfo"></div>
-                </div>
-
-                <div class="col-md-8">
-                    <div id="parallel-coordinates"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
     <!-- /.content-section-b -->
 
     <!--<section id="cd-timeline" class="cd-container">-->
@@ -602,7 +606,6 @@
     <script src="js/d3.min.js"></script>
     <script src="js/d3.tip.js"></script>
     <script src="js/colorbrewer.js"></script>
-    <script src="js/donut1.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/parallelCoordinates.js"></script>
     <script>

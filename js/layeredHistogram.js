@@ -1,4 +1,4 @@
-
+var state;
 
 /*
  *  layeredHistogram - Object constructor function
@@ -38,10 +38,8 @@ layeredHistogram.prototype.initVis = function() {
 
   var vis = this;
 
-  vis.margin = { top: 40, right: 10, bottom: 60, left: 60 },
-    vis.padding= vis.margin.top+vis.margin.bottom;
+  vis.margin = { top: 40, right: 10, bottom: 60, left: 60 };
 
-  //console.log(vis.padding);
   vis.width = 400 - vis.margin.left - vis.margin.right,
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
@@ -112,7 +110,7 @@ layeredHistogram.prototype.initVis = function() {
   vis.svg.select(".legendOrdinal")
       .call(vis.legendOrdinal);
 
-  vis.wrangleData();
+  vis.wrangleData("All States");
 }
 
 
@@ -120,10 +118,20 @@ layeredHistogram.prototype.initVis = function() {
  *  Data wrangling
  */
 
-layeredHistogram.prototype.wrangleData = function() {
+layeredHistogram.prototype.wrangleData = function(hoverState) {
   var vis = this;
 
-  vis.displayData = vis.data;
+  // Check if a state is being hovered over
+  if(hoverState && hoverState!="All States"){
+    state=hoverState;
+    vis.displayFemaleData = vis.femaleData.filter(byState)
+    vis.displayMaleData = vis.maleData.filter(byState)
+  }
+  else{
+    state="All States"
+    vis.displayFemaleData = vis.femaleData;
+    vis.displayMaleData = vis.maleData;
+  }
 
   // Update the visualization
   vis.updateVis();
@@ -141,30 +149,29 @@ layeredHistogram.prototype.updateVis = function() {
   vis.activity = selectedActivity(d3.select("#map-type").property("value"));
 
   // Generate a histogram using 24 uniformly-spaced bins.
-  vis.values = d3.layout.histogram()
-    .frequency(false)
-    .bins(vis.x.ticks(24))
-    .value(function(d) { return d[vis.activity]; })
-    (vis.data);
+  //vis.values = d3.layout.histogram()
+  //  .frequency(false)
+  //  .bins(vis.x.ticks(24))
+  //  .value(function(d) { return d[vis.activity]; })
+  //  (vis.data);
 
   // Female data values
   vis.femaleValues = d3.layout.histogram()
     .frequency(false)
     .bins(vis.x.ticks(24))
     .value(function(d) { return d[vis.activity]; })
-    (vis.femaleData);
+    (vis.displayFemaleData);
 
   // Male data values
   vis.maleValues = d3.layout.histogram()
     .frequency(false)
     .bins(vis.x.ticks(24))
     .value(function(d) { return d[vis.activity]; })
-    (vis.maleData);
+    (vis.displayMaleData);
 
   var femaleMax = d3.max(vis.femaleValues, function(d) { return d.y; });
   var maleMax = d3.max(vis.maleValues, function(d) { return d.y; });
   var yMax = d3.max([femaleMax,maleMax])+.05;
-  console.log(yMax);
 
   // Update y domain
   vis.y.domain([0, yMax]);
@@ -182,12 +189,13 @@ layeredHistogram.prototype.updateVis = function() {
   vis.bar1.append("rect")
     .attr("class", "rect1")
     .attr("x", 1)
-    .attr("width", vis.x(vis.values[0].dx) - 1)
+    .attr("width", vis.x(vis.femaleValues[0].dx) - 1)
     .attr("height", function(d) { return vis.height - vis.y(d.y); });
 
   // handle updated elements
-  vis.bar1.transition()
-    .duration(800)
+  vis.bar1
+    .transition()
+    //.duration(800);
     .attr("transform", function(d) { return "translate(" + vis.x(d.x) + "," + vis.y(d.y) + ")"; });
 
   //vis.bar1.append("text")
@@ -212,12 +220,12 @@ layeredHistogram.prototype.updateVis = function() {
     .append("rect")
     .attr("class", "rect2")
     .attr("x", 1)
-    .attr("width", vis.x(vis.values[0].dx) - 1)
+    .attr("width", vis.x(vis.maleValues[0].dx) - 1)
     .attr("height", function(d) { return vis.height - vis.y(d.y); });
 
   // handle updated elements
   vis.bar2.transition()
-    .duration(800)
+    //.duration(800)
     .attr("transform", function(d) { return "translate(" + vis.x(d.x) + "," + vis.y(d.y) + ")"; });
 
   vis.bar1.exit().remove();
@@ -237,7 +245,7 @@ layeredHistogram.prototype.updateVis = function() {
     }
   }
 
-  vis.svg.select(".title").text("Number of Hours Spent on " + actLabel(vis.activity));
+  d3.select("#state").text(state);
 
   // Call axis functions with the new domain
   vis.svg.select(".x-axis").call(vis.xAxis);
@@ -246,7 +254,6 @@ layeredHistogram.prototype.updateVis = function() {
 
 }
 
-
 function actLabel(act){
   switch (act) {
     case 'act_work': return "Work";
@@ -254,4 +261,8 @@ function actLabel(act){
     case 'act_pcare': return "Personal Care";
     case 'act_educ': return "Education";
   }
+}
+
+function byState(item) {
+  return item.state==state;
 }

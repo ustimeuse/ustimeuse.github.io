@@ -1,5 +1,4 @@
 var pdata;
-var format = d3.format("%")
 
 var margin = {top: 30, right: 10, bottom: 10, left: 10},
     width = 800 - margin.left - margin.right,
@@ -14,16 +13,15 @@ var line = d3.svg.line(),
     background,
     foreground;
 
-d3.csv("data/group-avgs.csv", function(error, csv) {
+d3.csv("data/group-avgs1.csv", function(error, csv) {
   var data = csv;
 
   for(var i=0; i<data.length; i++){
-    data[i].educ = +data[i].educ/1440;
-    data[i].leisure = +data[i].leisure/1440;
-    data[i].pcare = +data[i].pcare/1440;
-    data[i].social = +data[i].social/1440;
-    data[i].sports = +data[i].sports/1440;
-    data[i].work = +data[i].work/1440;
+    data[i].leisure = +data[i].leisure/60;
+    data[i].pcare = +data[i].pcare/60;
+    data[i].household = +data[i].household/60;
+    data[i].travel = +data[i].travel/60;
+    data[i].work = +data[i].work/60;
   }
 
   pdata=data;
@@ -48,10 +46,13 @@ function updatePath(selectedValue) {
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   // Extract the list of dimensions and create a scale for each.
-  x.domain(dimensions = d3.keys(pdata[0]).filter(function(d) {
+  x.domain(dimensions =["leisure","pcare","work","travel","household"]
+      //["leisure","pcare","work","travel","household"])
+      //d3.keys(pdata[0])
+          .filter(function(d) {
     return d != "Group.1" && d != "type" && (y[d] = d3.scale.linear()
         //.domain(d3.extent(pdata, function(p) { return +p[d]; }))
-        .domain([0,.5])
+        .domain([1,10.5])
         .range([height, 0]));
   }));
 
@@ -61,7 +62,9 @@ function updatePath(selectedValue) {
       .selectAll("path")
       .data(pdata)
       .enter().append("path")
+      .attr("stroke", "#ddd")
       .attr("stroke-width", 3)
+      .attr("fill", "none")
       .attr("d", path);
 
   // Add blue foreground lines for focus.
@@ -73,6 +76,7 @@ function updatePath(selectedValue) {
       //.transition()
       .attr("stroke", function(d, i) {return color(i);})
       .attr("stroke-width", 3)
+      .attr("fill", "none")
       .attr("d", path);
 
   //// Add grey background lines for context.
@@ -136,7 +140,7 @@ function updatePath(selectedValue) {
       .attr("y", -9)
       .text(function(d) { return d; });
 
-  // Add and store a brush for each axis.
+   //Add and store a brush for each axis.
   //g.append("g")
   //  .attr("class", "brush")
   //  .each(function(d) {

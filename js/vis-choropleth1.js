@@ -35,7 +35,6 @@ function processData(d) {
 function loaded(error,map,data) {
     USmap=map;
     timeuse=data;
-
     updateMap();
 }
 
@@ -55,9 +54,16 @@ var color = d3.scale.linear()
 
 
 // Upon hovering, show text
+//function getText(d,selectedValue) {
+//    return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+//    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
+//}
+
+//Upon hovering, show text
 function getText(d,selectedValue) {
-    var summary="<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
-    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue]/60,2)+ " hours</p>"
+    var summary=
+        "<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+        "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue]/60,2)+ " hours</p>"
     document.getElementById("content-1").innerHTML=summary;
 }
 
@@ -113,6 +119,13 @@ function updateMap(){
         }
     }
 
+    // Draw tip
+    tip1 = d3.tip().attr('class', 'd3-tip').html(function(d) {
+        return (getText(d,selectedValue));
+    });
+
+    svg.call(tip1)
+
     //console.log(US);
     svg.selectAll('path.countries')
         .data(US)
@@ -126,7 +139,17 @@ function updateMap(){
             }
             return "#e5e5e5";
         })
-        .on('mouseover', function(d) {getText(d,selectedValue)})
+        //.on('mouseover', tip1.show)
+        .on('mouseover', function(d){
+            layeredhistogram.wrangleData(d.properties.NAME);
+            getText(d,selectedValue);
+            //tip1.show;
+        })
+        //.on('mouseout', tip1.hide)
+        .on('mouseout', function(d){
+            layeredhistogram.wrangleData("All States");
+            document.getElementById("content-1").innerHTML="<p></p><p></p>";
+        })
 
     var legend_group = svg.append("g")
         .attr("class", "map_legend_group")

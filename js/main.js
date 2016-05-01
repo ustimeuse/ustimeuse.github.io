@@ -2,32 +2,31 @@
 var data;
 var femaleData;
 var maleData;
-var dataByState;
 
 // Set ordinal color scale
 var colorScale = d3.scale.category20();
 
 // Variables for the visualization instances
-var areachart, femalehistogram, malehistogram, layeredhistogram;
+var layeredhistogram;
 
 // use the Queue.js library to read multiple files
 queue()
-  .defer(d3.csv, "data/datatouse.csv")
+  //.defer(d3.csv, "data/datatouse.csv")
   .defer(d3.csv, "data/yuqi_new.csv")
   .await(analyze);
 
-function analyze(error, dataToUse, dataByStateCSV){
+function analyze(error, dataToUse){
 
-  dataByState = dataByStateCSV;
+  //dataByState = dataByStateCSV;
   data=dataToUse;
 
   for(var i=0; i<dataToUse.length; i++){
-    data[i].act_educ = Math.round(+dataToUse[i].act_educ/60);
-    data[i].act_leisure = Math.round(+dataToUse[i].act_leisure/60);
-    data[i].act_pcare = Math.round(+dataToUse[i].act_pcare/60);
-    data[i].act_social = Math.round(+dataToUse[i].act_social/60);
-    data[i].act_sports = Math.round(+dataToUse[i].act_sports/60);
-    data[i].act_work = Math.round(+dataToUse[i].act_work/60);
+    data[i].act_educ = Math.round(+dataToUse[i].educ/60);
+    data[i].act_leisure = Math.round(+dataToUse[i].leisure/60);
+    data[i].act_pcare = Math.round(+dataToUse[i].pcare/60);
+    data[i].act_social = Math.round(+dataToUse[i].social/60);
+    data[i].act_sports = Math.round(+dataToUse[i].sports/60);
+    data[i].act_work = Math.round(+dataToUse[i].work/60);
     data[i].educ_perc = +dataToUse[i].act_educ;
     data[i].leisure_perc = +dataToUse[i].act_leisure;
     data[i].pcare_perc = +dataToUse[i].act_pcare;
@@ -37,7 +36,7 @@ function analyze(error, dataToUse, dataByStateCSV){
     data[i].age = +dataToUse[i].age;
   }
 
-  console.log(dataByState[0]);
+  //console.log(dataByState[0]);
   console.log(data[0]);
 
   // Filter function
@@ -66,5 +65,5 @@ function createVis() {
 
 function updateChart(){
   //bubbleChart.updateVis();
-  layeredhistogram.updateVis();
+  layeredhistogram.wrangleData();
 }
