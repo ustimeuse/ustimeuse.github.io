@@ -1,3 +1,7 @@
+---
+permalink: /choropleth.html
+title: Time Use Across America
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,105 +80,75 @@
     </style>
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-    <div class="container topnav">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand topnav" href="index.html#top">American Time Use</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="index.html#time_management">Motivation</a>
-                </li>
-
-                <li>
-                    <a href="index.html#objectives">Goals</a>
-                </li>
-                <li>
-                    <a href="index.html#data">Data</a>
-                </li>
-                <li>
-                    <a href="index.html#insights">Visualizations</a>
-                </li>
-                <li>
-                    <a href="index.html#our_team">Team</a>
-                </li>
-                <!--<li>-->
-                <!--<a href="#references">References</a>-->
-                <!--</li>-->
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-<!-- Header -->
-<a name="about"></a>
-<div id="top" class="intro-header">
+{% include header.html %}
+{% include intro-header.html %}
+<div class="content-section-b">
     <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-section">
-                    <h1>Time Use Across America</h1>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <li>
-                            <a href="index.html" class="btn btn-default btn-lg network-name">Return to Story</a></li>
-                        <li>
-                            <a href="oneday.html" class="btn btn-default btn-lg"> <span class="network-name">A Day in the Life</span></a>
-                        </li>
-                        <li>
-                            <a href="choropleth.html" class="btn btn-default btn-lg"> <span class="network-name">Across America</span></a>
-                        </li>
-                        <li>
-                            <a href="differences.html" class="btn btn-default btn-lg"> <span class="network-name">Group Differences</span></a>
-                        </li>
-                    </ul>
-                </div>
+        <div id="objectives" class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <h2 class="section-heading">Insights & Observations</h2>
+                <ul>
+                    <li class="descriptions"><span class="mainpoint">Differences between gender </span>
+                        were not as vast between categories as expected. There was a surprisingly large amount of overlap between genders across all states.
+                    </li>
+                    <br>
+                    <li class="descriptions"><span class="mainpoint">Unemployment among women </span>
+                        was higher than for men, as indicated by the greater frequency of women who work less than 1 hour a day.
+                    </li>
+                    <br>
+                    <li class="descriptions"><span class="mainpoint">People in North Dakota </span>
+                        spent more time in their day doing leisure activities than people in any other state.
+                    </li>
+                    <br>
+                    <li class="descriptions"><span class="mainpoint">Time spent on education </span>
+                        tends to be greater for women than for men across all states.
+                    </li>
+                    <br>
+                </ul>
             </div>
-
+            <!--<div class="col-lg-6">-->
+            <!--<div id="floatingCirclesG">-->
+            <!--<div class="f_circleG" id="frotateG_01"></div>-->
+            <!--<div class="f_circleG" id="frotateG_02"></div>-->
+            <!--<div class="f_circleG" id="frotateG_03"></div>-->
+            <!--<div class="f_circleG" id="frotateG_04"></div>-->
+            <!--<div class="f_circleG" id="frotateG_05"></div>-->
+            <!--<div class="f_circleG" id="frotateG_06"></div>-->
+            <!--<div class="f_circleG" id="frotateG_07"></div>-->
+            <!--<div class="f_circleG" id="frotateG_08"></div>-->
+            <!--</div>-->
+            <!--<p class="ready">Get Set. Ready. Explore</p>-->
+            <!--</div>-->
         </div>
 
     </div>
     <!-- /.container -->
+
 </div>
-<!-- /.intro-header -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <h2 class="tag text-center">Time Spent on <span id="update">Work</span></h2>
-            <h3 class="mainpoint text-center text-uppercase">[ <span id="state">All States</span> ]</h3>
-            <div id="overlapping-histogram"></div>
-        </div>
-        <div class="col-md-8">
-            <form class="form-inline">
-                <div class="form-group">
-                    <br>
-                    <label for="rankingType">Category to Map by: </label>
-                    <select class="form-control" id="map-type" onchange="updateMap()">
-                        <option value="Average Work">Average Working Time (min)</option>
-                        <option value="Average Leisure">Average Leisure Time (min)</option>
-                        <option value="Average Personal Care">Average Personal Care Time (min)</option>
-                        <option value="Average Educational Time">Average Education Time (min)</option>
-                    </select>
-                    <br><br><br><br>
-                    <span>
-                        <p>Hover over the map to see the gender breakdown for that state. </p>
-                    </span>
-                </div>
-            </form>
-            <div id="visualization"></div>
+<div class="content-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="tag text-center">Time Spent on <span id="update">Work</span></h2>
+                <h3 class="mainpoint text-center text-uppercase">[ <span id="state">All States</span> ]</h3>
+                <div id="overlapping-histogram"></div>
+            </div>
+            <div class="col-md-8">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <br>
+                        <label for="rankingType">Category to Map by: </label>
+                        <select class="form-control" id="map-type" onchange="updateMap()">
+                            <option value="Average Work">Average Working Time (min)</option>
+                            <option value="Average Leisure">Average Leisure Time (min)</option>
+                            <option value="Average Personal Care">Average Personal Care Time (min)</option>
+                            <option value="Average Educational Time">Average Education Time (min)</option>
+                        </select>
+                    </div>
+                    <div id="content-1"><p></p><p></p></div>
+                </form>
+                <div id="visualization"></div>
+            </div>
         </div>
     </div>
 </div>

@@ -55,9 +55,17 @@ var color = d3.scale.linear()
 
 
 // Upon hovering, show text
+//function getText(d,selectedValue) {
+//    return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+//    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
+//}
+
+ //Upon hovering, show text
 function getText(d,selectedValue) {
-    return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
-    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
+    var summary=
+        "<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+        "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue]/60,2)+ " hours</p>"
+    document.getElementById("content-1").innerHTML=summary;
 }
 
 function updateMap(){
@@ -135,10 +143,13 @@ function updateMap(){
         //.on('mouseover', tip1.show)
         .on('mouseover', function(d){
             layeredhistogram.wrangleData(d.properties.NAME);
+            getText(d,selectedValue);
+            //tip1.show;
         })
         //.on('mouseout', tip1.hide)
         .on('mouseout', function(d){
             layeredhistogram.wrangleData("All States");
+            document.getElementById("content-1").innerHTML="<p></p><p></p>";
         })
 
     var legend_group = svg.append("g")

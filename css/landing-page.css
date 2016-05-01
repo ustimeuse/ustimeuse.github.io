@@ -16,11 +16,20 @@ iframe {
     height: 2200px;
 }
 
+#content-1 {
+    height: 50px;
+}
+
+label {
+    font-family:"Open Sans", sans-serif;
+    font-weight:700;
+}
 
 .typing {
-    /*color: #ff775c;*/
-    /*font-family: 'Playfair Display', serif;*/
-    /*font-size: 20px;*/
+    color: #ff775c;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     width: 30em;
@@ -83,7 +92,7 @@ iframe {
     text-align: center;
     width: 100%;
     bottom: 0px;
-    font: 400 18px/1 'Kaushan Script', cursive;
+    font: 400 18px/1 'Open Sans', sans-;
     color: #888;
 }
 
@@ -174,7 +183,10 @@ ul#tabs li a:hover {
     color: #00cdc0;
     font-size: 22px;
     font-weight: 700;
-    font-family: "Dosis", serif;
+    font-family: "Dosis", sans-serif;
+}
+.accordion p {
+    font-family: "Open Sans", sans-serif;
 }
 
 .ready {
@@ -1408,4 +1420,39 @@ Main components
 
 .tag2 {
     color: black;
+}
+
+/* 5 Columns http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ */
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
 }
