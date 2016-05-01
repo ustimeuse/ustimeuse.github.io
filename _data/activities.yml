@@ -1,0 +1,14 @@
+- act: Work and Work-Related Activities
+  detail: This category includes time spent working in one’s job, engaging in income-earning activities (not as part of one’s job), interviewing, and looking for jobs. Work-related activities involve those that are not obviously work but are parts of one’s job, such as attending meetings with business partners, getting dinner with potential clients, playing golf with customers, etc.
+
+- act: Personal Care Activities
+  detail: This category includes self-care, showering, grooming, and sleeping.
+
+- act: Household Activities
+  detail: This category includes housework, yard care, pet care, vehicle and home maintenance and repair, home decorations and renovation, cooking, and other activities that revolve around household management (checking mail, filling out paperwork, planning party).
+
+- act: Leisure Activities
+  detail: This category includes socializing, relaxing, engaging in leisure activities, doing sports, exercising, and engaging in recreational activities.
+
+- act: Educational Activities
+  detail: This category includes taking classes, doing any educational activities, including homework and conducting research, doing administrative tasks, and engaging in extracurricular activities except sports.

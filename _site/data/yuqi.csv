@@ -1,0 +1,1347 @@
+state,fam_income,race,age,sex,emp,fullpart,work,social,sports,pcare,educ,leisure
+Maine,"$100,000 to $149,999",Asian only,47,Male,Employed - at work,Full time,0,495,0,521,0,495
+Connecticut,"$40,000 to $49,999",White-Asian,28,Female,Employed - at work,Full time,450,120,0,530,0,120
+California,"$150,000 and over",White only,38,Female,Employed - at work,Full time,750,0,0,570,0,0
+Virginia,"$50,000 to $59,999",Black only,49,Male,Employed - absent,Full time,0,575,0,510,0,575
+Oregon,"$35,000 to $39,999",White only,33,Male,Employed - at work,Full time,495,135,0,540,0,135
+Minnesota,"$15,000 to $19,999",White only,24,Female,Employed - absent,Part time,0,814,0,600,0,814
+Oregon,"$100,000 to $149,999",White only,48,Male,Employed - at work,Full time,683,223,0,480,0,223
+Missouri,"$30,000 to $34,999",White only,41,Female,Employed - at work,Part time,410,70,0,735,0,70
+California,"$150,000 and over",White only,48,Female,Employed - at work,Part time,265,220,69,675,0,289
+Arkansas,"$50,000 to $59,999",Black only,42,Male,Employed - at work,Full time,455,374,0,470,0,374
+Minnesota,"$40,000 to $49,999",Black only,25,Male,Employed - at work,Full time,475,120,0,570,0,120
+Nevada,"$100,000 to $149,999",Black only,49,Female,Employed - at work,Full time,555,0,0,600,0,0
+Idaho,"$150,000 and over",White only,38,Female,Employed - at work,Full time,515,120,0,520,0,120
+New York,"$40,000 to $49,999",White only,28,Male,Employed - at work,Full time,485,205,0,485,0,205
+Texas,"$10,000 to $12,499",Black only,35,Female,Employed - at work,Full time,440,60,0,735,0,60
+Illinois,"$150,000 and over",White only,39,Male,Employed - at work,Full time,285,370,0,450,0,370
+Oregon,"$100,000 to $149,999",White only,24,Male,Employed - at work,Full time,515,140,90,540,0,230
+Washington,"$12,500 to $14,999",White-American Indian,23,Female,Employed - at work,Full time,480,215,0,615,0,215
+Kansas,"$50,000 to $59,999",White only,49,Female,Employed - at work,Part time,0,530,0,840,0,530
+Oklahoma,"$60,000 to $74,999",White only,42,Female,Employed - at work,Full time,525,205,0,625,0,205
+Pennsylvania,"$40,000 to $49,999",White only,21,Male,Employed - at work,Full time,245,668,0,300,0,668
+Washington,"$100,000 to $149,999",White only,44,Female,Employed - at work,Full time,0,270,0,725,0,270
+Kentucky,"$30,000 to $34,999",White only,39,Female,Employed - at work,Part time,450,225,0,435,0,225
+Arizona,"$40,000 to $49,999",White only,44,Female,Employed - at work,Full time,505,180,0,575,0,180
+Kentucky,"$30,000 to $34,999",Black only,22,Male,Employed - at work,Full time,525,210,0,645,0,210
+Florida,"$60,000 to $74,999",White only,41,Female,Employed - at work,Full time,0,90,0,740,0,90
+California,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,0,120,0,840,0,120
+Pennsylvania,"$40,000 to $49,999",White only,22,Female,Employed - at work,Part time,0,840,0,358,0,840
+Ohio,"$60,000 to $74,999",Black only,44,Male,Employed - at work,Part time,0,650,0,570,0,650
+Georgia,"$7,500 to $9,999",Black only,27,Male,Employed - at work,Full time,285,180,0,840,0,180
+Colorado,"$100,000 to $149,999",White only,32,Male,Employed - at work,Full time,676,140,75,435,0,215
+California,"$75,000 to $99,999",White only,31,Female,Employed - at work,Full time,720,30,0,505,0,30
+Colorado,"$60,000 to $74,999",White only,48,Male,Employed - at work,Full time,0,365,0,840,0,365
+Virginia,"$20,000 to $24,999",White only,45,Male,Employed - at work,Full time,0,705,0,720,0,705
+Ohio,"$15,000 to $19,999",White only,21,Female,Employed - at work,Full time,544,282,0,410,0,282
+Massachusetts,"$60,000 to $74,999",White only,30,Male,Employed - at work,Full time,450,355,0,425,0,355
+Georgia,"Less than $5,000",White only,21,Male,Employed - at work,Full time,0,650,0,660,0,650
+California,"$150,000 and over",Asian only,43,Male,Employed - at work,Full time,260,180,0,680,0,180
+North Carolina,"$15,000 to $19,999",White only,28,Female,Employed - at work,Full time,0,570,0,640,0,570
+California,"$150,000 and over",White only,24,Male,Employed - at work,Full time,0,875,0,555,0,875
+Texas,"$35,000 to $39,999",White only,27,Female,Employed - at work,Full time,430,189,60,589,0,249
+Arkansas,"$20,000 to $24,999",Black only,49,Male,Employed - at work,Part time,345,485,0,560,0,485
+Maryland,"$75,000 to $99,999",White only,48,Male,Employed - at work,Part time,504,229,60,443,0,289
+Ohio,"$5,000 to $7,499",Black only,45,Male,Employed - at work,Part time,300,165,0,660,0,165
+California,"$40,000 to $49,999",Black only,42,Male,Employed - at work,Full time,0,560,0,755,0,560
+New Mexico,"$10,000 to $12,499",White only,26,Male,Employed - at work,Part time,0,255,0,585,0,255
+Texas,"$10,000 to $12,499",White only,23,Male,Employed - at work,Part time,0,450,90,565,0,540
+California,"$150,000 and over",White only,31,Male,Employed - at work,Full time,0,430,0,620,0,430
+Michigan,"$50,000 to $59,999",White only,25,Male,Employed - at work,Full time,555,223,0,385,0,223
+Texas,"Less than $5,000",Black only,45,Female,Employed - at work,Full time,480,285,0,540,0,285
+Wisconsin,"$150,000 and over",White only,46,Male,Employed - at work,Full time,498,260,0,540,0,260
+Texas,"$40,000 to $49,999",White only,24,Female,Employed - at work,Full time,0,615,0,690,0,615
+Vermont,"$75,000 to $99,999",White only,32,Male,Employed - at work,Full time,0,450,120,690,0,570
+Washington,"$150,000 and over",White only,44,Female,Employed - absent,Full time,0,165,0,465,0,165
+Massachusetts,"$100,000 to $149,999",White only,33,Female,Employed - at work,Full time,510,45,45,570,0,90
+Ohio,"$60,000 to $74,999",White only,34,Female,Employed - at work,Full time,15,185,60,650,0,245
+Arkansas,"$60,000 to $74,999",White only,33,Female,Employed - at work,Full time,470,140,0,475,0,140
+Virginia,"$100,000 to $149,999",White only,43,Female,Employed - at work,Full time,765,120,0,415,0,120
+South Carolina,"$75,000 to $99,999",Black only,44,Female,Employed - at work,Part time,500,386,0,420,0,386
+Minnesota,"$50,000 to $59,999",White only,29,Male,Employed - at work,Full time,0,540,0,720,0,540
+Wisconsin,"$50,000 to $59,999",White only,28,Male,Employed - at work,Full time,560,89,0,588,0,89
+California,"$7,500 to $9,999",White only,20,Female,Employed - at work,Part time,0,601,0,600,0,601
+Missouri,"$50,000 to $59,999",White only,48,Female,Employed - at work,Full time,490,120,0,545,0,120
+Nevada,"$60,000 to $74,999",White only,26,Female,Employed - at work,Part time,810,70,40,330,0,110
+Washington,"$150,000 and over",White only,49,Female,Employed - at work,Full time,540,45,105,595,0,150
+Florida,"$20,000 to $24,999",White only,46,Female,Employed - at work,Full time,0,250,0,745,0,250
+Georgia,"$50,000 to $59,999",Black only,44,Male,Employed - at work,Part time,0,250,60,735,0,310
+Indiana,"$30,000 to $34,999",White only,27,Male,Employed - at work,Full time,445,330,0,468,0,330
+Indiana,"$75,000 to $99,999",White only,44,Female,Employed - at work,Full time,0,375,0,540,0,375
+Oregon,"$15,000 to $19,999",White only,41,Male,Employed - at work,Part time,0,540,0,780,0,540
+Illinois,"$10,000 to $12,499",White-Asian,31,Male,Employed - at work,Full time,480,150,0,555,0,150
+Michigan,"$60,000 to $74,999",White only,32,Female,Employed - at work,Part time,0,285,0,720,0,285
+Michigan,"$30,000 to $34,999",Black only,26,Male,Employed - at work,Full time,80,240,0,630,0,240
+Virginia,"$40,000 to $49,999",White only,25,Female,Employed - at work,Full time,450,298,0,420,0,298
+Louisiana,"$100,000 to $149,999",White only,49,Female,Employed - at work,Full time,470,100,0,470,0,100
+Florida,"$40,000 to $49,999",White only,26,Male,Employed - at work,Full time,0,711,0,669,0,711
+Virginia,"$60,000 to $74,999",Black only,41,Male,Employed - at work,Full time,0,585,0,545,0,585
+New York,"$150,000 and over",White only,47,Female,Employed - at work,Full time,90,437,0,580,0,437
+Texas,"$50,000 to $59,999",White only,19,Female,Employed - at work,Part time,225,0,0,750,0,0
+Wisconsin,"$5,000 to $7,499",White only,22,Male,Employed - at work,Part time,380,120,60,855,0,180
+Texas,"$40,000 to $49,999",White only,35,Male,Employed - at work,Full time,800,60,0,460,0,60
+North Carolina,"Less than $5,000",Black only,23,Male,Employed - at work,Part time,345,945,0,90,0,945
+Pennsylvania,"$100,000 to $149,999",White only,45,Male,Employed - at work,Full time,553,215,0,515,0,215
+Illinois,"$75,000 to $99,999",Asian only,32,Male,Employed - at work,Full time,420,238,0,658,0,238
+Georgia,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,0,525,0,750,0,525
+Kentucky,"$50,000 to $59,999",Black only,35,Male,Employed - at work,Full time,0,400,0,510,0,400
+Massachusetts,"$75,000 to $99,999",White only,32,Female,Employed - at work,Full time,20,335,0,705,0,335
+Alabama,"$50,000 to $59,999",White only,24,Male,Employed - at work,Part time,315,445,0,570,0,445
+New York,"$50,000 to $59,999",White only,32,Female,Employed - at work,Full time,0,428,0,510,0,428
+Nevada,"$25,000 to $29,999",White only,23,Male,Employed - at work,Full time,0,575,90,600,0,665
+Nevada,"$40,000 to $49,999",White only,21,Female,Employed - at work,Full time,515,180,0,530,0,180
+Montana,"$20,000 to $24,999",White only,36,Male,Employed - at work,Part time,0,320,0,720,0,320
+Vermont,"$50,000 to $59,999",White only,41,Female,Employed - at work,Full time,683,140,0,550,0,140
+Ohio,"$100,000 to $149,999",White only,48,Female,Employed - at work,Part time,595,60,0,540,0,60
+Iowa,"$75,000 to $99,999",White only,31,Male,Employed - at work,Full time,0,465,0,583,0,465
+Florida,"$60,000 to $74,999",White only,46,Female,Employed - at work,Full time,0,325,0,645,0,325
+California,"$50,000 to $59,999",White only,36,Female,Employed - at work,Full time,0,300,180,720,0,480
+Illinois,"$25,000 to $29,999",White only,19,Female,Employed - at work,Full time,430,450,0,420,0,450
+Texas,"$40,000 to $49,999",White only,28,Male,Employed - at work,Full time,0,180,0,715,0,180
+California,"$75,000 to $99,999",White only,39,Female,Employed - at work,Full time,0,345,0,540,0,345
+Maryland,"$40,000 to $49,999",White only,29,Female,Employed - at work,Full time,480,170,0,540,0,170
+Georgia,"$40,000 to $49,999",White only,21,Male,Employed - at work,Part time,480,0,0,760,0,0
+Tennessee,"$100,000 to $149,999",White only,24,Male,Employed - absent,Full time,235,550,0,530,0,550
+Texas,"$50,000 to $59,999",White only,40,Male,Employed - at work,Full time,0,120,0,590,0,120
+New Jersey,"$35,000 to $39,999",Black only,32,Female,Employed - at work,Full time,0,550,0,690,0,550
+Ohio,"$35,000 to $39,999",White only,28,Female,Employed - at work,Full time,0,635,0,725,0,635
+Washington,"$150,000 and over",White only,45,Female,Employed - at work,Full time,120,460,0,600,0,460
+Wisconsin,"$10,000 to $12,499",Black only,47,Male,Employed - at work,Full time,440,700,0,235,0,700
+New Jersey,"$12,500 to $14,999",White only,47,Male,Employed - at work,Full time,449,232,0,570,0,232
+Florida,"$25,000 to $29,999",Black only,45,Female,Employed - at work,Full time,0,345,0,570,0,345
+New York,"$60,000 to $74,999",White only,28,Female,Employed - at work,Full time,15,710,105,525,0,815
+Hawaii,"$150,000 and over",White only,40,Male,Employed - at work,Full time,0,733,0,510,0,733
+District of Columbia,"$75,000 to $99,999",White only,38,Female,Employed - at work,Full time,0,420,0,770,0,420
+Texas,"$40,000 to $49,999",White only,47,Female,Employed - at work,Full time,10,630,0,615,0,630
+Massachusetts,"$25,000 to $29,999",White only,48,Male,Employed - at work,Full time,0,300,0,650,0,300
+California,"$20,000 to $24,999",Asian only,42,Female,Employed - absent,Full time,0,180,0,875,0,180
+Pennsylvania,"$35,000 to $39,999",White only,49,Female,Employed - at work,Full time,625,0,45,500,0,45
+New York,"$100,000 to $149,999",White only,25,Female,Employed - at work,Full time,440,95,0,725,0,95
+South Carolina,"$15,000 to $19,999",White only,40,Female,Employed - at work,Full time,0,330,0,600,0,330
+Pennsylvania,"$40,000 to $49,999",Black only,42,Female,Employed - at work,Full time,0,625,0,780,0,625
+Oregon,"$25,000 to $29,999",White only,28,Male,Employed - at work,Full time,488,75,0,500,0,75
+Texas,"$10,000 to $12,499",White only,23,Female,Employed - at work,Full time,0,429,10,480,0,439
+Virginia,"$50,000 to $59,999",Black only,23,Female,Employed - at work,Part time,338,95,0,843,0,95
+Virginia,"$12,500 to $14,999",White only,20,Male,Employed - at work,Full time,0,540,0,720,0,540
+California,"$150,000 and over",Asian only,37,Female,Employed - at work,Full time,460,210,60,490,0,270
+Delaware,"$30,000 to $34,999",White only,47,Male,Employed - at work,Full time,0,565,0,600,0,565
+Alabama,"$30,000 to $34,999",White only,24,Male,Employed - at work,Full time,0,270,0,540,0,270
+California,"$60,000 to $74,999",White only,29,Female,Employed - at work,Full time,0,635,0,690,0,635
+Illinois,"$30,000 to $34,999",White only,27,Male,Employed - at work,Full time,402,537,0,377,0,537
+New York,"$75,000 to $99,999",Asian only,30,Female,Employed - at work,Full time,622,0,0,511,0,0
+Texas,"$30,000 to $34,999",White only,35,Female,Employed - at work,Full time,450,120,0,710,0,120
+California,"$15,000 to $19,999",White only,20,Male,Employed - at work,Part time,0,418,0,750,0,418
+Colorado,"$150,000 and over",White only,45,Male,Employed - at work,Full time,0,407,0,660,0,407
+Pennsylvania,"$60,000 to $74,999",White only,30,Female,Employed - at work,Full time,473,60,60,685,0,120
+Mississippi,"$25,000 to $29,999",Black only,42,Male,Employed - at work,Full time,670,60,0,510,0,60
+Tennessee,"$40,000 to $49,999",Black only,45,Female,Employed - at work,Full time,480,235,0,460,0,235
+Illinois,"$75,000 to $99,999",White only,30,Female,Employed - at work,Full time,5,435,0,540,0,435
+New York,"$50,000 to $59,999",Black only,32,Male,Employed - at work,Full time,400,195,0,540,0,195
+Texas,"$100,000 to $149,999",White only,26,Female,Employed - at work,Full time,220,85,0,685,0,85
+Washington,"$60,000 to $74,999",White only,37,Female,Employed - at work,Full time,468,120,60,564,0,180
+New York,"$100,000 to $149,999",White only,34,Male,Employed - at work,Full time,480,252,80,500,0,332
+Wisconsin,"$50,000 to $59,999",White only,47,Female,Employed - at work,Part time,450,225,0,495,0,225
+Missouri,"$25,000 to $29,999",White only,24,Male,Employed - at work,Full time,715,238,0,450,0,238
+Pennsylvania,"$30,000 to $34,999",White only,42,Female,Employed - at work,Full time,570,389,0,389,0,389
+Florida,"$75,000 to $99,999",White only,44,Female,Employed - at work,Full time,0,363,37,525,60,400
+Illinois,"$40,000 to $49,999",White only,35,Female,Employed - at work,Full time,0,460,0,720,0,460
+California,"$50,000 to $59,999",White only,40,Male,Employed - at work,Full time,0,630,0,540,0,630
+Minnesota,"$50,000 to $59,999",White only,49,Female,Employed - at work,Full time,480,240,0,510,0,240
+Virginia,"$50,000 to $59,999",Black only,46,Female,Employed - at work,Full time,430,563,0,280,0,563
+Oregon,"$20,000 to $24,999",White only,45,Male,Employed - at work,Part time,585,90,0,525,0,90
+Missouri,"$40,000 to $49,999",White only,49,Male,Employed - at work,Full time,0,60,645,655,0,705
+Arizona,"$40,000 to $49,999",White only,39,Female,Employed - at work,Full time,503,310,60,335,0,370
+West Virginia,"$100,000 to $149,999",White only,48,Female,Employed - at work,Full time,0,315,150,660,0,465
+Texas,"$15,000 to $19,999",White only,23,Male,Employed - at work,Part time,430,200,0,770,0,200
+Michigan,"$12,500 to $14,999","American Indian, Alaskan Native",37,Male,Employed - at work,Full time,650,200,0,570,0,200
+Florida,"$100,000 to $149,999",Black only,37,Female,Employed - at work,Full time,240,295,0,780,0,295
+Oklahoma,"$60,000 to $74,999",White only,46,Male,Employed - at work,Full time,0,587,0,630,0,587
+Florida,"$25,000 to $29,999",White only,28,Male,Employed - at work,Full time,364,269,0,625,0,269
+Kansas,"$60,000 to $74,999",White only,30,Male,Employed - at work,Full time,517,215,0,575,0,215
+Utah,"$35,000 to $39,999",White only,21,Female,Employed - at work,Part time,365,227,0,460,0,227
+Ohio,"Less than $5,000",White only,42,Female,Employed - absent,Full time,105,45,0,740,0,45
+California,"$40,000 to $49,999",Black only,28,Female,Employed - at work,Full time,483,112,60,570,0,172
+Louisiana,"$20,000 to $24,999",White only,38,Male,Employed - at work,Full time,615,159,0,460,0,159
+Texas,"$35,000 to $39,999",White only,43,Male,Employed - at work,Full time,465,315,0,540,0,315
+Arkansas,"$100,000 to $149,999",White only,42,Male,Employed - at work,Full time,760,0,0,485,0,0
+Oregon,"$35,000 to $39,999",White only,22,Female,Employed - at work,Full time,60,194,0,765,0,194
+Texas,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,510,165,90,540,0,255
+New York,"$75,000 to $99,999",White only,41,Female,Employed - at work,Full time,485,60,0,510,0,60
+New York,"$35,000 to $39,999",White only,49,Male,Employed - at work,Full time,600,180,0,565,0,180
+New Jersey,"$30,000 to $34,999",White only,43,Male,Employed - at work,Full time,690,0,0,525,0,0
+Alabama,"$75,000 to $99,999",White only,48,Female,Employed - at work,Full time,485,395,0,510,0,395
+New Mexico,"$20,000 to $24,999",White only,30,Female,Employed - at work,Part time,540,150,0,465,0,150
+Arizona,"$40,000 to $49,999",White only,30,Female,Employed - at work,Full time,480,210,0,560,0,210
+Minnesota,"$75,000 to $99,999",White only,43,Female,Employed - at work,Full time,0,650,0,729,0,650
+Arizona,"$15,000 to $19,999",White only,25,Female,Employed - at work,Full time,510,30,170,485,0,200
+California,"$100,000 to $149,999",White only,39,Female,Employed - at work,Full time,460,135,30,591,0,165
+Pennsylvania,"$60,000 to $74,999",White only,32,Male,Employed - at work,Full time,780,60,0,510,0,60
+Indiana,"$75,000 to $99,999",Black only,29,Male,Employed - at work,Full time,750,85,0,290,0,85
+Texas,"$20,000 to $24,999",White only,25,Male,Employed - at work,Full time,0,60,0,1316,0,60
+California,"$35,000 to $39,999",White only,38,Male,Employed - at work,Full time,0,210,0,625,0,210
+Texas,"$75,000 to $99,999",Black-Asian,18,Female,Employed - at work,Part time,450,120,0,760,60,120
+Massachusetts,"$40,000 to $49,999",White only,32,Female,Employed - at work,Part time,0,490,0,675,0,490
+West Virginia,"$7,500 to $9,999",White only,44,Male,Employed - absent,Part time,120,90,0,345,0,90
+Florida,"$50,000 to $59,999",White only,47,Female,Employed - at work,Full time,485,135,0,590,0,135
+Missouri,"$40,000 to $49,999",White only,39,Male,Employed - at work,Full time,1245,0,0,110,0,0
+Florida,"$60,000 to $74,999",White only,43,Male,Employed - at work,Part time,315,90,0,690,0,90
+Washington,"$15,000 to $19,999",White only,42,Female,Employed - at work,Full time,263,255,0,600,0,255
+New Jersey,"$100,000 to $149,999",Asian only,38,Female,Employed - at work,Full time,563,50,0,720,0,50
+Pennsylvania,"$60,000 to $74,999",White only,22,Male,Employed - at work,Full time,0,370,0,630,0,370
+Florida,"$40,000 to $49,999",White only,25,Female,Employed - at work,Full time,0,440,0,750,0,440
+Massachusetts,"$50,000 to $59,999",White only,32,Female,Employed - at work,Full time,788,0,0,541,0,0
+Virginia,"$12,500 to $14,999",Black only,45,Male,Employed - at work,Full time,775,0,0,655,0,0
+North Carolina,"$75,000 to $99,999",White only,46,Female,Employed - at work,Part time,0,245,0,865,0,245
+Pennsylvania,"$50,000 to $59,999",Black only,40,Male,Employed - at work,Full time,474,450,45,300,0,495
+Illinois,"$35,000 to $39,999",White only,43,Male,Employed - at work,Full time,0,315,0,635,0,315
+District of Columbia,"$150,000 and over",Asian only,29,Female,Employed - at work,Full time,5,480,220,440,0,700
+Mississippi,"$20,000 to $24,999",Black only,46,Female,Employed - at work,Full time,240,110,0,850,0,110
+Hawaii,"$100,000 to $149,999",Asian only,44,Male,Employed - at work,Full time,30,270,120,510,0,390
+Indiana,"$60,000 to $74,999",White only,46,Female,Employed - at work,Part time,90,120,60,700,0,180
+Maine,"$75,000 to $99,999",White only,49,Female,Employed - at work,Full time,0,135,0,645,0,135
+Wisconsin,"$100,000 to $149,999",White only,29,Male,Employed - at work,Full time,550,60,105,569,0,165
+Florida,"$60,000 to $74,999",White only,44,Male,Employed - at work,Full time,60,90,60,740,0,150
+North Carolina,"$100,000 to $149,999",White only,44,Male,Employed - at work,Full time,720,120,0,480,0,120
+Pennsylvania,"$20,000 to $24,999",Black only,35,Male,Employed - at work,Full time,0,495,0,510,0,495
+New York,"$50,000 to $59,999",White only,32,Male,Employed - at work,Full time,670,290,0,390,0,290
+New York,"$40,000 to $49,999",Asian only,21,Female,Employed - at work,Part time,0,90,0,885,0,90
+Iowa,"$150,000 and over",White only,48,Female,Employed - at work,Full time,357,283,0,555,0,283
+Massachusetts,"$40,000 to $49,999",White-Black,35,Female,Employed - at work,Full time,735,60,0,550,0,60
+Arizona,"$15,000 to $19,999","American Indian, Alaskan Native",42,Female,Employed - at work,Full time,0,120,0,700,0,120
+Washington,"$100,000 to $149,999",White-American Indian,47,Male,Employed - at work,Full time,750,270,0,90,0,270
+Massachusetts,"$150,000 and over",White only,30,Male,Employed - at work,Full time,1100,0,0,210,0,0
+Wisconsin,"$75,000 to $99,999",White only,21,Male,Employed - at work,Part time,0,572,0,765,0,572
+Texas,"$10,000 to $12,499",Black only,49,Female,Employed - at work,Full time,0,1095,0,270,0,1095
+Illinois,"$40,000 to $49,999",White only,42,Female,Employed - at work,Full time,575,178,0,480,0,178
+South Carolina,"$35,000 to $39,999",Black only,27,Female,Employed - at work,Full time,310,0,60,910,0,60
+Missouri,"$50,000 to $59,999",White only,42,Female,Employed - at work,Full time,450,185,0,585,0,185
+Florida,"$50,000 to $59,999",White only,26,Female,Employed - at work,Full time,0,270,90,886,0,360
+South Carolina,"$75,000 to $99,999",White only,38,Female,Employed - at work,Full time,245,440,0,465,0,440
+Kansas,"$60,000 to $74,999",White only,41,Male,Employed - at work,Full time,810,90,0,480,0,90
+Texas,"$60,000 to $74,999",White only,39,Male,Employed - at work,Full time,535,195,60,480,0,255
+Colorado,"$100,000 to $149,999",Black only,49,Female,Employed - at work,Full time,525,225,0,600,0,225
+Tennessee,"$35,000 to $39,999",White only,44,Female,Employed - at work,Full time,0,465,0,710,0,465
+Illinois,"$20,000 to $24,999",White only,42,Female,Employed - at work,Part time,0,165,0,564,0,165
+Michigan,"$75,000 to $99,999",White only,41,Male,Employed - absent,Full time,0,540,0,660,0,540
+Wisconsin,"$75,000 to $99,999",White only,46,Male,Employed - at work,Full time,0,608,120,378,0,728
+Ohio,"$50,000 to $59,999",White only,25,Male,Employed - at work,Full time,0,465,90,700,0,555
+Illinois,"$5,000 to $7,499",White only,27,Female,Employed - at work,Full time,0,255,0,615,0,255
+Florida,"$20,000 to $24,999",White only,40,Female,Employed - at work,Full time,640,0,0,445,0,0
+Illinois,"$100,000 to $149,999",White only,45,Female,Employed - at work,Full time,540,210,0,510,0,210
+Indiana,"$75,000 to $99,999",White only,28,Male,Employed - at work,Full time,510,150,0,570,0,150
+Virginia,"$12,500 to $14,999",White only,35,Female,Employed - at work,Full time,635,150,45,560,0,195
+California,"$60,000 to $74,999",White only,36,Male,Employed - at work,Full time,0,705,0,720,0,705
+Oregon,"$50,000 to $59,999",White-Asian,26,Male,Employed - at work,Full time,460,200,0,670,0,200
+Mississippi,"$20,000 to $24,999",White only,20,Female,Employed - at work,Full time,0,290,0,845,0,290
+New Jersey,"$60,000 to $74,999",White only,29,Male,Employed - at work,Full time,501,376,0,405,0,376
+North Carolina,"$15,000 to $19,999",White only,29,Female,Employed - at work,Full time,0,240,0,785,0,240
+New York,"$25,000 to $29,999",Black only,35,Male,Employed - at work,Full time,0,469,0,510,0,469
+New York,"$30,000 to $34,999",White only,27,Female,Employed - at work,Full time,435,30,45,655,0,75
+Idaho,"$30,000 to $34,999",White only,37,Male,Employed - at work,Full time,530,325,0,460,0,325
+Arizona,"$50,000 to $59,999",Black only,49,Female,Employed - at work,Full time,480,360,0,170,0,360
+Missouri,"$10,000 to $12,499",White only,48,Female,Employed - at work,Full time,0,265,0,730,0,265
+Florida,"$12,500 to $14,999",White only,44,Male,Employed - at work,Part time,655,0,0,465,0,0
+Washington,"$40,000 to $49,999",White only,42,Male,Employed - at work,Full time,0,0,320,585,0,320
+Oklahoma,"$75,000 to $99,999",White-American Indian,30,Male,Employed - at work,Full time,470,105,205,350,0,310
+New Jersey,"$12,500 to $14,999",Black only,26,Male,Employed - at work,Full time,224,500,0,400,0,500
+Oklahoma,"$15,000 to $19,999",White only,28,Female,Employed - at work,Full time,585,45,0,680,0,45
+New York,"$50,000 to $59,999",White only,47,Male,Employed - at work,Full time,0,0,0,600,0,0
+Minnesota,"$40,000 to $49,999",White only,37,Male,Employed - at work,Full time,0,835,0,600,0,835
+Missouri,"$40,000 to $49,999",White only,35,Male,Employed - at work,Full time,0,690,0,510,0,690
+District of Columbia,"$25,000 to $29,999",Black only,29,Male,Employed - at work,Full time,500,335,60,420,0,395
+Washington,"$75,000 to $99,999",White only,43,Male,Employed - at work,Full time,0,555,0,620,0,555
+New York,"$60,000 to $74,999",White only,35,Female,Employed - at work,Full time,0,348,60,720,0,408
+Texas,"$40,000 to $49,999",White only,39,Female,Employed - at work,Full time,435,165,0,610,0,165
+West Virginia,"$150,000 and over",White only,26,Female,Employed - at work,Full time,435,0,80,615,0,80
+Michigan,"$15,000 to $19,999",White only,45,Female,Employed - at work,Part time,0,525,0,750,0,525
+Washington,"$150,000 and over",White only,43,Male,Employed - at work,Full time,535,145,0,545,0,145
+Ohio,"$75,000 to $99,999",White only,48,Female,Employed - at work,Full time,0,285,0,600,0,285
+Tennessee,"$50,000 to $59,999",White only,36,Female,Employed - at work,Full time,0,442,53,540,0,495
+Florida,"$40,000 to $49,999",White only,43,Female,Employed - at work,Full time,0,310,120,825,0,430
+Texas,"$60,000 to $74,999",White-Black,35,Male,Employed - at work,Part time,275,375,215,413,0,590
+Pennsylvania,"$75,000 to $99,999",White only,34,Male,Employed - at work,Full time,595,0,45,560,0,45
+South Carolina,"$40,000 to $49,999",White-Black-American Indian,23,Female,Employed - at work,Full time,0,615,0,510,0,615
+Illinois,"$150,000 and over",White only,49,Female,Employed - at work,Full time,0,358,0,660,0,358
+Connecticut,"$150,000 and over",White only,48,Female,Employed - at work,Full time,540,180,0,570,0,180
+New Jersey,"$75,000 to $99,999",White only,29,Female,Employed - at work,Full time,0,455,0,810,0,455
+Wisconsin,"$60,000 to $74,999",White only,48,Female,Employed - at work,Full time,450,176,0,610,0,176
+Colorado,"$10,000 to $12,499",White only,23,Female,Employed - at work,Full time,0,570,120,630,0,690
+Virginia,"$75,000 to $99,999",White only,30,Female,Employed - at work,Full time,700,65,0,530,0,65
+Florida,"$20,000 to $24,999",Black only,34,Male,Employed - at work,Full time,0,255,0,774,0,255
+Oregon,"$35,000 to $39,999",White only,41,Male,Employed - at work,Full time,460,240,0,720,0,240
+Georgia,"$35,000 to $39,999",Black only,34,Female,Employed - at work,Full time,10,120,0,660,0,120
+Ohio,"$20,000 to $24,999",White only,47,Female,Employed - at work,Part time,609,0,5,705,0,5
+New Jersey,"$100,000 to $149,999",White only,29,Female,Employed - at work,Full time,0,320,0,770,0,320
+California,"$40,000 to $49,999",Asian only,31,Male,Employed - at work,Full time,630,105,0,450,0,105
+Texas,"$30,000 to $34,999",Black only,34,Female,Employed - at work,Full time,590,120,0,640,0,120
+New Mexico,"$75,000 to $99,999",White only,25,Male,Employed - at work,Full time,180,170,0,776,0,170
+North Carolina,"$75,000 to $99,999",Black only,42,Female,Employed - at work,Full time,20,295,0,695,0,295
+Florida,"$40,000 to $49,999",Asian only,44,Female,Employed - at work,Full time,400,180,0,520,0,180
+Kansas,"$50,000 to $59,999",White only,22,Male,Employed - at work,Full time,0,643,0,525,0,643
+South Carolina,"$20,000 to $24,999",White only,43,Male,Employed - at work,Part time,475,306,0,533,0,306
+New York,"$20,000 to $24,999",Black only,30,Female,Employed - at work,Part time,112,150,0,542,0,150
+Louisiana,"$40,000 to $49,999",White only,38,Male,Employed - at work,Full time,461,247,0,570,0,247
+New York,"$50,000 to $59,999",Asian only,40,Male,Employed - at work,Full time,0,270,0,600,0,270
+Texas,"$15,000 to $19,999",White only,48,Female,Employed - at work,Full time,604,222,0,415,0,222
+Arkansas,"$100,000 to $149,999",White only,46,Female,Employed - at work,Full time,0,405,0,625,0,405
+Illinois,"$25,000 to $29,999",Asian only,40,Female,Employed - at work,Full time,1240,0,0,60,0,0
+Texas,"$40,000 to $49,999",Black only,24,Female,Employed - at work,Full time,465,60,0,675,0,60
+Wisconsin,"$50,000 to $59,999",White only,48,Male,Employed - at work,Full time,355,135,0,520,0,135
+Georgia,"$30,000 to $34,999",White only,49,Male,Employed - at work,Full time,465,288,0,445,0,288
+Kansas,"$15,000 to $19,999",White only,26,Female,Employed - absent,Full time,270,320,0,550,0,320
+Texas,"$75,000 to $99,999",White only,42,Female,Employed - at work,Full time,0,390,0,835,0,390
+Maryland,"$150,000 and over",White only,42,Male,Employed - at work,Full time,507,183,30,540,0,213
+Colorado,"$150,000 and over",White only,23,Male,Employed - at work,Full time,0,120,0,810,0,120
+Indiana,"$60,000 to $74,999",White only,48,Female,Employed - at work,Full time,499,150,0,566,0,150
+Texas,"$60,000 to $74,999",White only,49,Female,Employed - at work,Full time,0,270,270,600,0,540
+Florida,"$40,000 to $49,999",White only,26,Female,Employed - at work,Full time,520,60,0,625,0,60
+Pennsylvania,"$100,000 to $149,999",White only,49,Female,Employed - at work,Full time,0,420,0,540,0,420
+Texas,"$20,000 to $24,999",White only,42,Female,Employed - at work,Full time,310,200,0,630,0,200
+Wisconsin,"$25,000 to $29,999",White only,30,Male,Employed - at work,Full time,10,742,0,475,15,742
+Maine,"$15,000 to $19,999",White only,48,Male,Employed - at work,Full time,334,135,298,465,0,433
+Texas,"$30,000 to $34,999",White only,30,Female,Employed - at work,Part time,0,385,60,760,0,445
+California,"$75,000 to $99,999",White only,42,Male,Employed - at work,Full time,475,105,0,535,0,105
+Alaska,"$12,500 to $14,999",White only,28,Male,Employed - at work,Full time,0,40,0,680,0,40
+California,"$60,000 to $74,999",White only,22,Male,Employed - at work,Part time,460,380,0,390,0,380
+Ohio,"$75,000 to $99,999",White only,30,Female,Employed - at work,Part time,0,355,0,810,0,355
+Virginia,"$35,000 to $39,999",Black only,43,Female,Employed - at work,Full time,480,285,0,490,0,285
+New York,"$100,000 to $149,999",White only,32,Male,Employed - at work,Full time,0,400,240,590,0,640
+Maine,"$20,000 to $24,999",White only,41,Female,Employed - at work,Full time,0,655,0,660,0,655
+North Carolina,"$150,000 and over",Black only,47,Female,Employed - at work,Full time,445,125,0,630,0,125
+Indiana,"$60,000 to $74,999",White only,47,Male,Employed - at work,Full time,0,250,0,275,0,250
+Ohio,"$75,000 to $99,999",White only,25,Male,Employed - at work,Full time,315,480,0,545,0,480
+Georgia,"$35,000 to $39,999",Black only,49,Male,Employed - at work,Full time,584,60,0,616,0,60
+Ohio,"$40,000 to $49,999",White only,40,Male,Employed - at work,Full time,0,482,203,680,0,685
+Tennessee,"$50,000 to $59,999",Black only,31,Male,Employed - at work,Full time,455,380,60,435,0,440
+Washington,"$60,000 to $74,999",White-Asian,23,Female,Employed - at work,Full time,646,66,0,445,0,66
+Iowa,"$35,000 to $39,999",Black only,24,Female,Employed - at work,Full time,493,92,0,560,0,92
+Wisconsin,"$15,000 to $19,999",White only,37,Male,Employed - at work,Full time,822,59,0,510,0,59
+New York,"$12,500 to $14,999",Black only,46,Female,Employed - at work,Full time,0,985,0,430,0,985
+North Carolina,"$35,000 to $39,999",White only,44,Female,Employed - at work,Part time,0,120,0,690,0,120
+California,"$150,000 and over",White only,30,Male,Employed - at work,Full time,120,592,0,530,0,592
+Texas,"$75,000 to $99,999",White only,45,Male,Employed - at work,Full time,675,110,0,465,0,110
+Texas,"$25,000 to $29,999",White only,49,Male,Employed - at work,Full time,600,0,0,585,0,0
+Tennessee,"$75,000 to $99,999",White only,49,Male,Employed - at work,Full time,635,205,0,380,0,205
+California,"$75,000 to $99,999",Asian only,35,Male,Employed - at work,Full time,0,390,0,660,0,390
+Texas,"$50,000 to $59,999",Black only,48,Female,Employed - absent,Full time,0,782,0,638,0,782
+Minnesota,"$30,000 to $34,999",Black only,29,Male,Employed - at work,Full time,210,390,0,710,0,390
+Iowa,"$75,000 to $99,999",White only,42,Female,Employed - at work,Full time,830,0,0,555,0,0
+California,"$35,000 to $39,999",White only,23,Female,Employed - at work,Full time,490,370,25,492,0,395
+Alabama,"$100,000 to $149,999","American Indian, Alaskan Native",49,Female,Employed - at work,Full time,0,290,0,585,0,290
+California,"$50,000 to $59,999",Asian only,27,Male,Employed - at work,Full time,0,572,0,720,0,572
+Florida,"$150,000 and over",White only,20,Male,Employed - at work,Full time,260,369,0,504,0,369
+New Hampshire,"$25,000 to $29,999",White only,18,Female,Employed - at work,Part time,330,240,150,545,0,390
+South Carolina,"$50,000 to $59,999",White only,49,Female,Employed - at work,Full time,559,256,0,455,0,256
+New York,"$30,000 to $34,999",White only,39,Male,Employed - at work,Full time,638,75,0,390,0,75
+California,"$100,000 to $149,999",White only,47,Male,Employed - at work,Full time,470,248,0,450,0,248
+Kansas,"$35,000 to $39,999",White only,27,Female,Employed - at work,Full time,0,344,0,690,0,344
+Washington,"$20,000 to $24,999",White only,27,Male,Employed - at work,Full time,482,0,0,568,0,0
+Pennsylvania,"Less than $5,000",White only,31,Female,Employed - at work,Full time,390,78,165,575,0,243
+Georgia,"$75,000 to $99,999",White only,18,Female,Employed - at work,Part time,251,0,0,529,400,0
+Pennsylvania,"$10,000 to $12,499",Black only,44,Male,Employed - at work,Part time,220,524,0,586,0,524
+Oregon,"$35,000 to $39,999",White only,47,Female,Employed - absent,Full time,0,195,0,720,0,195
+Michigan,"$20,000 to $24,999",Black only,32,Female,Employed - at work,Full time,0,420,150,540,0,570
+New York,"$50,000 to $59,999",Black only,47,Female,Employed - at work,Part time,0,594,0,342,0,594
+New York,"$100,000 to $149,999",White only,25,Female,Employed - at work,Full time,730,68,60,360,0,128
+Indiana,"$100,000 to $149,999",White only,28,Female,Employed - at work,Full time,0,450,0,585,0,450
+New York,"$30,000 to $34,999",White only,33,Female,Employed - at work,Full time,0,445,0,630,0,445
+Wisconsin,"$30,000 to $34,999",White only,25,Female,Employed - at work,Full time,455,63,90,645,0,153
+Illinois,"$20,000 to $24,999",White only,29,Male,Employed - at work,Full time,120,300,0,600,0,300
+Ohio,"$100,000 to $149,999",White only,41,Female,Employed - at work,Full time,538,70,0,535,0,70
+Iowa,"$75,000 to $99,999",White only,49,Male,Employed - at work,Full time,570,90,0,480,0,90
+California,"$30,000 to $34,999",White only,27,Male,Employed - at work,Full time,0,210,90,540,0,300
+Georgia,"$75,000 to $99,999",White only,44,Male,Employed - at work,Full time,120,239,0,565,0,239
+Delaware,"$60,000 to $74,999",Black only,33,Female,Employed - at work,Full time,570,90,0,540,0,90
+Utah,"$30,000 to $34,999",White only,31,Female,Employed - at work,Full time,590,120,0,530,0,120
+Pennsylvania,"$50,000 to $59,999",White only,34,Female,Employed - at work,Full time,0,150,0,660,0,150
+Indiana,"$100,000 to $149,999",Black only,49,Male,Employed - at work,Full time,585,223,0,300,0,223
+New Mexico,"$100,000 to $149,999",White only,36,Female,Employed - at work,Full time,300,150,0,465,0,150
+Texas,"$60,000 to $74,999",White only,29,Male,Employed - at work,Full time,490,335,0,440,0,335
+New York,"$75,000 to $99,999",White only,24,Male,Employed - at work,Full time,447,90,45,472,0,135
+New Jersey,"$40,000 to $49,999",White only,34,Female,Employed - at work,Full time,480,206,0,505,0,206
+South Carolina,"$60,000 to $74,999",White only,31,Female,Employed - at work,Full time,600,203,0,532,0,203
+California,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,530,315,0,480,0,315
+Virginia,"$15,000 to $19,999",White only,45,Male,Employed - at work,Full time,714,120,30,444,0,150
+Georgia,"$75,000 to $99,999",Black only,32,Male,Employed - at work,Full time,60,240,90,590,0,330
+Texas,"$100,000 to $149,999",White only,42,Male,Employed - at work,Full time,0,410,0,660,0,410
+Kentucky,"$35,000 to $39,999",White only,30,Female,Employed - at work,Full time,0,320,0,760,0,320
+Illinois,"$40,000 to $49,999",White only,47,Male,Employed - at work,Part time,530,345,0,395,0,345
+New York,"$50,000 to $59,999",Asian only,45,Female,Employed - at work,Part time,0,120,0,449,510,120
+Georgia,"$40,000 to $49,999",Black only,34,Female,Employed - at work,Full time,510,300,0,510,0,300
+North Carolina,"$150,000 and over",White only,41,Female,Employed - at work,Full time,485,87,0,615,0,87
+Mississippi,"$20,000 to $24,999",White only,22,Female,Employed - at work,Full time,498,70,0,757,0,70
+Pennsylvania,"$75,000 to $99,999",White only,36,Male,Employed - at work,Full time,0,240,195,560,0,435
+District of Columbia,"$75,000 to $99,999",White only,26,Male,Employed - at work,Full time,0,630,0,696,0,630
+California,"$50,000 to $59,999",White-Black,30,Male,Employed - at work,Full time,233,247,0,686,0,247
+Minnesota,"$60,000 to $74,999",White only,28,Male,Employed - at work,Full time,635,120,0,565,0,120
+Florida,"$35,000 to $39,999",Black only,41,Male,Employed - at work,Full time,705,120,0,535,0,120
+Connecticut,"$150,000 and over",Black only,31,Male,Employed - at work,Full time,600,280,0,515,0,280
+Alaska,"$75,000 to $99,999",White only,26,Female,Employed - at work,Full time,0,370,150,610,0,520
+California,"$100,000 to $149,999",White only,36,Female,Employed - at work,Full time,0,810,0,540,0,810
+Florida,"$100,000 to $149,999",White only,45,Male,Employed - at work,Full time,0,330,30,615,0,360
+Virginia,"$60,000 to $74,999",White only,24,Male,Employed - at work,Full time,512,163,0,530,0,163
+Kansas,"$150,000 and over",White only,40,Male,Employed - at work,Full time,290,275,0,580,0,275
+California,"$60,000 to $74,999",Black only,49,Male,Employed - at work,Full time,0,944,0,260,0,944
+Maryland,"$100,000 to $149,999",White only,45,Male,Employed - at work,Full time,520,207,60,415,0,267
+Missouri,"$40,000 to $49,999",Black only,49,Female,Employed - at work,Full time,90,360,0,500,0,360
+Michigan,"$20,000 to $24,999",White only,48,Male,Employed - at work,Full time,10,210,0,725,0,210
+Massachusetts,"$150,000 and over",White only,47,Female,Employed - at work,Full time,120,130,120,690,0,250
+New Mexico,"$60,000 to $74,999",White only,43,Female,Employed - at work,Full time,535,120,0,610,0,120
+Virginia,"$60,000 to $74,999",White only,28,Male,Employed - at work,Full time,510,210,0,510,0,210
+New York,"$100,000 to $149,999",White only,38,Male,Employed - at work,Full time,647,15,60,470,0,75
+Washington,"$60,000 to $74,999",Asian only,29,Male,Employed - at work,Full time,535,225,15,555,0,240
+Texas,"$40,000 to $49,999",White only,41,Female,Employed - at work,Full time,570,270,0,375,0,270
+South Dakota,"$20,000 to $24,999",White only,28,Male,Employed - at work,Full time,0,435,0,510,0,435
+Texas,"$50,000 to $59,999",White only,18,Female,Employed - at work,Part time,395,0,0,565,385,0
+Hawaii,"$35,000 to $39,999",White-Asian,49,Female,Employed - at work,Part time,415,150,145,517,0,295
+Iowa,"$40,000 to $49,999",White only,23,Male,Employed - at work,Full time,645,45,0,630,0,45
+Virginia,"$30,000 to $34,999",White only,45,Male,Employed - at work,Part time,380,30,0,540,0,30
+Nevada,"$75,000 to $99,999",Black only,49,Male,Employed - at work,Full time,0,465,0,840,0,465
+Colorado,"$30,000 to $34,999",White only,39,Male,Employed - at work,Full time,0,250,0,675,0,250
+California,"$40,000 to $49,999",White only,33,Male,Employed - at work,Full time,615,30,60,605,0,90
+Arizona,"$100,000 to $149,999",Asian only,33,Male,Employed - at work,Full time,0,440,45,710,0,485
+Missouri,"$60,000 to $74,999",White only,46,Female,Employed - at work,Full time,0,550,0,452,0,550
+Florida,"$40,000 to $49,999",White only,25,Male,Employed - at work,Full time,0,245,0,730,0,245
+Ohio,"$75,000 to $99,999",White only,31,Male,Employed - at work,Full time,0,275,5,770,0,280
+Iowa,"$75,000 to $99,999",White only,46,Male,Employed - at work,Full time,25,205,0,510,0,205
+Wisconsin,"$40,000 to $49,999",White only,41,Female,Employed - at work,Full time,545,80,0,540,0,80
+New Jersey,"$75,000 to $99,999",White only,19,Female,Employed - at work,Full time,0,588,30,557,0,618
+Minnesota,"$20,000 to $24,999",White only,34,Female,Employed - at work,Full time,515,300,0,520,0,300
+Maryland,"$150,000 and over",White only,31,Female,Employed - at work,Full time,940,0,60,140,0,60
+Illinois,"$75,000 to $99,999",White only,26,Male,Employed - at work,Full time,0,0,0,520,0,0
+Georgia,"$35,000 to $39,999",Black only,47,Male,Employed - at work,Full time,525,450,0,420,0,450
+Georgia,"$20,000 to $24,999",White only,23,Female,Employed - at work,Full time,0,280,180,615,0,460
+Texas,"$60,000 to $74,999",White only,48,Male,Employed - at work,Full time,557,37,0,480,0,37
+Massachusetts,"$150,000 and over",White only,38,Female,Employed - at work,Full time,240,60,0,330,0,60
+Georgia,"$50,000 to $59,999",Black only,42,Male,Employed - at work,Full time,300,120,0,864,0,120
+Tennessee,"$30,000 to $34,999",White only,32,Female,Employed - at work,Full time,585,145,0,520,0,145
+Massachusetts,"$75,000 to $99,999",White only,46,Male,Employed - at work,Full time,440,150,0,495,0,150
+Arizona,"$75,000 to $99,999",White only,49,Female,Employed - at work,Full time,510,120,0,570,0,120
+Colorado,"$5,000 to $7,499",White only,30,Male,Employed - at work,Part time,0,255,0,640,0,255
+Oregon,"$30,000 to $34,999",White only,24,Female,Employed - at work,Full time,30,280,0,640,0,280
+Louisiana,"$150,000 and over",White only,29,Female,Employed - at work,Full time,605,120,0,525,0,120
+Pennsylvania,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,910,110,0,316,0,110
+Texas,"$40,000 to $49,999",White only,25,Male,Employed - at work,Full time,585,180,0,510,0,180
+Texas,"$30,000 to $34,999",White only,49,Female,Employed - at work,Full time,0,210,95,600,0,305
+Illinois,"$25,000 to $29,999",White only,34,Male,Employed - at work,Full time,542,270,0,496,0,270
+Virginia,"$100,000 to $149,999",Asian only,31,Male,Employed - at work,Full time,442,150,60,545,0,210
+Pennsylvania,"$40,000 to $49,999",Black only,43,Female,Employed - at work,Full time,0,233,0,665,0,233
+Michigan,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,180,185,150,575,0,335
+Illinois,"$30,000 to $34,999",Black only,45,Male,Employed - at work,Full time,303,355,0,557,0,355
+West Virginia,"$35,000 to $39,999",White only,28,Male,Employed - at work,Full time,495,0,0,530,0,0
+Pennsylvania,"$75,000 to $99,999",White only,45,Male,Employed - at work,Full time,450,300,0,330,0,300
+Mississippi,"$50,000 to $59,999",White only,27,Male,Employed - at work,Full time,0,275,0,680,0,275
+New York,"$60,000 to $74,999",White only,43,Female,Employed - at work,Full time,0,398,30,678,0,428
+New York,"$150,000 and over",White only,46,Male,Employed - at work,Full time,60,275,60,570,0,335
+California,"$5,000 to $7,499",Asian only,44,Female,Employed - at work,Part time,0,210,30,810,0,240
+Wisconsin,"Less than $5,000",White only,19,Male,Employed - at work,Part time,540,60,0,690,0,60
+Kansas,"Less than $5,000",Black only,21,Female,Employed - at work,Full time,0,375,0,900,0,375
+Washington,"$75,000 to $99,999",White-American Indian,44,Male,Employed - at work,Full time,120,235,175,643,0,410
+Arizona,"$35,000 to $39,999",White only,34,Female,Employed - at work,Full time,420,220,0,570,0,220
+Florida,"$40,000 to $49,999",White only,47,Female,Employed - at work,Full time,0,190,0,690,0,190
+Texas,"$50,000 to $59,999",Black only,48,Female,Employed - at work,Full time,470,15,60,590,0,75
+Oregon,"$35,000 to $39,999",White only,22,Male,Employed - at work,Full time,0,350,120,470,0,470
+California,"$75,000 to $99,999",Black only,48,Male,Employed - at work,Full time,520,305,30,482,0,335
+Tennessee,"$15,000 to $19,999",White only,29,Male,Employed - at work,Full time,0,306,300,540,0,606
+Texas,"$75,000 to $99,999",White only,38,Male,Employed - at work,Full time,510,30,45,510,0,75
+Alabama,"$20,000 to $24,999",White only,44,Male,Employed - at work,Full time,0,240,0,550,0,240
+Texas,"$50,000 to $59,999",White only,44,Male,Employed - at work,Full time,580,155,135,390,0,290
+Michigan,"$150,000 and over",White only,22,Male,Employed - at work,Full time,460,0,0,630,0,0
+Nebraska,"$35,000 to $39,999",White only,44,Male,Employed - at work,Full time,706,144,0,431,0,144
+Florida,"$40,000 to $49,999",White only,37,Male,Employed - at work,Full time,525,140,60,580,0,200
+Illinois,"$40,000 to $49,999",White only,41,Female,Employed - at work,Full time,480,60,0,610,0,60
+Ohio,"$75,000 to $99,999",White only,44,Female,Employed - at work,Full time,475,35,50,565,0,85
+New York,"$50,000 to $59,999",White only,31,Female,Employed - at work,Full time,485,240,0,600,0,240
+Minnesota,"$35,000 to $39,999",White only,19,Male,Employed - at work,Full time,0,470,0,710,0,470
+New York,"$75,000 to $99,999",Black only,28,Female,Employed - at work,Full time,0,320,0,640,0,320
+West Virginia,"$35,000 to $39,999",White only,46,Male,Employed - at work,Full time,720,179,0,451,0,179
+New Jersey,"$150,000 and over",White only,24,Female,Employed - at work,Full time,380,85,0,620,0,85
+California,"$25,000 to $29,999",Black only,44,Female,Employed - at work,Full time,0,60,0,780,0,60
+Florida,"$75,000 to $99,999",White only,42,Female,Employed - at work,Full time,572,135,0,454,0,135
+New Jersey,"$25,000 to $29,999",Black only,24,Male,Employed - absent,Part time,135,280,0,720,0,280
+Illinois,"$12,500 to $14,999",Black only,34,Female,Employed - at work,Part time,0,390,0,955,0,390
+New York,"$100,000 to $149,999",Asian only,26,Male,Employed - at work,Full time,480,60,0,660,0,60
+Alabama,"$60,000 to $74,999",White only,28,Female,Employed - at work,Part time,0,315,0,820,0,315
+California,"$60,000 to $74,999",White-American Indian,24,Female,Employed - at work,Full time,0,425,203,690,0,628
+Colorado,"$40,000 to $49,999",White only,49,Male,Employed - at work,Full time,570,270,0,485,0,270
+West Virginia,"$20,000 to $24,999",White only,49,Female,Employed - at work,Part time,325,108,0,573,0,108
+Florida,"$25,000 to $29,999",White only,36,Female,Employed - at work,Full time,0,600,0,730,0,600
+Nevada,"$150,000 and over",White only,32,Male,Employed - at work,Full time,428,360,0,570,0,360
+Kentucky,"$30,000 to $34,999",White only,45,Male,Employed - at work,Full time,735,60,0,460,0,60
+Illinois,"$75,000 to $99,999",Asian only,30,Female,Employed - at work,Full time,0,420,0,780,0,420
+Pennsylvania,"$40,000 to $49,999",White only,42,Female,Employed - at work,Full time,525,35,0,510,0,35
+Colorado,"$60,000 to $74,999",White only,37,Male,Employed - at work,Full time,90,125,0,679,0,125
+New York,"$35,000 to $39,999",White only,46,Male,Employed - at work,Full time,440,170,0,515,0,170
+Virginia,"$40,000 to $49,999",Black only,49,Female,Employed - at work,Full time,275,25,0,565,0,25
+Michigan,"$50,000 to $59,999",White only,35,Female,Employed - at work,Full time,30,210,0,578,0,210
+Oregon,"$15,000 to $19,999",White only,33,Female,Employed - at work,Full time,625,10,0,655,0,10
+Illinois,"$25,000 to $29,999",Black only,24,Female,Employed - at work,Full time,0,330,60,848,0,390
+Alabama,"$12,500 to $14,999",Black only,23,Female,Employed - at work,Full time,0,417,0,871,0,417
+Texas,"$75,000 to $99,999",White only,48,Female,Employed - at work,Full time,0,225,0,615,0,225
+Missouri,"$60,000 to $74,999",White only,27,Female,Employed - at work,Full time,0,610,0,530,0,610
+Ohio,"$7,500 to $9,999",White only,43,Female,Employed - at work,Part time,0,750,0,610,0,750
+Texas,"$50,000 to $59,999",White only,30,Female,Employed - at work,Full time,530,225,0,510,0,225
+Minnesota,"$25,000 to $29,999",White only,32,Male,Employed - at work,Full time,766,49,0,550,0,49
+Illinois,"$75,000 to $99,999",White only,31,Male,Employed - at work,Full time,510,15,105,505,0,120
+Alaska,"$35,000 to $39,999",White only,25,Male,Employed - at work,Full time,960,20,0,410,0,20
+Texas,"$40,000 to $49,999",White only,26,Male,Employed - at work,Full time,590,105,0,580,0,105
+Colorado,"$30,000 to $34,999",White only,40,Male,Employed - at work,Full time,476,98,0,530,0,98
+North Carolina,"$35,000 to $39,999",Black only,27,Male,Employed - at work,Full time,0,180,0,825,0,180
+Connecticut,"$20,000 to $24,999",White only,44,Female,Employed - at work,Full time,1,614,0,720,0,614
+Illinois,"$75,000 to $99,999",White only,49,Female,Employed - at work,Full time,440,330,0,555,0,330
+California,"$75,000 to $99,999",Black only,35,Female,Employed - at work,Full time,0,515,0,495,0,515
+Indiana,"$30,000 to $34,999",White only,45,Female,Employed - at work,Full time,0,270,0,680,0,270
+Georgia,"$40,000 to $49,999",Black only,25,Female,Employed - at work,Full time,635,165,0,570,0,165
+Illinois,"$75,000 to $99,999",White only,24,Male,Employed - at work,Full time,510,180,30,510,0,210
+Colorado,"$60,000 to $74,999",White only,19,Female,Employed - at work,Full time,0,230,120,420,0,350
+Colorado,"$100,000 to $149,999",White only,19,Female,Employed - at work,Part time,410,65,0,740,0,65
+Mississippi,"$60,000 to $74,999",White only,31,Male,Employed - at work,Full time,480,300,0,570,0,300
+Wisconsin,"$50,000 to $59,999",White only,18,Male,Employed - at work,Full time,475,150,0,565,0,150
+Kentucky,"$35,000 to $39,999",White only,48,Male,Employed - at work,Full time,0,224,0,480,0,224
+Florida,"$35,000 to $39,999",White only,48,Male,Employed - at work,Full time,530,255,65,510,0,320
+Illinois,"$100,000 to $149,999",White only,22,Male,Employed - at work,Full time,615,60,0,635,0,60
+Missouri,"$60,000 to $74,999",White only,43,Male,Employed - at work,Full time,0,480,0,570,0,480
+Oklahoma,"$50,000 to $59,999",White only,22,Male,Employed - at work,Full time,600,0,0,660,0,0
+Texas,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,0,195,60,705,0,255
+California,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,320,240,0,490,0,240
+Texas,"$50,000 to $59,999",Black only,33,Male,Employed - at work,Full time,0,375,0,555,0,375
+Texas,"$60,000 to $74,999",White only,46,Male,Employed - at work,Full time,0,40,0,570,0,40
+California,"$60,000 to $74,999",Black only,26,Female,Employed - at work,Full time,390,265,0,570,0,265
+Illinois,"$30,000 to $34,999",Black only,46,Male,Employed - at work,Full time,0,390,0,920,0,390
+Minnesota,"$150,000 and over",White only,32,Female,Employed - at work,Full time,0,503,90,460,0,593
+Missouri,"$25,000 to $29,999",White only,23,Female,Employed - at work,Full time,0,0,225,750,0,225
+North Carolina,"$40,000 to $49,999",White only,43,Male,Employed - at work,Full time,600,70,0,650,0,70
+California,"$50,000 to $59,999",White only,46,Female,Employed - at work,Full time,0,440,0,540,0,440
+Colorado,"$25,000 to $29,999",White only,18,Male,Employed - at work,Part time,0,822,0,435,0,822
+Virginia,"$100,000 to $149,999",Asian only,41,Male,Employed - at work,Full time,630,150,0,290,180,150
+Idaho,"$15,000 to $19,999",White only,45,Male,Employed - at work,Full time,0,105,0,673,0,105
+Arkansas,"$20,000 to $24,999",White only,44,Female,Employed - at work,Full time,490,258,0,542,0,258
+Iowa,"$50,000 to $59,999",White only,27,Male,Employed - at work,Full time,450,0,0,495,0,0
+California,"$20,000 to $24,999",Black-American Indian,46,Male,Employed - at work,Part time,375,465,0,600,0,465
+Texas,"Less than $5,000",White only,25,Female,Employed - at work,Part time,0,330,0,960,0,330
+Pennsylvania,"$60,000 to $74,999",White only,29,Male,Employed - at work,Full time,30,150,90,675,0,240
+Oklahoma,"$50,000 to $59,999",White only,35,Female,Employed - at work,Full time,500,470,0,420,0,470
+Oregon,"$75,000 to $99,999",White only,36,Female,Employed - at work,Full time,420,130,164,435,0,294
+Texas,"$75,000 to $99,999",White only,28,Male,Employed - at work,Full time,480,65,0,540,120,65
+Kansas,"$25,000 to $29,999",White only,37,Male,Employed - at work,Full time,1050,0,0,345,0,0
+Oregon,"$100,000 to $149,999",White only,36,Female,Employed - at work,Full time,0,235,90,665,0,325
+New Jersey,"$100,000 to $149,999",Asian only,34,Female,Employed - at work,Full time,675,0,0,500,0,0
+Louisiana,"$25,000 to $29,999",White only,27,Male,Employed - at work,Full time,840,90,0,435,0,90
+Illinois,"$25,000 to $29,999",White-Asian,23,Male,Employed - at work,Part time,315,240,120,570,90,360
+Tennessee,"$50,000 to $59,999",White only,19,Female,Employed - at work,Full time,340,180,0,730,0,180
+Kentucky,"$12,500 to $14,999",White only,37,Male,Employed - at work,Full time,60,739,0,230,0,739
+Pennsylvania,"$40,000 to $49,999",White only,40,Female,Employed - at work,Full time,0,455,0,495,0,455
+Oklahoma,"$50,000 to $59,999",White only,45,Female,Employed - at work,Full time,535,160,52,565,0,212
+Kansas,"$12,500 to $14,999",Asian only,23,Female,Employed - at work,Full time,0,360,0,725,0,360
+Louisiana,"$75,000 to $99,999",White only,48,Male,Employed - at work,Full time,0,382,28,555,0,410
+Colorado,"$60,000 to $74,999",White only,36,Male,Employed - at work,Full time,365,90,0,540,0,90
+Arizona,"$20,000 to $24,999",White only,45,Male,Employed - at work,Full time,335,425,0,510,0,425
+Texas,"$150,000 and over",White only,40,Male,Employed - at work,Full time,620,170,0,450,0,170
+Minnesota,"$15,000 to $19,999",White only,46,Male,Employed - at work,Part time,235,225,0,662,0,225
+North Dakota,"$35,000 to $39,999","American Indian, Alaskan Native",48,Male,Employed - at work,Full time,0,343,0,570,0,343
+Pennsylvania,"$50,000 to $59,999",White only,28,Female,Employed - at work,Full time,520,70,0,475,0,70
+Alabama,"$30,000 to $34,999",White only,36,Male,Employed - at work,Part time,60,840,0,496,0,840
+Illinois,"$150,000 and over",White only,32,Male,Employed - at work,Full time,5,160,0,635,0,160
+Louisiana,"$40,000 to $49,999",Black only,47,Male,Employed - at work,Full time,0,300,0,660,0,300
+Georgia,"$40,000 to $49,999",White only,32,Female,Employed - at work,Part time,0,308,0,630,0,308
+Nevada,"$50,000 to $59,999",White only,27,Male,Employed - at work,Full time,0,450,60,470,0,510
+Texas,"$40,000 to $49,999",White only,24,Female,Employed - at work,Full time,480,225,0,570,0,225
+Missouri,"$50,000 to $59,999",White only,26,Male,Employed - at work,Full time,659,90,0,480,0,90
+Texas,"$50,000 to $59,999",Black only,36,Female,Employed - at work,Full time,120,120,0,885,0,120
+Pennsylvania,"$100,000 to $149,999",White only,30,Female,Employed - at work,Full time,720,60,0,445,0,60
+Texas,"$20,000 to $24,999",White only,49,Female,Employed - at work,Full time,612,95,0,485,0,95
+Pennsylvania,"$60,000 to $74,999",Black only,40,Female,Employed - at work,Full time,2,390,60,488,0,450
+Oklahoma,"$75,000 to $99,999",White only,42,Female,Employed - absent,Full time,0,585,0,535,0,585
+Illinois,"$40,000 to $49,999",Black only,45,Male,Employed - at work,Full time,0,262,0,510,0,262
+California,"$35,000 to $39,999",White only,22,Female,Employed - at work,Part time,495,315,0,540,0,315
+Indiana,"$60,000 to $74,999",White only,41,Male,Employed - at work,Full time,450,0,0,320,0,0
+California,"$150,000 and over",White only,24,Male,Employed - at work,Part time,581,25,30,365,0,55
+Michigan,"$75,000 to $99,999",White only,45,Female,Employed - at work,Full time,525,150,0,585,0,150
+Florida,"$20,000 to $24,999",White only,30,Male,Employed - at work,Part time,0,290,0,648,0,290
+Colorado,"$75,000 to $99,999",White only,36,Female,Employed - at work,Full time,515,120,0,537,0,120
+Florida,"$150,000 and over",White only,25,Male,Employed - at work,Full time,495,80,90,608,0,170
+Minnesota,"$60,000 to $74,999",White only,49,Female,Employed - at work,Part time,0,645,0,525,0,645
+Maryland,"$20,000 to $24,999",White only,42,Male,Employed - at work,Part time,795,25,40,450,20,65
+New Hampshire,"$40,000 to $49,999",White only,45,Male,Employed - at work,Full time,0,565,0,475,0,565
+Texas,"$75,000 to $99,999",White only,44,Male,Employed - at work,Full time,600,0,60,490,0,60
+Arizona,"$10,000 to $12,499",White only,46,Male,Employed - at work,Full time,0,427,0,514,0,427
+California,"$40,000 to $49,999",White only,23,Male,Employed - at work,Part time,0,150,0,785,0,150
+California,"$40,000 to $49,999",Asian only,30,Male,Employed - at work,Full time,30,300,120,530,0,420
+Alabama,"$35,000 to $39,999",Black only,39,Male,Employed - at work,Part time,0,360,0,717,0,360
+Texas,"$25,000 to $29,999",Black only,24,Male,Employed - at work,Full time,683,90,0,565,0,90
+New York,"$75,000 to $99,999",White only,20,Female,Employed - at work,Part time,485,510,0,400,0,510
+Texas,"$20,000 to $24,999",White only,32,Male,Employed - at work,Full time,0,0,0,390,0,0
+Florida,"$150,000 and over",White only,21,Male,Employed - at work,Full time,510,210,0,540,0,210
+Washington,"$60,000 to $74,999",White only,25,Male,Employed - at work,Full time,295,10,150,574,0,160
+Michigan,"$35,000 to $39,999",White only,32,Male,Employed - at work,Full time,670,215,0,395,0,215
+Massachusetts,"$60,000 to $74,999",Black only,33,Male,Employed - at work,Full time,639,0,100,350,0,100
+Alabama,"$75,000 to $99,999",White only,47,Female,Employed - at work,Full time,540,70,0,565,0,70
+California,"$7,500 to $9,999",White only,29,Female,Employed - at work,Full time,545,225,0,555,0,225
+South Carolina,"$25,000 to $29,999",White only,34,Male,Employed - at work,Full time,217,315,118,556,0,433
+Pennsylvania,"$100,000 to $149,999",White only,29,Female,Employed - at work,Full time,609,240,0,405,0,240
+New York,"$40,000 to $49,999",White only,27,Female,Employed - at work,Full time,0,160,0,695,0,160
+California,"$150,000 and over",White only,33,Male,Employed - at work,Full time,590,90,30,510,0,120
+Indiana,"$75,000 to $99,999",White only,22,Male,Employed - at work,Part time,30,650,0,510,0,650
+South Carolina,"$150,000 and over",White only,45,Female,Employed - at work,Full time,0,210,120,510,0,330
+Kentucky,"$15,000 to $19,999",White only,47,Male,Employed - at work,Full time,728,60,0,337,0,60
+Connecticut,"$100,000 to $149,999",White only,21,Male,Employed - at work,Full time,0,950,0,440,0,950
+Colorado,"$75,000 to $99,999",White only,43,Female,Employed - at work,Full time,0,0,0,150,0,0
+Nebraska,"$35,000 to $39,999",White only,34,Male,Employed - at work,Full time,0,316,60,789,0,376
+California,"$35,000 to $39,999",Asian only,29,Male,Employed - at work,Full time,405,80,0,835,0,80
+Massachusetts,"$75,000 to $99,999",Asian only,40,Male,Employed - at work,Full time,15,240,0,600,0,240
+Pennsylvania,"$100,000 to $149,999",Asian only,29,Male,Employed - at work,Full time,482,118,10,465,0,128
+California,"$100,000 to $149,999",White only,49,Female,Employed - at work,Full time,0,115,0,477,0,115
+California,"$60,000 to $74,999",White only,25,Male,Employed - at work,Full time,0,605,0,670,0,605
+Illinois,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,539,62,90,538,0,152
+New York,"$50,000 to $59,999",White only,47,Male,Employed - at work,Full time,345,113,120,530,0,233
+Colorado,"$60,000 to $74,999",White only,28,Female,Employed - at work,Full time,490,60,0,600,0,60
+Georgia,"$5,000 to $7,499",White only,27,Female,Employed - at work,Full time,0,205,150,890,0,355
+South Carolina,"$25,000 to $29,999",Black only,27,Female,Employed - at work,Full time,705,0,60,600,0,60
+California,"$20,000 to $24,999",White only,28,Male,Employed - at work,Part time,0,415,90,570,0,505
+Ohio,"$60,000 to $74,999",White only,48,Female,Employed - absent,Part time,0,130,0,660,0,130
+Utah,"$10,000 to $12,499","American Indian, Alaskan Native",46,Male,Employed - at work,Full time,430,420,0,430,0,420
+Georgia,"$75,000 to $99,999",White only,35,Male,Employed - at work,Full time,525,145,0,550,0,145
+Massachusetts,"$100,000 to $149,999",White only,49,Female,Employed - at work,Full time,0,463,0,420,0,463
+Nevada,"$40,000 to $49,999",White only,48,Female,Employed - at work,Full time,450,75,0,635,0,75
+South Carolina,"$60,000 to $74,999",White only,26,Female,Employed - at work,Full time,0,195,60,830,0,255
+Ohio,"$35,000 to $39,999",White only,25,Male,Employed - at work,Full time,405,162,0,570,0,162
+Illinois,"$15,000 to $19,999",Black only,46,Male,Employed - at work,Part time,310,705,0,290,0,705
+New York,"$100,000 to $149,999",White only,43,Male,Employed - at work,Full time,0,423,240,450,0,663
+Maryland,"$10,000 to $12,499",White only,29,Male,Employed - at work,Full time,0,120,60,640,0,180
+California,"$25,000 to $29,999",White only,27,Male,Employed - at work,Full time,607,167,0,540,0,167
+California,"$20,000 to $24,999",White only,43,Male,Employed - at work,Part time,519,135,20,371,0,155
+New York,"$50,000 to $59,999",Asian only,48,Female,Employed - at work,Full time,60,154,40,558,0,194
+Florida,"$25,000 to $29,999",Black only,30,Male,Employed - at work,Full time,0,500,0,720,0,500
+New Jersey,"$150,000 and over",White only,38,Male,Employed - at work,Full time,0,370,0,450,0,370
+Nevada,"$50,000 to $59,999",White only,32,Male,Employed - at work,Part time,452,165,90,495,0,255
+Ohio,"$60,000 to $74,999",White only,38,Female,Employed - at work,Full time,0,115,245,640,0,360
+Minnesota,"$5,000 to $7,499",Black only,39,Male,Employed - at work,Full time,610,150,0,480,0,150
+New York,"$75,000 to $99,999",White only,38,Male,Employed - at work,Full time,0,290,0,570,0,290
+Ohio,"$20,000 to $24,999",White only,25,Male,Employed - at work,Full time,420,390,0,540,0,390
+Colorado,"$60,000 to $74,999",White only,38,Female,Employed - at work,Full time,0,233,330,630,0,563
+Minnesota,"$40,000 to $49,999",White only,42,Female,Employed - at work,Full time,0,420,0,718,0,420
+Pennsylvania,"$150,000 and over",White only,30,Male,Employed - at work,Full time,0,385,0,745,0,385
+New York,"$60,000 to $74,999",White only,37,Male,Employed - at work,Full time,530,150,0,524,0,150
+South Carolina,"$35,000 to $39,999",White only,49,Female,Employed - at work,Full time,0,685,0,645,0,685
+Iowa,"$100,000 to $149,999",White only,49,Male,Employed - at work,Full time,630,180,0,480,0,180
+Texas,"$60,000 to $74,999",Black only,21,Male,Employed - at work,Part time,0,660,60,505,0,720
+North Dakota,"$75,000 to $99,999",White only,36,Male,Employed - at work,Full time,0,430,0,510,0,430
+Kentucky,"$5,000 to $7,499",White only,42,Male,Employed - at work,Part time,0,565,0,570,0,565
+California,"$75,000 to $99,999",White only,25,Female,Employed - at work,Full time,542,85,0,583,0,85
+Arizona,"$40,000 to $49,999",White only,28,Male,Employed - at work,Full time,465,150,0,780,0,150
+Arkansas,"$35,000 to $39,999",White only,40,Male,Employed - at work,Full time,0,90,0,510,0,90
+North Carolina,"$150,000 and over",White only,42,Male,Employed - at work,Full time,450,180,0,495,0,180
+West Virginia,"$75,000 to $99,999",White only,39,Male,Employed - at work,Full time,480,300,0,470,0,300
+Minnesota,"$40,000 to $49,999",White only,27,Male,Employed - at work,Full time,115,515,0,600,0,515
+California,"$60,000 to $74,999",White only,48,Male,Employed - at work,Full time,535,300,0,545,0,300
+Kansas,"$60,000 to $74,999",White only,24,Male,Employed - at work,Full time,0,240,240,840,0,480
+New York,"$75,000 to $99,999",White only,32,Male,Employed - at work,Full time,30,540,240,480,0,780
+Illinois,"$150,000 and over",White only,48,Male,Employed - at work,Full time,0,520,0,655,0,520
+Louisiana,"$75,000 to $99,999",Black only,47,Male,Employed - at work,Full time,405,240,0,570,0,240
+Nevada,"$35,000 to $39,999",White only,26,Male,Employed - at work,Full time,105,518,0,575,0,518
+Oklahoma,"$60,000 to $74,999",Black only,47,Male,Employed - at work,Full time,0,755,0,600,0,755
+Texas,"$100,000 to $149,999",White only,44,Female,Employed - at work,Full time,0,360,55,630,0,415
+Tennessee,"$25,000 to $29,999",Black only,43,Female,Employed - at work,Full time,465,130,0,540,0,130
+California,"$15,000 to $19,999",White only,35,Female,Employed - at work,Part time,430,245,0,690,0,245
+New Jersey,"$100,000 to $149,999",White only,45,Male,Employed - at work,Full time,0,590,0,650,0,590
+Minnesota,"$100,000 to $149,999",Black only,25,Female,Employed - at work,Part time,440,175,0,720,0,175
+California,"$50,000 to $59,999",White only,32,Female,Employed - at work,Full time,590,0,0,520,0,0
+Pennsylvania,"$100,000 to $149,999",White only,31,Male,Employed - at work,Full time,533,225,88,485,0,313
+West Virginia,"$10,000 to $12,499",White only,24,Male,Employed - at work,Full time,0,220,240,570,0,460
+Kentucky,"$20,000 to $24,999",White only,49,Male,Employed - at work,Full time,485,255,0,495,0,255
+Wisconsin,"$75,000 to $99,999",White only,25,Male,Employed - at work,Full time,0,180,0,660,0,180
+Kentucky,"$40,000 to $49,999",White only,48,Male,Employed - at work,Full time,425,179,0,540,0,179
+Colorado,"$50,000 to $59,999",White only,44,Male,Employed - at work,Full time,525,235,0,660,0,235
+Maryland,"$30,000 to $34,999",Black only,26,Male,Employed - at work,Full time,650,75,0,509,0,75
+Michigan,"$50,000 to $59,999",Black only,46,Female,Employed - at work,Full time,15,305,0,630,0,305
+Nebraska,"$35,000 to $39,999",White only,34,Male,Employed - at work,Full time,0,505,90,600,0,595
+Pennsylvania,"$100,000 to $149,999",White only,29,Male,Employed - at work,Full time,40,30,270,595,0,300
+Indiana,"$100,000 to $149,999",White only,48,Female,Employed - absent,Full time,0,320,0,600,0,320
+Illinois,"$40,000 to $49,999",Asian only,30,Male,Employed - at work,Full time,540,20,0,690,0,20
+Maryland,"$40,000 to $49,999",Black only,36,Female,Employed - at work,Full time,0,350,0,815,0,350
+California,"$12,500 to $14,999",White only,46,Female,Employed - at work,Part time,720,120,0,360,0,120
+Wisconsin,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,495,180,0,445,0,180
+Maryland,"$150,000 and over",White only,24,Female,Employed - at work,Full time,0,545,60,675,0,605
+Michigan,"$75,000 to $99,999",Black only,44,Female,Employed - at work,Full time,0,285,0,725,0,285
+Illinois,"$25,000 to $29,999",White only,28,Male,Employed - at work,Part time,633,130,0,550,0,130
+Michigan,"$30,000 to $34,999",White only,28,Male,Employed - at work,Full time,240,195,0,720,0,195
+Colorado,"$75,000 to $99,999",White only,37,Male,Employed - at work,Full time,600,60,0,480,0,60
+Michigan,"$30,000 to $34,999",White only,45,Male,Employed - at work,Full time,0,27,0,265,0,27
+Texas,"$50,000 to $59,999",White only,45,Female,Employed - at work,Full time,470,50,0,480,0,50
+Minnesota,"$75,000 to $99,999",White only,32,Male,Employed - at work,Full time,360,310,0,600,0,310
+Virginia,"$50,000 to $59,999",White only,44,Male,Employed - at work,Full time,600,240,0,440,0,240
+Nevada,"$75,000 to $99,999",White only,29,Male,Employed - absent,Full time,0,700,120,470,0,820
+California,"$12,500 to $14,999",White only,34,Male,Employed - at work,Full time,5,455,0,670,0,455
+Oklahoma,"$50,000 to $59,999",White only,40,Male,Employed - at work,Full time,595,105,0,450,0,105
+Texas,"$75,000 to $99,999",White only,30,Female,Employed - at work,Full time,490,120,0,525,0,120
+Texas,"$25,000 to $29,999",White only,46,Female,Employed - at work,Full time,0,420,165,595,0,585
+New York,"$150,000 and over",Black only,48,Female,Employed - at work,Full time,90,210,0,743,0,210
+California,"$12,500 to $14,999",White only,48,Female,Employed - at work,Full time,425,180,0,525,0,180
+Kansas,"$25,000 to $29,999",White only,47,Male,Employed - at work,Full time,0,421,0,450,0,421
+Wisconsin,"$100,000 to $149,999",White only,34,Male,Employed - at work,Full time,810,0,150,450,0,150
+South Dakota,"$75,000 to $99,999",White only,27,Female,Employed - at work,Full time,0,435,250,620,0,685
+Arizona,"$50,000 to $59,999",White only,44,Male,Employed - at work,Full time,538,0,95,490,0,95
+California,"$75,000 to $99,999",White only,36,Male,Employed - at work,Full time,550,60,0,510,0,60
+Illinois,"$60,000 to $74,999",White only,26,Male,Employed - at work,Full time,255,415,0,530,0,415
+Virginia,"$75,000 to $99,999",White only,24,Female,Employed - at work,Full time,0,290,0,660,0,290
+Illinois,"$50,000 to $59,999",Asian only,36,Male,Employed - at work,Full time,500,150,0,600,0,150
+Washington,"$100,000 to $149,999",White only,44,Female,Employed - at work,Part time,0,519,0,801,0,519
+Alabama,"$25,000 to $29,999",White only,28,Male,Employed - at work,Full time,0,394,0,719,0,394
+New York,"$35,000 to $39,999",White only,44,Male,Employed - at work,Full time,475,15,0,660,0,15
+Georgia,"$100,000 to $149,999",Black only,43,Male,Employed - at work,Full time,595,0,0,730,0,0
+Georgia,"$35,000 to $39,999",White only,47,Male,Employed - at work,Full time,0,200,0,570,0,200
+Texas,"$100,000 to $149,999",White only,18,Female,Employed - at work,Part time,0,458,0,270,225,458
+Ohio,"$30,000 to $34,999",White only,42,Male,Employed - absent,Full time,0,540,0,480,0,540
+Minnesota,"$150,000 and over",White only,41,Male,Employed - at work,Full time,0,495,0,525,0,495
+Arizona,"$40,000 to $49,999",White only,28,Female,Employed - at work,Full time,5,360,0,930,0,360
+North Carolina,"$5,000 to $7,499",Black only,21,Female,Employed - at work,Full time,0,305,0,810,0,305
+Georgia,"$50,000 to $59,999",White only,45,Male,Employed - at work,Full time,620,180,0,270,0,180
+South Carolina,"$50,000 to $59,999",White only,47,Female,Employed - at work,Full time,418,150,0,495,0,150
+Arizona,"$35,000 to $39,999",White only,21,Female,Employed - at work,Full time,485,165,60,485,0,225
+New Mexico,"$35,000 to $39,999",White only,46,Female,Employed - at work,Full time,425,130,60,715,0,190
+Kentucky,"$50,000 to $59,999",White only,27,Female,Employed - at work,Full time,475,195,0,500,0,195
+Hawaii,"$25,000 to $29,999",White only,30,Male,Employed - at work,Full time,0,210,60,560,0,270
+Pennsylvania,"$7,500 to $9,999",Black only,20,Male,Employed - at work,Full time,450,420,0,470,0,420
+Alabama,"$40,000 to $49,999",White only,48,Male,Employed - at work,Full time,705,65,0,475,0,65
+Texas,"$40,000 to $49,999",White only,25,Male,Employed - at work,Full time,525,60,0,535,0,60
+California,"$60,000 to $74,999",White only,28,Male,Employed - at work,Full time,350,60,0,652,0,60
+Michigan,"$100,000 to $149,999",White only,49,Female,Employed - at work,Full time,520,15,0,460,0,15
+Pennsylvania,"$35,000 to $39,999",Black only,21,Male,Employed - at work,Full time,335,480,0,400,0,480
+California,"$60,000 to $74,999",White only,41,Male,Employed - at work,Full time,564,180,0,594,0,180
+New York,"$40,000 to $49,999",White only,37,Female,Employed - at work,Full time,0,450,60,690,0,510
+California,"$75,000 to $99,999",White only,35,Male,Employed - at work,Full time,0,240,30,645,0,270
+New York,"$5,000 to $7,499",White only,30,Male,Employed - at work,Full time,0,500,0,605,0,500
+District of Columbia,"$75,000 to $99,999",White only,37,Male,Employed - at work,Full time,445,270,0,540,0,270
+Washington,"$60,000 to $74,999",Hawaiian Pacific Islander only,33,Male,Employed - at work,Full time,690,0,0,555,0,0
+Michigan,"$10,000 to $12,499",White only,22,Male,Employed - at work,Part time,0,765,0,570,0,765
+Pennsylvania,"$60,000 to $74,999",Asian only,30,Female,Employed - at work,Full time,0,345,0,670,0,345
+Michigan,"$25,000 to $29,999",White only,33,Female,Employed - at work,Full time,535,0,0,615,0,0
+Texas,"$15,000 to $19,999",White only,36,Male,Employed - at work,Full time,575,90,0,495,0,90
+California,"$5,000 to $7,499",White only,20,Male,Employed - at work,Part time,0,253,0,750,0,253
+Illinois,"$20,000 to $24,999",White only,27,Male,Employed - at work,Full time,255,155,100,790,0,255
+Oregon,"$100,000 to $149,999",White only,49,Male,Employed - at work,Full time,406,265,0,465,0,265
+California,"$75,000 to $99,999",White only,40,Male,Employed - at work,Full time,600,108,50,480,0,158
+Texas,"$60,000 to $74,999",White only,36,Male,Employed - at work,Full time,850,60,0,335,0,60
+North Carolina,"$100,000 to $149,999",White only,43,Male,Employed - at work,Full time,0,343,120,563,0,463
+South Carolina,"$25,000 to $29,999",Black only,41,Male,Employed - at work,Full time,710,95,0,471,0,95
+Oregon,"Less than $5,000",White only,37,Male,Employed - at work,Part time,0,630,420,155,0,1050
+California,"$100,000 to $149,999",White-American Indian,29,Female,Employed - at work,Full time,495,210,60,530,0,270
+Virginia,"$50,000 to $59,999",White only,34,Female,Employed - at work,Full time,480,300,0,555,0,300
+Michigan,"$150,000 and over",White only,25,Female,Employed - at work,Full time,0,450,45,784,0,495
+Colorado,"$50,000 to $59,999",White only,27,Male,Employed - at work,Full time,0,465,200,585,0,665
+Florida,"$25,000 to $29,999",Asian only,42,Male,Employed - at work,Full time,0,325,180,780,0,505
+Massachusetts,"$25,000 to $29,999",White only,24,Male,Employed - at work,Full time,550,285,60,470,0,345
+New York,"$12,500 to $14,999",Black only,48,Female,Employed - at work,Part time,345,370,0,510,0,370
+Illinois,"$60,000 to $74,999",White only,47,Male,Employed - at work,Full time,480,0,0,450,0,0
+Florida,"$75,000 to $99,999",Black only,30,Female,Employed - absent,Full time,605,55,0,590,0,55
+North Carolina,"$60,000 to $74,999",White only,47,Female,Employed - at work,Full time,0,180,0,823,0,180
+Texas,"$150,000 and over",White only,35,Female,Employed - at work,Full time,520,252,0,528,0,252
+Texas,"$7,500 to $9,999",White only,40,Female,Employed - at work,Full time,0,255,0,510,0,255
+Florida,"$10,000 to $12,499",Black only,26,Male,Employed - at work,Part time,405,0,218,415,0,218
+Illinois,"$40,000 to $49,999",Black only,49,Female,Employed - at work,Full time,0,145,0,850,0,145
+Indiana,"$40,000 to $49,999",White only,49,Female,Employed - at work,Full time,543,193,0,481,0,193
+California,"$30,000 to $34,999",White only,23,Female,Employed - at work,Full time,0,320,0,564,0,320
+New York,"$100,000 to $149,999",Black only,23,Male,Employed - at work,Full time,0,410,0,709,0,410
+Texas,"$50,000 to $59,999",White only,43,Female,Employed - at work,Full time,490,235,0,510,0,235
+California,"$100,000 to $149,999","American Indian, Alaskan Native",26,Female,Employed - at work,Full time,0,445,0,630,0,445
+Florida,"$60,000 to $74,999",White only,30,Female,Employed - at work,Full time,540,60,0,655,0,60
+Pennsylvania,"$40,000 to $49,999",Black only,26,Female,Employed - at work,Full time,0,360,0,900,0,360
+Maryland,"$30,000 to $34,999",White only,42,Female,Employed - at work,Full time,445,110,0,645,0,110
+Ohio,"$5,000 to $7,499",White only,28,Female,Employed - at work,Part time,295,0,0,890,0,0
+Washington,"$35,000 to $39,999",White only,19,Female,Employed - at work,Part time,385,435,0,530,0,435
+Pennsylvania,"$25,000 to $29,999",White only,27,Male,Employed - at work,Part time,240,332,0,788,0,332
+Michigan,"$100,000 to $149,999",White only,28,Female,Employed - absent,Full time,180,146,90,540,0,236
+Texas,"$60,000 to $74,999",White only,29,Male,Employed - at work,Full time,0,425,0,655,0,425
+Illinois,"$50,000 to $59,999",Black only,31,Male,Employed - at work,Full time,437,287,0,370,0,287
+Michigan,"$75,000 to $99,999",White only,35,Male,Employed - at work,Full time,764,0,30,570,0,30
+Indiana,"$7,500 to $9,999",Asian only,32,Male,Employed - absent,Full time,110,295,0,510,0,295
+Ohio,"$150,000 and over",White only,47,Female,Employed - at work,Full time,285,105,100,565,0,205
+Georgia,"$50,000 to $59,999",White only,38,Male,Employed - at work,Full time,0,320,0,750,0,320
+New York,"Less than $5,000",White only,27,Female,Employed - at work,Full time,470,215,0,530,0,215
+Florida,"$60,000 to $74,999",White only,49,Male,Employed - at work,Full time,645,95,60,360,0,155
+Kansas,"$15,000 to $19,999",White only,25,Male,Employed - at work,Full time,347,220,0,555,0,220
+Texas,"$75,000 to $99,999",White only,29,Female,Employed - at work,Full time,517,150,0,431,0,150
+California,"$20,000 to $24,999",Black only,35,Male,Employed - at work,Full time,815,35,30,455,0,65
+New Jersey,"$100,000 to $149,999",White only,32,Female,Employed - at work,Full time,65,120,0,485,0,120
+Colorado,"$25,000 to $29,999",White only,24,Male,Employed - at work,Full time,569,134,0,530,0,134
+Maryland,"$40,000 to $49,999",Black only,28,Male,Employed - at work,Full time,465,185,0,603,0,185
+New York,"$5,000 to $7,499",Black only,49,Male,Employed - absent,Full time,0,150,270,705,0,420
+Illinois,"$150,000 and over",Black only,36,Male,Employed - at work,Full time,570,45,10,413,75,55
+California,"$10,000 to $12,499",White only,28,Male,Employed - at work,Full time,780,30,0,548,0,30
+Tennessee,"$60,000 to $74,999",White only,38,Female,Employed - at work,Full time,0,30,0,400,0,30
+North Carolina,"$20,000 to $24,999",Black only,49,Male,Employed - at work,Part time,0,581,0,529,0,581
+Ohio,"$40,000 to $49,999",Black only,46,Female,Employed - at work,Full time,362,204,0,720,0,204
+Oklahoma,"$7,500 to $9,999",White only,23,Male,Employed - at work,Full time,439,120,75,615,0,195
+Louisiana,"$25,000 to $29,999",Black only,37,Female,Employed - at work,Full time,0,480,0,750,0,480
+Pennsylvania,"$30,000 to $34,999",White only,22,Female,Employed - at work,Full time,515,165,0,535,0,165
+Nevada,"$150,000 and over",White only,40,Female,Employed - at work,Full time,0,240,25,525,0,265
+North Carolina,"$40,000 to $49,999",White only,26,Male,Employed - at work,Full time,0,690,0,400,0,690
+Texas,"$50,000 to $59,999",White only,34,Female,Employed - at work,Part time,0,420,0,900,0,420
+New York,"$50,000 to $59,999",Black only,26,Male,Employed - at work,Part time,314,147,120,558,0,267
+Texas,"$50,000 to $59,999",White only,40,Female,Employed - at work,Full time,180,480,0,600,0,480
+Virginia,"Less than $5,000",White only,35,Female,Employed - at work,Full time,560,60,0,510,0,60
+Washington,"$60,000 to $74,999",White only,25,Male,Employed - at work,Full time,597,172,0,540,0,172
+Arizona,"$100,000 to $149,999",White only,44,Male,Employed - at work,Full time,0,180,0,490,0,180
+Connecticut,"$12,500 to $14,999",Asian only,28,Male,Employed - at work,Full time,203,195,0,715,0,195
+Florida,"$50,000 to $59,999",Black only,26,Male,Employed - at work,Full time,0,495,0,480,0,495
+Florida,"$30,000 to $34,999",White only,23,Female,Employed - at work,Full time,540,30,0,565,0,30
+Colorado,"Less than $5,000",White only,25,Male,Employed - at work,Full time,665,135,0,555,0,135
+Georgia,"$20,000 to $24,999",White only,44,Male,Employed - at work,Full time,0,135,120,570,0,255
+Montana,"$30,000 to $34,999",White only,48,Female,Employed - at work,Full time,0,228,0,630,0,228
+California,"$60,000 to $74,999",White-Asian,24,Female,Employed - at work,Full time,10,180,0,650,0,180
+New Jersey,"$100,000 to $149,999",White only,37,Female,Employed - at work,Full time,0,125,0,605,0,125
+New York,"$40,000 to $49,999",White only,34,Male,Employed - at work,Full time,695,0,120,480,0,120
+New Jersey,"$50,000 to $59,999",Asian only,44,Male,Employed - at work,Full time,690,175,0,415,0,175
+Pennsylvania,"$20,000 to $24,999",Black only,25,Male,Employed - at work,Part time,395,260,0,600,0,260
+Tennessee,"$40,000 to $49,999",Black only,49,Female,Employed - at work,Full time,0,215,0,540,0,215
+Massachusetts,"$150,000 and over",White only,23,Female,Employed - at work,Full time,520,100,60,525,0,160
+Minnesota,"$35,000 to $39,999",White only,45,Female,Employed - at work,Full time,0,220,0,1200,0,220
+Missouri,"$150,000 and over",White only,46,Female,Employed - absent,Full time,0,15,120,910,0,135
+Alabama,"$75,000 to $99,999",White only,26,Male,Employed - at work,Full time,420,325,0,465,0,325
+New York,"$100,000 to $149,999",Black only,30,Male,Employed - at work,Full time,450,480,0,270,0,480
+Massachusetts,"$60,000 to $74,999",White only,39,Male,Employed - at work,Full time,645,269,80,240,0,349
+Wisconsin,"$150,000 and over",White only,34,Male,Employed - at work,Full time,0,515,45,660,0,560
+Arizona,"$60,000 to $74,999",White only,34,Male,Employed - at work,Full time,690,0,60,490,0,60
+North Dakota,"$25,000 to $29,999",White only,33,Male,Employed - at work,Full time,0,400,240,750,0,640
+Florida,"$25,000 to $29,999",White only,47,Female,Employed - at work,Full time,0,410,105,625,0,515
+Iowa,"$25,000 to $29,999",White only,43,Male,Employed - at work,Full time,580,118,0,488,0,118
+Wisconsin,"$75,000 to $99,999",White only,43,Male,Employed - at work,Full time,120,520,0,540,0,520
+Michigan,"$35,000 to $39,999",White only,44,Female,Employed - at work,Full time,460,375,0,450,0,375
+Vermont,"$20,000 to $24,999",White only,48,Female,Employed - at work,Part time,0,180,130,585,0,310
+Massachusetts,"$60,000 to $74,999",White only,33,Female,Employed - at work,Full time,450,105,60,665,0,165
+Maine,"$25,000 to $29,999",White only,30,Male,Employed - at work,Full time,480,127,0,510,0,127
+Michigan,"$25,000 to $29,999",White only,33,Male,Employed - at work,Full time,685,120,0,540,0,120
+Oregon,"$40,000 to $49,999",White only,46,Female,Employed - at work,Full time,0,165,0,810,0,165
+Oregon,"$35,000 to $39,999",White only,41,Female,Employed - at work,Full time,0,180,60,545,0,240
+Oregon,"$25,000 to $29,999",White-American Indian,20,Male,Employed - at work,Full time,370,170,105,665,0,275
+Oregon,"$100,000 to $149,999",White only,41,Male,Employed - at work,Full time,620,235,0,365,0,235
+Pennsylvania,"$40,000 to $49,999",White only,26,Female,Employed - at work,Full time,485,150,75,345,60,225
+Texas,"$15,000 to $19,999",Asian only,41,Male,Employed - at work,Full time,493,153,0,490,0,153
+Wisconsin,"$150,000 and over",Black only,34,Female,Employed - at work,Full time,0,320,0,675,0,320
+North Carolina,"$7,500 to $9,999",White only,25,Male,Employed - at work,Full time,462,105,0,400,0,105
+New Jersey,"$25,000 to $29,999",Black only,19,Male,Employed - at work,Part time,310,78,0,330,0,78
+Nevada,"$30,000 to $34,999",Black only,36,Male,Employed - at work,Full time,687,40,0,647,0,40
+Illinois,"$40,000 to $49,999",White only,48,Female,Employed - at work,Full time,485,285,0,460,0,285
+Maryland,"$50,000 to $59,999",Black only,43,Female,Employed - at work,Full time,455,200,0,575,0,200
+Missouri,"$20,000 to $24,999",White only,33,Female,Employed - at work,Full time,515,200,0,525,0,200
+Ohio,"$60,000 to $74,999",Black only,49,Female,Employed - absent,Full time,653,0,0,753,0,0
+Louisiana,"$40,000 to $49,999",Black only,33,Female,Employed - at work,Full time,225,90,0,547,0,90
+Oregon,"$150,000 and over",White only,31,Male,Employed - at work,Full time,825,77,0,415,0,77
+Ohio,"$100,000 to $149,999",White only,47,Male,Employed - absent,Full time,0,670,199,315,0,869
+New Jersey,"$75,000 to $99,999",White only,41,Male,Employed - absent,Full time,0,333,0,1096,0,333
+Nebraska,"$50,000 to $59,999",White only,30,Female,Employed - at work,Full time,605,90,0,575,0,90
+New York,"$40,000 to $49,999",White only,39,Male,Employed - at work,Full time,297,120,60,570,0,180
+Texas,"$25,000 to $29,999",Black only,39,Male,Employed - at work,Full time,555,213,0,510,0,213
+Utah,"$75,000 to $99,999",White only,46,Male,Employed - at work,Full time,710,200,0,330,0,200
+Arizona,"Less than $5,000",White only,46,Male,Employed - at work,Full time,0,310,0,585,0,310
+California,"$60,000 to $74,999",White only,30,Male,Employed - at work,Full time,450,228,60,490,0,288
+California,"$50,000 to $59,999",White only,26,Male,Employed - at work,Full time,495,190,15,555,0,205
+California,"$15,000 to $19,999",White only,45,Female,Employed - at work,Part time,0,477,0,550,0,477
+Wisconsin,"$50,000 to $59,999",White only,30,Male,Employed - at work,Full time,660,310,0,420,0,310
+New York,"$75,000 to $99,999",White only,42,Male,Employed - at work,Full time,590,334,0,270,0,334
+Minnesota,"$25,000 to $29,999",Black only,34,Male,Employed - at work,Full time,930,220,85,145,0,305
+Mississippi,"$40,000 to $49,999",White only,46,Female,Employed - at work,Full time,516,145,0,606,0,145
+Indiana,"$40,000 to $49,999",White only,34,Male,Employed - at work,Full time,0,183,492,620,0,675
+Texas,"$35,000 to $39,999",White only,34,Male,Employed - at work,Full time,620,210,0,425,0,210
+Missouri,"$40,000 to $49,999",White only,45,Female,Employed - at work,Full time,0,0,210,470,0,210
+California,"$60,000 to $74,999",Asian only,39,Female,Employed - at work,Full time,490,75,0,660,0,75
+Pennsylvania,"$60,000 to $74,999",White only,47,Male,Employed - at work,Full time,0,380,0,550,0,380
+Illinois,"$150,000 and over",White only,41,Female,Employed - at work,Full time,915,15,0,435,0,15
+Texas,"$60,000 to $74,999",White only,34,Male,Employed - at work,Full time,0,242,360,690,0,602
+Virginia,"$25,000 to $29,999",White only,28,Male,Employed - at work,Full time,532,150,63,484,0,213
+Florida,"$75,000 to $99,999",White only,29,Male,Employed - at work,Full time,0,447,60,405,0,507
+California,"$60,000 to $74,999",White only,43,Male,Employed - at work,Full time,430,285,60,480,0,345
+Texas,"$75,000 to $99,999",Black only,28,Female,Employed - at work,Full time,525,150,70,469,0,220
+Texas,"$40,000 to $49,999",White-Black,39,Female,Employed - at work,Full time,920,0,0,405,0,0
+Florida,"$60,000 to $74,999",White only,48,Male,Employed - at work,Full time,0,525,90,490,0,615
+California,"$40,000 to $49,999",White only,20,Male,Employed - at work,Part time,270,440,0,640,0,440
+Georgia,"$25,000 to $29,999",White only,27,Female,Employed - at work,Part time,360,0,0,840,0,0
+Ohio,"$35,000 to $39,999",White only,48,Male,Employed - at work,Full time,15,210,0,570,0,210
+California,"$20,000 to $24,999",White only,33,Male,Employed - at work,Full time,30,20,370,590,0,390
+Kansas,"$60,000 to $74,999",White only,37,Female,Employed - at work,Full time,540,140,60,540,0,200
+Arkansas,"$60,000 to $74,999",White only,40,Male,Employed - at work,Full time,720,0,0,600,0,0
+Montana,"$60,000 to $74,999",White only,34,Male,Employed - at work,Full time,501,246,80,505,0,326
+California,"$30,000 to $34,999",White only,46,Male,Employed - at work,Full time,445,85,0,710,0,85
+North Dakota,"$100,000 to $149,999",White only,28,Male,Employed - at work,Full time,0,740,0,470,0,740
+Pennsylvania,"$100,000 to $149,999",White only,31,Female,Employed - at work,Full time,505,135,0,535,0,135
+Texas,"$25,000 to $29,999",White only,45,Male,Employed - at work,Full time,690,180,0,450,0,180
+New York,"$150,000 and over",White only,30,Female,Employed - at work,Full time,0,20,304,680,0,324
+Alabama,"$150,000 and over",White-American Indian,48,Male,Employed - at work,Full time,575,340,0,360,0,340
+Florida,"$75,000 to $99,999",White only,23,Male,Employed - at work,Full time,0,580,0,600,0,580
+Texas,"$20,000 to $24,999",White only,26,Female,Employed - at work,Full time,740,0,0,490,0,0
+Louisiana,"$30,000 to $34,999",Black only,45,Male,Employed - at work,Full time,0,457,0,830,0,457
+Mississippi,"$40,000 to $49,999",Black only,27,Female,Employed - at work,Part time,0,510,0,750,0,510
+Pennsylvania,"$100,000 to $149,999",White only,42,Male,Employed - absent,Full time,0,295,0,840,0,295
+South Carolina,"$75,000 to $99,999",Black only,48,Female,Employed - at work,Full time,0,385,0,630,0,385
+Michigan,"$20,000 to $24,999",White only,44,Male,Employed - at work,Part time,365,280,0,615,0,280
+California,"$150,000 and over",Asian only,39,Female,Employed - at work,Full time,17,360,0,767,0,360
+Arizona,"$75,000 to $99,999",White only,49,Female,Employed - at work,Full time,490,195,45,485,0,240
+Wisconsin,"Less than $5,000",Black only,46,Male,Employed - at work,Part time,110,345,0,720,0,345
+Oklahoma,"$50,000 to $59,999",White only,32,Male,Employed - at work,Full time,420,180,0,690,0,180
+Maryland,"$60,000 to $74,999",White only,25,Female,Employed - at work,Full time,475,90,45,635,0,135
+Illinois,"$25,000 to $29,999",White only,28,Female,Employed - at work,Full time,513,90,30,520,0,120
+Pennsylvania,"$150,000 and over",White only,36,Male,Employed - at work,Full time,438,300,0,500,0,300
+Florida,"$40,000 to $49,999",White only,48,Male,Employed - at work,Full time,658,90,0,520,0,90
+Texas,"$75,000 to $99,999",Black only,27,Male,Employed - at work,Full time,0,335,0,960,0,335
+Indiana,"$30,000 to $34,999",White only,42,Female,Employed - at work,Full time,710,85,0,425,0,85
+Alabama,"$40,000 to $49,999",White only,20,Male,Employed - at work,Full time,0,736,73,510,0,809
+Virginia,"$75,000 to $99,999",Black only,42,Female,Employed - at work,Full time,0,250,0,915,0,250
+South Dakota,"$30,000 to $34,999",White only,20,Male,Employed - at work,Full time,540,330,0,500,0,330
+Louisiana,"$100,000 to $149,999",White only,29,Male,Employed - at work,Full time,63,239,0,500,0,239
+Texas,"$50,000 to $59,999",White only,27,Male,Employed - at work,Full time,460,180,0,580,0,180
+Idaho,"$60,000 to $74,999",White only,28,Female,Employed - at work,Full time,510,120,0,540,0,120
+Texas,"$60,000 to $74,999",Asian only,31,Male,Employed - at work,Full time,540,250,0,430,0,250
+New York,"$30,000 to $34,999",Black only,27,Female,Employed - at work,Full time,510,75,0,630,0,75
+Indiana,"$35,000 to $39,999",White only,40,Male,Employed - at work,Full time,370,375,0,470,0,375
+New Jersey,"$60,000 to $74,999",White only,47,Male,Employed - at work,Full time,600,0,0,435,0,0
+California,"$75,000 to $99,999",White only,49,Male,Employed - at work,Full time,515,135,0,535,0,135
+Illinois,"$40,000 to $49,999",White only,36,Male,Employed - at work,Full time,60,590,0,405,0,590
+Oregon,"$35,000 to $39,999",White only,42,Male,Employed - at work,Full time,550,15,0,590,0,15
+New Jersey,"$5,000 to $7,499",Black only,46,Male,Employed - at work,Full time,0,150,0,677,0,150
+California,"$150,000 and over",Asian only,34,Female,Employed - at work,Full time,120,120,0,610,0,120
+Ohio,"$50,000 to $59,999",White only,23,Male,Employed - at work,Full time,120,715,215,220,0,930
+Minnesota,"$40,000 to $49,999",White only,30,Female,Employed - at work,Full time,0,179,0,685,0,179
+Connecticut,"$100,000 to $149,999",White only,28,Female,Employed - at work,Full time,487,148,45,533,0,193
+Nebraska,"$30,000 to $34,999",White only,37,Male,Employed - at work,Full time,400,230,0,700,0,230
+New York,"$150,000 and over",White only,26,Female,Employed - at work,Full time,512,122,0,600,0,122
+Connecticut,"$40,000 to $49,999",White only,49,Female,Employed - at work,Full time,465,160,0,610,0,160
+Indiana,"$30,000 to $34,999",Black only,37,Male,Employed - at work,Full time,480,300,0,480,0,300
+Louisiana,"$25,000 to $29,999",White only,35,Male,Employed - at work,Full time,550,264,0,480,0,264
+New York,"Less than $5,000",White only,20,Male,Employed - at work,Full time,405,90,0,560,0,90
+Wisconsin,"$60,000 to $74,999",White only,39,Male,Employed - at work,Full time,0,290,0,565,0,290
+Florida,"$12,500 to $14,999",White only,19,Female,Employed - at work,Full time,0,130,0,1079,0,130
+Minnesota,"$40,000 to $49,999",White only,21,Male,Employed - at work,Full time,0,363,0,560,0,363
+New York,"$75,000 to $99,999",White only,40,Female,Employed - at work,Full time,0,429,15,585,0,444
+Pennsylvania,"$40,000 to $49,999",White only,26,Female,Employed - at work,Full time,613,220,0,467,0,220
+Iowa,"Less than $5,000",White only,43,Male,Employed - at work,Part time,0,751,0,660,0,751
+Wisconsin,"Less than $5,000",White only,36,Male,Employed - at work,Full time,355,180,0,865,0,180
+Delaware,"$75,000 to $99,999",White only,39,Male,Employed - at work,Full time,0,180,60,730,0,240
+Nebraska,"$75,000 to $99,999",White only,28,Female,Employed - at work,Full time,0,220,120,600,0,340
+Tennessee,"$35,000 to $39,999",Black only,36,Female,Employed - at work,Full time,650,60,0,610,0,60
+Arkansas,"$35,000 to $39,999",White only,43,Male,Employed - at work,Full time,487,242,0,530,0,242
+Pennsylvania,"$10,000 to $12,499",White only,27,Female,Employed - at work,Full time,630,130,0,565,0,130
+Maryland,"$50,000 to $59,999",Black only,35,Male,Employed - at work,Full time,0,420,0,720,0,420
+Florida,"Less than $5,000",Black only,25,Male,Employed - at work,Part time,0,120,0,930,0,120
+Florida,"$30,000 to $34,999",White only,36,Male,Employed - at work,Full time,310,309,60,489,0,369
+California,"$75,000 to $99,999",White only,31,Female,Employed - at work,Full time,0,386,240,630,0,626
+Arizona,"$75,000 to $99,999",White only,36,Female,Employed - at work,Full time,600,30,90,580,0,120
+Minnesota,"$35,000 to $39,999",White only,32,Female,Employed - at work,Full time,575,225,0,260,0,225
+New York,"$60,000 to $74,999",Asian only,40,Male,Employed - at work,Part time,60,350,0,570,0,350
+Texas,"$75,000 to $99,999",White only,31,Male,Employed - at work,Full time,255,353,0,590,0,353
+Texas,"$75,000 to $99,999",White only,24,Male,Employed - at work,Full time,0,360,0,675,0,360
+Massachusetts,"$60,000 to $74,999",White only,42,Male,Employed - at work,Full time,475,170,135,540,0,305
+North Carolina,"$30,000 to $34,999",White only,34,Female,Employed - at work,Full time,500,165,0,595,0,165
+New Hampshire,"$35,000 to $39,999",White only,25,Male,Employed - at work,Full time,870,90,0,395,0,90
+Florida,"$75,000 to $99,999",White only,44,Female,Employed - at work,Part time,0,235,0,605,0,235
+Kansas,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,540,0,120,685,0,120
+Texas,"$25,000 to $29,999",Asian only,41,Male,Employed - at work,Full time,510,460,0,300,0,460
+California,"$20,000 to $24,999",White only,39,Male,Employed - at work,Part time,0,397,0,635,0,397
+Virginia,"$75,000 to $99,999",Black only,45,Female,Employed - at work,Full time,437,268,0,481,0,268
+North Carolina,"$40,000 to $49,999",White only,45,Male,Employed - at work,Full time,445,170,60,580,0,230
+California,"$20,000 to $24,999",White only,32,Male,Employed - at work,Part time,390,120,0,670,0,120
+California,"$150,000 and over",White only,26,Male,Employed - at work,Full time,710,25,45,500,0,70
+Oregon,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,0,750,0,535,0,750
+Texas,"$40,000 to $49,999",Black only,41,Male,Employed - at work,Full time,540,265,0,518,0,265
+Georgia,"$40,000 to $49,999",Black only,42,Female,Employed - at work,Full time,0,330,0,770,0,330
+California,"$150,000 and over",White only,32,Male,Employed - at work,Part time,40,607,0,645,0,607
+New Jersey,"Less than $5,000",White only,42,Male,Employed - at work,Full time,0,645,0,540,0,645
+Virginia,"$100,000 to $149,999",Asian only,36,Male,Employed - at work,Full time,529,210,0,515,0,210
+Texas,"$25,000 to $29,999",White only,45,Male,Employed - at work,Full time,0,150,0,635,0,150
+Maryland,"$5,000 to $7,499",Black only,43,Male,Employed - at work,Part time,455,240,0,410,0,240
+Maryland,"$75,000 to $99,999",Black only,38,Female,Employed - at work,Full time,540,0,0,840,0,0
+Mississippi,"$15,000 to $19,999",Black only,26,Male,Employed - at work,Full time,0,385,0,820,0,385
+California,"$60,000 to $74,999",White only,26,Male,Employed - at work,Full time,455,135,60,595,0,195
+California,"$50,000 to $59,999",White only,32,Male,Employed - at work,Full time,0,230,0,510,0,230
+Texas,"$100,000 to $149,999",White only,42,Male,Employed - at work,Full time,485,30,0,465,0,30
+Pennsylvania,"$50,000 to $59,999",White only,43,Female,Employed - at work,Full time,435,265,0,460,0,265
+Indiana,"$100,000 to $149,999",White only,38,Male,Employed - at work,Full time,0,627,0,530,0,627
+Michigan,"$40,000 to $49,999",Asian only,30,Male,Employed - at work,Full time,0,540,0,840,0,540
+North Carolina,"$25,000 to $29,999",White only,36,Male,Employed - at work,Full time,825,0,0,510,0,0
+Colorado,"$25,000 to $29,999",White only,31,Female,Employed - at work,Full time,660,50,0,525,0,50
+North Dakota,"$35,000 to $39,999",White only,34,Female,Employed - at work,Full time,0,335,0,780,0,335
+Montana,"$25,000 to $29,999",Asian only,20,Female,Employed - at work,Full time,335,310,0,660,0,310
+Virginia,"$100,000 to $149,999",White only,35,Female,Employed - at work,Full time,495,210,60,495,0,270
+Arizona,"$10,000 to $12,499",White only,26,Male,Employed - at work,Full time,459,359,0,359,0,359
+Indiana,"$40,000 to $49,999",White only,37,Female,Employed - at work,Full time,495,195,60,455,0,255
+Pennsylvania,"$150,000 and over",Asian only,32,Male,Employed - at work,Full time,0,365,0,615,0,365
+Pennsylvania,"$100,000 to $149,999",White only,30,Male,Employed - at work,Full time,575,85,75,540,0,160
+Ohio,"$20,000 to $24,999",Hawaiian Pacific Islander only,30,Male,Employed - at work,Full time,425,245,0,560,0,245
+West Virginia,"$20,000 to $24,999",Black only,36,Male,Employed - at work,Part time,0,0,0,718,0,0
+New York,"$150,000 and over",White only,31,Male,Employed - at work,Full time,480,346,0,460,0,346
+New York,"$40,000 to $49,999",White only,39,Male,Employed - at work,Full time,645,15,0,630,0,15
+Texas,"$60,000 to $74,999",White only,40,Male,Employed - at work,Full time,0,575,0,570,0,575
+Ohio,"Less than $5,000",Black only,49,Female,Employed - at work,Part time,0,0,0,765,0,0
+New Jersey,"$30,000 to $34,999",White only,30,Female,Employed - at work,Part time,15,301,0,650,0,301
+Alabama,"$40,000 to $49,999",White only,38,Female,Employed - at work,Part time,465,60,0,600,0,60
+Indiana,"$50,000 to $59,999",White only,44,Female,Employed - at work,Full time,500,125,0,545,0,125
+California,"$150,000 and over",Asian only,36,Male,Employed - at work,Full time,30,520,0,667,0,520
+Missouri,"$50,000 to $59,999",White only,43,Male,Employed - at work,Full time,450,0,30,730,0,30
+California,"$30,000 to $34,999",White only,25,Male,Employed - at work,Full time,480,210,0,570,0,210
+Michigan,"$40,000 to $49,999",White only,46,Male,Employed - at work,Full time,400,485,0,255,0,485
+District of Columbia,"$40,000 to $49,999",White only,25,Female,Employed - at work,Full time,0,610,0,785,0,610
+Idaho,"$12,500 to $14,999",White only,42,Male,Employed - at work,Part time,240,335,0,630,0,335
+Texas,"$40,000 to $49,999",White only,40,Female,Employed - at work,Full time,510,150,0,580,0,150
+California,"$100,000 to $149,999",Black only,31,Male,Employed - at work,Full time,0,680,0,555,0,680
+Illinois,"$50,000 to $59,999",White only,46,Male,Employed - at work,Full time,600,75,0,542,0,75
+Virginia,"$150,000 and over",White only,47,Female,Employed - at work,Full time,175,410,0,525,0,410
+Wisconsin,"$40,000 to $49,999",White only,44,Male,Employed - at work,Full time,240,145,0,450,0,145
+New York,"$150,000 and over",White only,39,Female,Employed - at work,Full time,0,370,210,705,0,580
+South Carolina,"$40,000 to $49,999",White only,38,Male,Employed - at work,Full time,495,225,0,465,0,225
+Texas,"$20,000 to $24,999",Black only,28,Female,Employed - at work,Part time,0,310,0,720,0,310
+Washington,"$50,000 to $59,999",White only,37,Female,Employed - at work,Full time,363,10,0,660,0,10
+California,"$40,000 to $49,999",White only,32,Male,Employed - at work,Full time,245,270,0,505,0,270
+California,"$150,000 and over",White only,33,Male,Employed - at work,Full time,2,225,0,625,0,225
+California,"$100,000 to $149,999",White only,28,Female,Employed - at work,Full time,0,373,0,600,0,373
+Ohio,"Less than $5,000",Asian only,30,Female,Employed - at work,Part time,405,253,0,485,0,253
+California,"$40,000 to $49,999",White only,48,Male,Employed - at work,Full time,0,650,60,600,0,710
+South Dakota,"$20,000 to $24,999",White only,30,Male,Employed - at work,Full time,90,360,0,635,0,360
+North Carolina,"$60,000 to $74,999",White only,36,Male,Employed - at work,Full time,275,60,0,490,0,60
+Connecticut,"$50,000 to $59,999",White only,40,Male,Employed - at work,Full time,0,180,0,679,0,180
+Ohio,"$60,000 to $74,999",White only,28,Male,Employed - at work,Full time,600,325,0,280,0,325
+Minnesota,"$60,000 to $74,999",White only,47,Male,Employed - absent,Full time,0,495,0,638,0,495
+New York,"$35,000 to $39,999",White only,43,Male,Employed - at work,Full time,0,185,485,345,0,670
+North Carolina,"$7,500 to $9,999",Black only,48,Male,Employed - at work,Full time,525,415,0,380,0,415
+Massachusetts,"$75,000 to $99,999",White only,24,Male,Employed - at work,Full time,205,455,70,640,0,525
+Texas,"$40,000 to $49,999",White only,37,Male,Employed - at work,Full time,489,485,0,360,0,485
+California,"$150,000 and over",Asian only,48,Male,Employed - at work,Full time,465,0,70,560,0,70
+Illinois,"$60,000 to $74,999",White only,42,Male,Employed - at work,Full time,530,351,0,526,0,351
+Nevada,"$50,000 to $59,999",White only,31,Female,Employed - at work,Part time,15,617,0,525,0,617
+Ohio,"$40,000 to $49,999",White only,37,Male,Employed - at work,Full time,0,630,0,750,0,630
+Illinois,"$25,000 to $29,999",White only,33,Female,Employed - at work,Full time,20,240,90,605,0,330
+California,"$150,000 and over",White only,24,Female,Employed - at work,Full time,0,180,0,800,0,180
+California,"$50,000 to $59,999",Black only,48,Female,Employed - at work,Full time,650,0,0,535,0,0
+California,"$150,000 and over",White only,27,Female,Employed - at work,Full time,474,195,45,605,0,240
+Hawaii,"$60,000 to $74,999",White-Asian,48,Female,Employed - absent,Full time,0,60,0,650,0,60
+Indiana,"$40,000 to $49,999",White only,28,Female,Employed - at work,Full time,0,120,0,743,0,120
+Kansas,"$20,000 to $24,999",Black only,32,Male,Employed - at work,Full time,705,205,0,394,0,205
+Florida,"$40,000 to $49,999",White only,33,Female,Employed - at work,Full time,95,280,60,650,0,340
+Texas,"$40,000 to $49,999",White only,41,Male,Employed - at work,Full time,360,260,0,450,0,260
+Texas,"$40,000 to $49,999",Black only,34,Female,Employed - at work,Part time,590,130,0,570,0,130
+Michigan,"$25,000 to $29,999",White only,49,Male,Employed - at work,Full time,630,60,0,540,0,60
+Colorado,"$40,000 to $49,999",White only,30,Female,Employed - at work,Full time,540,479,60,300,0,539
+Washington,"$20,000 to $24,999",White only,49,Female,Employed - at work,Full time,345,250,0,557,0,250
+Kansas,"$75,000 to $99,999",White only,28,Female,Employed - at work,Full time,0,355,0,735,0,355
+Ohio,"$25,000 to $29,999",White only,23,Female,Employed - at work,Full time,0,529,0,555,0,529
+Illinois,"$100,000 to $149,999",White only,30,Male,Employed - at work,Full time,705,90,0,540,0,90
+Minnesota,"$150,000 and over",White only,45,Male,Employed - at work,Full time,480,105,0,530,0,105
+Virginia,"$100,000 to $149,999",White only,49,Female,Employed - at work,Part time,0,175,0,570,0,175
+Pennsylvania,"$30,000 to $34,999",White only,46,Female,Employed - at work,Full time,0,90,0,715,0,90
+Louisiana,"$75,000 to $99,999",White only,47,Female,Employed - at work,Part time,540,165,0,535,0,165
+New Jersey,"$40,000 to $49,999",Black only,26,Female,Employed - at work,Full time,180,395,210,240,0,605
+New York,"$50,000 to $59,999",Black only,48,Female,Employed - at work,Full time,493,50,160,515,0,210
+Texas,"$50,000 to $59,999",White only,18,Male,Employed - at work,Part time,0,585,0,675,0,585
+Oklahoma,"$40,000 to $49,999",White only,25,Female,Employed - at work,Full time,550,120,0,540,0,120
+Vermont,"$60,000 to $74,999",White only,34,Male,Employed - at work,Full time,473,180,0,540,0,180
+California,"$100,000 to $149,999",White only,45,Male,Employed - at work,Full time,0,470,0,570,0,470
+Massachusetts,"$150,000 and over",Black only,48,Male,Employed - at work,Full time,465,35,105,345,0,140
+South Carolina,"$75,000 to $99,999",White only,39,Male,Employed - at work,Full time,0,595,0,455,0,595
+New York,"$50,000 to $59,999",White only,34,Male,Employed - at work,Full time,815,60,0,360,0,60
+Texas,"$35,000 to $39,999",White only,37,Female,Employed - at work,Full time,360,120,0,719,0,120
+Tennessee,"$100,000 to $149,999",White only,22,Female,Employed - at work,Full time,239,299,0,635,0,299
+Washington,"$50,000 to $59,999",White only,31,Female,Employed - at work,Full time,525,0,0,520,0,0
+Minnesota,"$7,500 to $9,999",Black only,31,Female,Employed - at work,Full time,0,350,0,720,0,350
+California,"$60,000 to $74,999",White only,48,Female,Employed - at work,Full time,0,435,0,540,0,435
+California,"$100,000 to $149,999",White only,33,Female,Employed - at work,Full time,0,370,0,690,0,370
+Michigan,"$100,000 to $149,999",White only,34,Female,Employed - at work,Full time,60,205,0,720,370,205
+California,"$150,000 and over",White only,23,Male,Employed - at work,Full time,0,576,0,390,0,576
+Minnesota,"$40,000 to $49,999",White only,49,Female,Employed - at work,Full time,0,425,0,660,0,425
+Montana,"$35,000 to $39,999",White only,36,Female,Employed - at work,Full time,517,240,0,635,0,240
+South Carolina,"$30,000 to $34,999",Black only,32,Female,Employed - at work,Full time,506,224,60,524,0,284
+Iowa,"$100,000 to $149,999",White only,23,Female,Employed - at work,Full time,627,262,0,430,0,262
+Alabama,"$35,000 to $39,999",White only,29,Male,Employed - at work,Full time,0,395,0,555,0,395
+New Mexico,"$50,000 to $59,999",White only,36,Male,Employed - at work,Full time,0,225,60,600,0,285
+California,"$20,000 to $24,999",Black only,45,Female,Employed - at work,Full time,210,400,0,790,0,400
+California,"$150,000 and over",Asian only,46,Female,Employed - at work,Full time,0,235,0,720,0,235
+Massachusetts,"$60,000 to $74,999",White only,37,Female,Employed - at work,Full time,525,150,0,650,0,150
+California,"$150,000 and over",White only,22,Female,Employed - at work,Full time,0,395,75,760,0,470
+Washington,"$35,000 to $39,999",Asian only,49,Male,Employed - at work,Full time,435,210,0,495,0,210
+Texas,"$60,000 to $74,999",White only,42,Female,Employed - absent,Full time,0,600,0,690,0,600
+Alabama,"$30,000 to $34,999",Black only,47,Female,Employed - at work,Full time,240,480,0,425,0,480
+New York,"$20,000 to $24,999",Black only,46,Male,Employed - at work,Part time,0,300,30,930,0,330
+New York,"$50,000 to $59,999",White only,34,Female,Employed - at work,Full time,423,112,0,562,0,112
+Maryland,"$50,000 to $59,999",White only,32,Male,Employed - at work,Full time,655,120,0,485,0,120
+Texas,"$10,000 to $12,499",White only,22,Female,Employed - at work,Full time,0,185,0,810,0,185
+Missouri,"$100,000 to $149,999",Black only,48,Male,Employed - at work,Full time,550,100,0,527,0,100
+South Dakota,"$40,000 to $49,999",White only,46,Male,Employed - at work,Full time,0,290,120,480,0,410
+Maryland,"$40,000 to $49,999",Black only,32,Male,Employed - at work,Full time,685,130,0,575,0,130
+Pennsylvania,"$60,000 to $74,999",Black only,26,Female,Employed - at work,Full time,180,345,0,555,150,345
+Florida,"$7,500 to $9,999",Black only,40,Female,Employed - at work,Part time,0,690,0,550,0,690
+New Mexico,"$75,000 to $99,999",White only,30,Male,Employed - at work,Full time,480,170,120,465,0,290
+Massachusetts,"$25,000 to $29,999",Black only,28,Female,Employed - at work,Full time,0,455,0,600,0,455
+Illinois,"$60,000 to $74,999",White only,26,Female,Employed - at work,Full time,705,0,0,540,0,0
+Kansas,"$7,500 to $9,999",White only,48,Female,Employed - at work,Part time,60,325,30,720,0,355
+Michigan,"$100,000 to $149,999",White only,39,Male,Employed - at work,Part time,0,0,0,600,0,0
+Ohio,"$100,000 to $149,999",White only,46,Male,Employed - at work,Full time,740,49,120,440,0,169
+Pennsylvania,"$150,000 and over",White only,34,Female,Employed - at work,Full time,0,75,375,570,0,450
+Pennsylvania,"$25,000 to $29,999",White only,42,Male,Employed - at work,Full time,15,480,0,650,0,480
+Illinois,"$50,000 to $59,999",White only,47,Male,Employed - at work,Full time,0,460,0,625,0,460
+Colorado,"$100,000 to $149,999",White only,35,Female,Employed - at work,Full time,0,645,0,690,0,645
+Oklahoma,"$75,000 to $99,999",Black only,27,Male,Employed - at work,Full time,450,490,0,420,0,490
+Kentucky,"$25,000 to $29,999",White only,46,Male,Employed - absent,Full time,0,745,0,555,0,745
+Kansas,"$30,000 to $34,999",White only,30,Male,Employed - at work,Full time,0,135,375,713,0,510
+Connecticut,"$75,000 to $99,999",Asian only,23,Female,Employed - at work,Full time,540,65,0,538,0,65
+California,"$50,000 to $59,999",White only,35,Male,Employed - at work,Full time,590,110,0,505,0,110
+California,"$150,000 and over",Black only,49,Female,Employed - at work,Full time,0,60,0,655,0,60
+California,"$25,000 to $29,999",White only,23,Male,Employed - at work,Full time,500,0,180,480,0,180
+Florida,"$100,000 to $149,999",White only,33,Female,Employed - at work,Full time,0,804,0,463,0,804
+North Carolina,"$7,500 to $9,999",Black only,48,Female,Employed - at work,Part time,0,390,0,630,0,390
+New Hampshire,"$75,000 to $99,999",White only,38,Female,Employed - at work,Full time,0,395,0,660,0,395
+California,"$50,000 to $59,999",White only,25,Male,Employed - at work,Full time,0,90,375,688,0,465
+California,"$100,000 to $149,999",Hawaiian Pacific Islander only,22,Male,Employed - at work,Part time,455,240,0,520,0,240
+Minnesota,"$100,000 to $149,999",White only,42,Male,Employed - at work,Full time,0,25,0,580,0,25
+California,"$30,000 to $34,999",Asian only,34,Male,Employed - at work,Full time,10,165,150,571,0,315
+New York,"$50,000 to $59,999",White only,34,Male,Employed - at work,Full time,0,440,0,600,0,440
+Colorado,"$150,000 and over",White only,43,Male,Employed - at work,Full time,490,145,45,553,0,190
+Colorado,"$50,000 to $59,999",White only,35,Female,Employed - at work,Full time,0,120,0,600,0,120
+Virginia,"$60,000 to $74,999",Black only,32,Male,Employed - at work,Full time,490,340,60,430,0,400
+California,"$50,000 to $59,999",White only,23,Female,Employed - at work,Full time,150,270,0,685,0,270
+Tennessee,"$25,000 to $29,999",White only,26,Female,Employed - at work,Full time,520,0,40,555,0,40
+California,"$50,000 to $59,999",White only,24,Female,Employed - at work,Full time,0,500,0,750,0,500
+Washington,"$75,000 to $99,999",White only,37,Male,Employed - at work,Full time,150,460,0,640,0,460
+Kentucky,"$50,000 to $59,999",White only,37,Male,Employed - at work,Full time,975,0,0,405,0,0
+Ohio,"$20,000 to $24,999",White only,22,Male,Employed - at work,Part time,480,270,0,510,0,270
+Wisconsin,"$15,000 to $19,999",White only,31,Female,Employed - at work,Full time,480,225,0,600,0,225
+Minnesota,"$60,000 to $74,999",White only,48,Male,Employed - at work,Full time,0,320,0,540,0,320
+Texas,"$25,000 to $29,999",Black only,49,Male,Employed - at work,Part time,60,680,0,600,0,680
+Massachusetts,"$75,000 to $99,999",Asian only,33,Male,Employed - at work,Full time,0,300,0,615,0,300
+Nevada,"$60,000 to $74,999",White-American Indian,47,Male,Employed - at work,Full time,0,35,133,420,0,168
+Missouri,"$40,000 to $49,999",Black only,24,Male,Employed - at work,Full time,0,527,30,625,0,557
+South Carolina,"$150,000 and over",White only,31,Female,Employed - at work,Full time,380,190,0,540,0,190
+Louisiana,"$20,000 to $24,999",Black only,49,Female,Employed - at work,Full time,421,0,0,425,0,0
+Utah,"$75,000 to $99,999",White only,46,Female,Employed - at work,Full time,0,205,0,787,0,205
+Texas,"$25,000 to $29,999",Black only,35,Male,Employed - at work,Full time,357,405,0,400,0,405
+Alabama,"$7,500 to $9,999",White only,47,Female,Employed - at work,Full time,655,95,0,640,0,95
+Texas,"$40,000 to $49,999",White only,31,Male,Employed - at work,Full time,500,240,0,487,0,240
+Maryland,"$100,000 to $149,999",White only,48,Female,Employed - at work,Full time,510,220,0,415,0,220
+Minnesota,"$30,000 to $34,999",White only,26,Male,Employed - at work,Full time,0,555,120,630,0,675
+California,"$60,000 to $74,999",White only,35,Female,Employed - at work,Part time,0,875,0,495,0,875
+Texas,"$75,000 to $99,999",White only,47,Male,Employed - at work,Full time,0,300,0,720,0,300
+Georgia,"$25,000 to $29,999",White-American Indian,45,Male,Employed - at work,Full time,445,340,0,510,0,340
+Missouri,"$40,000 to $49,999",White only,37,Female,Employed - at work,Full time,480,170,0,595,0,170
+Delaware,"$35,000 to $39,999",White only,33,Male,Employed - at work,Full time,0,681,0,660,0,681
+Pennsylvania,"$15,000 to $19,999",White only,44,Male,Employed - at work,Full time,0,180,60,653,0,240
+District of Columbia,"$50,000 to $59,999",White only,39,Male,Employed - at work,Full time,540,0,0,660,0,0
+California,"$100,000 to $149,999",Asian only,32,Female,Employed - at work,Full time,60,350,0,600,0,350
+Illinois,"$60,000 to $74,999",Black only,26,Male,Employed - at work,Full time,656,70,0,577,0,70
+Michigan,"Less than $5,000",White only,39,Male,Employed - at work,Full time,0,350,0,420,0,350
+Florida,"$60,000 to $74,999",Asian only,24,Male,Employed - at work,Full time,15,360,0,825,0,360
+North Carolina,"$150,000 and over",White only,35,Male,Employed - at work,Full time,678,120,0,543,0,120
+Idaho,"$40,000 to $49,999",White only,28,Male,Employed - at work,Full time,440,30,0,540,0,30
+Alabama,"$100,000 to $149,999",White only,43,Female,Employed - at work,Full time,0,300,0,660,0,300
+Virginia,"$60,000 to $74,999",Black only,40,Female,Employed - at work,Full time,410,165,0,684,0,165
+Tennessee,"$100,000 to $149,999",White only,30,Male,Employed - at work,Full time,240,240,270,305,0,510
+Louisiana,"$20,000 to $24,999",White only,30,Male,Employed - at work,Full time,480,0,0,510,0,0
+Missouri,"$150,000 and over",White only,45,Female,Employed - at work,Full time,710,33,0,555,0,33
+New York,"$150,000 and over",White only,29,Male,Employed - at work,Full time,0,90,0,620,0,90
+Virginia,"$12,500 to $14,999",White only,44,Male,Employed - at work,Full time,607,117,0,485,0,117
+Virginia,"$150,000 and over",Black only,48,Male,Employed - at work,Full time,0,480,180,570,0,660
+Nebraska,"$30,000 to $34,999",White only,47,Female,Employed - at work,Full time,0,547,0,810,0,547
+Texas,"$5,000 to $7,499",White only,33,Female,Employed - at work,Full time,490,0,0,905,0,0
+Pennsylvania,"$60,000 to $74,999",White only,23,Male,Employed - at work,Full time,475,195,0,410,0,195
+North Carolina,"$30,000 to $34,999",Black only,43,Female,Employed - at work,Full time,0,180,0,840,0,180
+Illinois,"$40,000 to $49,999",White only,23,Male,Employed - at work,Full time,0,318,60,734,0,378
+New York,"$50,000 to $59,999",White only,47,Female,Employed - at work,Full time,0,898,0,420,0,898
+New York,"$50,000 to $59,999",Asian only,23,Male,Employed - at work,Full time,595,60,0,668,0,60
+Oregon,"$40,000 to $49,999",White only,28,Male,Employed - at work,Full time,455,285,0,440,0,285
+Ohio,"$50,000 to $59,999",White only,47,Male,Employed - at work,Full time,610,140,0,470,0,140
+California,"$100,000 to $149,999",White only,39,Male,Employed - at work,Full time,1115,30,0,155,0,30
+Texas,"$40,000 to $49,999",White only,24,Male,Employed - at work,Part time,346,339,0,645,0,339
+California,"$150,000 and over",Black only,28,Female,Employed - at work,Full time,0,395,0,605,0,395
+Florida,"$40,000 to $49,999",White only,27,Female,Employed - at work,Full time,0,370,0,610,0,370
+Kentucky,"$30,000 to $34,999",White only,45,Female,Employed - at work,Full time,570,10,0,400,0,10
+Illinois,"$50,000 to $59,999",White only,26,Male,Employed - at work,Full time,545,145,0,525,0,145
+Utah,"$100,000 to $149,999",White only,48,Male,Employed - at work,Full time,625,65,68,517,0,133
+Florida,"$20,000 to $24,999",Black only,46,Male,Employed - at work,Full time,0,495,10,630,0,505
+Illinois,"$50,000 to $59,999",White only,23,Female,Employed - at work,Full time,30,145,90,600,419,235
+California,"$60,000 to $74,999",White only,43,Male,Employed - at work,Full time,0,365,0,450,0,365
+Iowa,"$150,000 and over",White only,47,Female,Employed - at work,Full time,423,170,35,527,0,205
+Maine,"$75,000 to $99,999",White only,22,Female,Employed - at work,Full time,560,0,0,670,0,0
+New Jersey,"$30,000 to $34,999",Black only,30,Female,Employed - at work,Full time,415,410,0,360,0,410
+Texas,"$100,000 to $149,999",White only,37,Female,Employed - at work,Full time,0,170,0,840,0,170
+California,"$150,000 and over",Asian only,40,Male,Employed - at work,Full time,15,330,0,590,0,330
+Pennsylvania,"$100,000 to $149,999",White only,31,Female,Employed - at work,Full time,540,80,0,580,0,80
+Minnesota,"$30,000 to $34,999",White only,36,Male,Employed - at work,Full time,25,440,0,570,0,440
+Utah,"$60,000 to $74,999",White only,33,Male,Employed - at work,Full time,510,100,0,675,0,100
+Texas,"$100,000 to $149,999",White only,26,Male,Employed - at work,Full time,685,45,0,605,0,45
+Virginia,"$40,000 to $49,999",Black only,39,Male,Employed - at work,Full time,0,389,0,980,0,389
+Minnesota,"$20,000 to $24,999",Black only,43,Male,Employed - at work,Full time,480,188,0,720,0,188
+California,"$150,000 and over",Asian only,22,Male,Employed - at work,Part time,300,95,60,720,0,155
+Florida,"$75,000 to $99,999",White only,27,Female,Employed - at work,Full time,0,430,30,590,0,460
+Nebraska,"$35,000 to $39,999",White only,31,Male,Employed - at work,Full time,665,45,0,650,0,45
+South Carolina,"$25,000 to $29,999",White only,44,Female,Employed - at work,Full time,30,530,0,615,0,530
+Tennessee,"$15,000 to $19,999",Black only,21,Female,Employed - at work,Full time,1040,40,0,233,0,40
+Maryland,"$150,000 and over",Black only,43,Male,Employed - at work,Full time,390,165,0,760,0,165
+Florida,"$60,000 to $74,999",White only,43,Male,Employed - at work,Full time,521,208,75,210,0,283
+Washington,"$40,000 to $49,999",White only,26,Female,Employed - at work,Part time,0,465,120,684,0,585
+Massachusetts,"$150,000 and over",Asian only,49,Female,Employed - at work,Full time,505,195,0,465,0,195
+Illinois,"$30,000 to $34,999",White only,39,Male,Employed - at work,Full time,150,440,90,620,0,530
+Pennsylvania,"$50,000 to $59,999",White only,27,Male,Employed - at work,Full time,0,149,0,850,0,149
+California,"$75,000 to $99,999",White only,38,Female,Employed - at work,Full time,0,360,0,780,0,360
+Oregon,"$75,000 to $99,999",White only,35,Female,Employed - at work,Full time,0,425,30,643,0,455
+Georgia,"$50,000 to $59,999",White only,37,Female,Employed - at work,Full time,440,135,90,635,0,225
+Texas,"$40,000 to $49,999",Black only,25,Female,Employed - at work,Full time,0,440,0,850,0,440
+Maryland,"$75,000 to $99,999",Black only,38,Female,Employed - at work,Full time,60,320,0,530,0,320
+Ohio,"$75,000 to $99,999",Black only,40,Female,Employed - at work,Part time,0,585,0,720,0,585
+New York,"$35,000 to $39,999",Black only,44,Male,Employed - at work,Full time,471,195,0,595,0,195
+Florida,"$50,000 to $59,999",White only,23,Male,Employed - at work,Part time,0,492,120,554,0,612
+Illinois,"$25,000 to $29,999",White only,49,Male,Employed - at work,Full time,505,180,0,630,0,180
+New Hampshire,"$30,000 to $34,999",White only,43,Female,Employed - at work,Full time,470,0,0,385,0,0
+North Carolina,"$100,000 to $149,999",White only,47,Female,Employed - at work,Full time,0,650,0,560,0,650
+Florida,"$25,000 to $29,999",Black only,49,Female,Employed - at work,Full time,473,230,0,660,0,230
+California,"$75,000 to $99,999",White only,45,Female,Employed - at work,Part time,195,315,0,515,0,315
+New Jersey,"$150,000 and over",White only,43,Male,Employed - at work,Full time,25,500,180,620,0,680
+California,"$50,000 to $59,999",White only,29,Female,Employed - at work,Full time,521,60,0,562,0,60
+Virginia,"$50,000 to $59,999",White only,35,Male,Employed - at work,Full time,0,540,0,550,0,540
+South Carolina,"$15,000 to $19,999",White only,23,Male,Employed - at work,Full time,0,700,0,600,0,700
+California,"$100,000 to $149,999",White only,45,Female,Employed - at work,Full time,0,255,0,658,0,255
+Michigan,"$75,000 to $99,999",White only,28,Male,Employed - at work,Full time,0,593,0,470,0,593
+Illinois,"$75,000 to $99,999",Black only,28,Female,Employed - at work,Full time,0,112,0,660,355,112
+New Mexico,"$60,000 to $74,999",White only,21,Male,Employed - at work,Full time,450,375,0,495,0,375
+New Jersey,"$50,000 to $59,999",White only,46,Male,Employed - at work,Full time,0,300,0,600,0,300
+Florida,"$60,000 to $74,999",White only,27,Male,Employed - at work,Full time,0,540,220,380,0,760
+Arizona,"$7,500 to $9,999",White only,27,Female,Employed - at work,Full time,0,420,0,720,0,420
+California,"$25,000 to $29,999",White only,45,Female,Employed - at work,Full time,690,140,0,500,0,140
+Washington,"$35,000 to $39,999",White only,46,Female,Employed - at work,Full time,0,403,0,658,0,403
+Indiana,"$60,000 to $74,999",Black only,35,Male,Employed - at work,Full time,703,86,0,560,0,86
+Massachusetts,"$35,000 to $39,999",White only,30,Male,Employed - at work,Full time,225,440,0,570,0,440
+Georgia,"$100,000 to $149,999",White only,38,Male,Employed - at work,Full time,0,305,0,410,0,305
+Pennsylvania,"$10,000 to $12,499",White only,26,Female,Employed - at work,Part time,445,358,0,450,0,358
+Nevada,"$50,000 to $59,999",White only,31,Male,Employed - at work,Full time,0,460,0,660,0,460
+California,"$75,000 to $99,999",White only,45,Male,Employed - at work,Full time,0,459,45,570,0,504
+Kansas,"$50,000 to $59,999",White only,24,Male,Employed - at work,Full time,301,230,0,858,0,230
+Wisconsin,"$35,000 to $39,999",White only,49,Male,Employed - at work,Full time,0,290,600,390,0,890
+California,"$100,000 to $149,999",White only,48,Male,Employed - at work,Full time,400,200,0,605,0,200
+Michigan,"$75,000 to $99,999",White only,38,Male,Employed - at work,Full time,490,265,160,405,0,425
+Florida,"$75,000 to $99,999",Black only,48,Female,Employed - at work,Full time,0,180,0,1155,0,180
+Minnesota,"$35,000 to $39,999",White only,44,Male,Employed - at work,Full time,0,540,160,650,0,700
+Iowa,"$15,000 to $19,999",White only,19,Female,Employed - at work,Part time,0,375,0,686,0,375
+Georgia,"$40,000 to $49,999",White only,36,Male,Employed - at work,Full time,0,415,0,665,0,415
+Wisconsin,"$75,000 to $99,999",White only,27,Female,Employed - at work,Full time,0,140,0,658,0,140
+Delaware,"$50,000 to $59,999",White only,45,Male,Employed - at work,Full time,474,208,0,540,0,208
+Arizona,"$40,000 to $49,999",White only,48,Female,Employed - at work,Full time,0,879,0,480,0,879
+Colorado,"$60,000 to $74,999",White only,25,Female,Employed - at work,Full time,5,247,30,505,0,277
+Nebraska,"$5,000 to $7,499",White only,22,Male,Employed - at work,Full time,545,125,0,660,0,125
+New Mexico,"$50,000 to $59,999",White only,43,Male,Employed - at work,Full time,474,240,0,510,0,240
+Florida,"$75,000 to $99,999",White only,31,Male,Employed - at work,Full time,535,75,0,640,60,75
+Texas,"$50,000 to $59,999",White only,48,Male,Employed - at work,Full time,0,315,0,750,0,315
+Ohio,"$150,000 and over",White only,22,Female,Employed - at work,Full time,693,30,0,582,0,30
+Louisiana,"$60,000 to $74,999",White only,41,Female,Employed - at work,Full time,560,260,0,460,0,260
+Pennsylvania,"$150,000 and over",White only,48,Male,Employed - at work,Full time,240,390,0,560,0,390
+South Dakota,"$60,000 to $74,999",White only,23,Male,Employed - at work,Full time,0,315,0,705,0,315
+Michigan,"$40,000 to $49,999",White only,39,Male,Employed - at work,Part time,415,60,0,795,0,60
+Missouri,"Less than $5,000",Black only,24,Female,Employed - at work,Full time,0,255,0,870,0,255
+Texas,"$35,000 to $39,999",White only,26,Female,Employed - at work,Full time,0,530,0,510,0,530
+Maryland,"$75,000 to $99,999",White only,21,Female,Employed - at work,Part time,508,90,0,778,0,90
+North Carolina,"$25,000 to $29,999",Black only,45,Male,Employed - at work,Full time,500,200,50,480,0,250
+Colorado,"$15,000 to $19,999",White only,25,Female,Employed - at work,Full time,0,240,180,683,0,420
+Washington,"$150,000 and over",White only,39,Male,Employed - at work,Full time,0,279,0,615,0,279
+Arizona,"$15,000 to $19,999",White only,20,Male,Employed - at work,Full time,0,330,0,720,0,330
+Colorado,"$50,000 to $59,999",Asian only,47,Female,Employed - at work,Full time,0,210,0,695,0,210
+Ohio,"$60,000 to $74,999",White only,26,Male,Employed - at work,Full time,0,593,0,575,0,593
+Louisiana,"$20,000 to $24,999",White only,28,Male,Employed - at work,Full time,405,435,0,540,0,435
+Minnesota,"$100,000 to $149,999",White only,24,Male,Employed - at work,Full time,665,130,0,480,0,130
+Alabama,"$30,000 to $34,999",White only,34,Male,Employed - at work,Full time,0,425,0,960,0,425
+Texas,"$25,000 to $29,999",White only,41,Male,Employed - at work,Full time,516,325,0,525,0,325
+Florida,"$50,000 to $59,999",White only,46,Male,Employed - at work,Full time,0,570,0,720,0,570
+Maryland,"$50,000 to $59,999",Black only,38,Female,Employed - at work,Full time,480,180,0,660,0,180
+California,"$10,000 to $12,499",White only,48,Male,Employed - at work,Full time,0,320,0,495,0,320
+Utah,"$150,000 and over",White only,33,Male,Employed - absent,Full time,0,598,0,762,0,598
+Michigan,"$50,000 to $59,999",White only,49,Female,Employed - at work,Full time,0,545,0,485,0,545
+California,"$40,000 to $49,999",Black only,49,Female,Employed - absent,Part time,0,555,0,705,0,555
+Texas,"$50,000 to $59,999",White only,28,Male,Employed - at work,Part time,40,640,0,710,0,640
+Connecticut,"$100,000 to $149,999",White only,23,Male,Employed - at work,Part time,0,979,0,420,0,979
+Minnesota,"$5,000 to $7,499",White only,26,Female,Employed - at work,Part time,210,340,0,831,0,340
+North Carolina,"$15,000 to $19,999",White only,25,Female,Employed - at work,Full time,705,60,0,530,0,60
+Minnesota,"$20,000 to $24,999",Black only,46,Female,Employed - at work,Full time,400,250,0,465,0,250
+Iowa,"Less than $5,000",White only,47,Female,Employed - at work,Full time,0,135,0,390,0,135
+Minnesota,"$150,000 and over",Asian only,42,Male,Employed - at work,Part time,425,263,0,644,0,263
+Arkansas,"$30,000 to $34,999",Black only,24,Female,Employed - at work,Full time,310,195,0,754,0,195
+California,"$30,000 to $34,999",White only,44,Female,Employed - at work,Full time,0,510,0,780,0,510
+New Mexico,"$100,000 to $149,999",Black only,30,Male,Employed - at work,Full time,0,124,0,780,0,124
+California,"$150,000 and over",Asian only,45,Female,Employed - at work,Full time,395,175,75,525,0,250
+California,"$35,000 to $39,999",White only,46,Female,Employed - at work,Full time,469,30,0,835,0,30
+California,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,0,375,0,525,0,375
+Minnesota,"$25,000 to $29,999",Black only,44,Female,Employed - at work,Full time,270,180,0,700,0,180
+South Dakota,"$12,500 to $14,999",White only,35,Female,Employed - at work,Full time,140,177,0,690,0,177
+Florida,"$100,000 to $149,999",White only,32,Male,Employed - absent,Full time,0,320,0,750,0,320
+Indiana,"$60,000 to $74,999",White only,30,Female,Employed - at work,Full time,15,390,0,720,0,390
+Texas,"$150,000 and over",Asian only,40,Female,Employed - at work,Full time,590,0,0,690,0,0
+Washington,"$50,000 to $59,999",White only,31,Male,Employed - at work,Full time,0,150,0,680,0,150
+Oregon,"$75,000 to $99,999",White only,42,Female,Employed - at work,Full time,60,305,0,470,0,305
+Texas,"$75,000 to $99,999",White only,49,Male,Employed - at work,Full time,496,75,0,600,0,75
+Kansas,"$150,000 and over",White only,31,Male,Employed - at work,Full time,0,638,0,390,0,638
+New Mexico,"$150,000 and over",White only,45,Female,Employed - at work,Full time,0,385,0,540,0,385
+California,"$100,000 to $149,999",White only,44,Male,Employed - at work,Full time,0,180,0,1245,0,180
+Missouri,"$35,000 to $39,999",White only,24,Male,Employed - at work,Full time,540,0,222,565,0,222
+Texas,"$60,000 to $74,999",White only,29,Male,Employed - at work,Full time,693,160,0,425,0,160
+Florida,"$50,000 to $59,999",White only,38,Male,Employed - at work,Full time,0,405,0,600,0,405
+Ohio,"$35,000 to $39,999",Black only,30,Male,Employed - at work,Full time,1030,0,0,266,0,0
+Indiana,"$20,000 to $24,999",White only,41,Female,Employed - at work,Full time,518,142,0,520,0,142
+Texas,"$75,000 to $99,999",Black only,46,Male,Employed - at work,Full time,0,545,0,840,0,545
+West Virginia,"$75,000 to $99,999",White only,31,Male,Employed - at work,Full time,0,680,0,660,0,680
+California,"$25,000 to $29,999",White only,46,Male,Employed - at work,Full time,556,222,0,555,0,222
+Pennsylvania,"$40,000 to $49,999",White only,47,Female,Employed - at work,Full time,630,270,0,430,0,270
+Louisiana,"$60,000 to $74,999",Black only,41,Male,Employed - at work,Part time,732,45,0,435,0,45
+South Carolina,"$15,000 to $19,999",Black only,39,Male,Employed - at work,Full time,0,525,0,645,0,525
+Colorado,"$75,000 to $99,999",White only,39,Male,Employed - at work,Full time,740,80,0,430,0,80
+Oklahoma,"$75,000 to $99,999",White only,24,Male,Employed - at work,Full time,0,0,150,600,0,150
+Florida,"$30,000 to $34,999",White only,24,Female,Employed - at work,Full time,0,255,0,450,0,255
+New Jersey,"$40,000 to $49,999",White only,46,Male,Employed - at work,Part time,730,0,0,540,0,0
+Ohio,"$10,000 to $12,499",White only,35,Male,Employed - at work,Full time,525,295,0,420,0,295
+California,"$75,000 to $99,999",White only,33,Female,Employed - at work,Full time,380,340,0,600,0,340
+Wisconsin,"$20,000 to $24,999",White only,33,Male,Employed - at work,Full time,385,265,0,495,0,265
+California,"$150,000 and over",White only,25,Female,Employed - at work,Full time,660,20,0,500,0,20
+Maryland,"$50,000 to $59,999",White-Black-American Indian,47,Female,Employed - at work,Full time,460,130,15,555,0,145
+Texas,"$75,000 to $99,999",White only,46,Male,Employed - at work,Full time,495,195,0,585,0,195
+Ohio,"$75,000 to $99,999",White only,46,Male,Employed - at work,Full time,0,567,0,720,0,567
+Texas,"$50,000 to $59,999",White only,18,Female,Employed - at work,Part time,0,280,0,580,0,280
+California,"$150,000 and over",White only,23,Female,Employed - absent,Full time,0,215,0,442,0,215
+Ohio,"$40,000 to $49,999",White only,29,Male,Employed - at work,Full time,555,275,60,420,0,335
+South Carolina,"$60,000 to $74,999",White only,26,Female,Employed - at work,Full time,0,15,0,720,0,15
+Indiana,"$75,000 to $99,999",White only,32,Male,Employed - at work,Full time,0,660,0,650,0,660
+Louisiana,"$40,000 to $49,999",Black only,41,Male,Employed - at work,Full time,492,255,0,540,0,255
+Florida,"$60,000 to $74,999",White only,18,Male,Employed - at work,Part time,0,0,0,783,0,0
+New Jersey,"$100,000 to $149,999",White only,30,Female,Employed - at work,Full time,0,285,0,720,0,285
+Alabama,"$35,000 to $39,999",White only,49,Male,Employed - at work,Full time,0,165,0,660,0,165
+New Mexico,"$25,000 to $29,999",White only,35,Male,Employed - at work,Full time,0,385,0,590,0,385
+Nebraska,"$30,000 to $34,999",White only,34,Male,Employed - at work,Full time,523,113,0,585,0,113
+California,"$15,000 to $19,999",Asian only,31,Female,Employed - at work,Full time,190,0,0,570,0,0
+New York,"$100,000 to $149,999",White only,26,Male,Employed - at work,Full time,590,110,150,435,0,260
+Texas,"$35,000 to $39,999",White only,23,Male,Employed - at work,Full time,570,234,0,480,0,234
+Mississippi,"$75,000 to $99,999",White only,28,Male,Employed - at work,Full time,0,503,0,668,0,503
+Pennsylvania,"$40,000 to $49,999",White only,37,Male,Employed - at work,Full time,546,327,0,495,0,327
+Minnesota,"$100,000 to $149,999",White only,24,Male,Employed - at work,Full time,735,165,0,420,0,165
+Ohio,"$10,000 to $12,499",White only,23,Male,Employed - at work,Full time,240,537,0,460,0,537
+Utah,"$60,000 to $74,999",White only,20,Female,Employed - at work,Full time,480,138,0,657,0,138
+Maryland,"$50,000 to $59,999",White only,43,Female,Employed - at work,Full time,0,0,0,1215,0,0
+New York,"$30,000 to $34,999",White only,27,Female,Employed - at work,Part time,512,20,0,629,0,20
+New York,"$5,000 to $7,499",Black only,34,Male,Employed - at work,Full time,0,515,0,600,0,515
+Oklahoma,"$75,000 to $99,999",White only,18,Male,Employed - at work,Full time,465,400,0,540,0,400
+New York,"$50,000 to $59,999",White only,47,Male,Employed - at work,Part time,0,680,0,720,0,680
+Virginia,"$150,000 and over",Black only,34,Female,Employed - at work,Full time,1,210,0,509,0,210
+California,"$150,000 and over",Asian only,47,Male,Employed - at work,Full time,30,310,0,710,0,310
+Pennsylvania,"$60,000 to $74,999",White only,28,Male,Employed - at work,Full time,0,355,20,660,0,375
+District of Columbia,"$150,000 and over",White only,39,Male,Employed - at work,Full time,0,303,0,675,90,303
+Texas,"$100,000 to $149,999",White only,33,Male,Employed - at work,Full time,515,180,0,595,0,180
+Colorado,"$35,000 to $39,999",White only,19,Female,Employed - at work,Full time,532,180,0,478,0,180
+New York,"$15,000 to $19,999",White only,49,Male,Employed - at work,Full time,490,100,0,550,0,100
+North Carolina,"$50,000 to $59,999",Black only,45,Male,Employed - at work,Full time,0,750,0,570,0,750
+California,"$100,000 to $149,999",Asian only,25,Male,Employed - at work,Full time,0,425,60,510,0,485
+Michigan,"$75,000 to $99,999",White only,28,Female,Employed - at work,Full time,455,70,0,670,0,70
+Texas,"$75,000 to $99,999",Black only,34,Female,Employed - at work,Full time,0,345,0,750,0,345
+Pennsylvania,"$40,000 to $49,999",White only,32,Male,Employed - at work,Full time,0,645,0,620,0,645
+Louisiana,"$75,000 to $99,999",White only,27,Male,Employed - at work,Full time,0,500,0,665,0,500
+Maryland,"$100,000 to $149,999",White only,46,Male,Employed - at work,Full time,0,175,0,439,0,175
+Nebraska,"$75,000 to $99,999",White only,28,Female,Employed - at work,Full time,0,415,90,650,0,505
+North Carolina,"$35,000 to $39,999",White only,24,Male,Employed - at work,Full time,720,60,60,560,0,120
+Arkansas,"$30,000 to $34,999",Black only,20,Female,Employed - at work,Full time,0,310,57,935,0,367
+Ohio,"$60,000 to $74,999",White only,46,Male,Employed - absent,Full time,0,594,0,620,0,594
+Texas,"$20,000 to $24,999",White only,38,Female,Employed - at work,Full time,450,140,0,630,0,140
+Illinois,"$60,000 to $74,999",White only,29,Male,Employed - at work,Full time,0,345,0,625,0,345
+Illinois,"$40,000 to $49,999",White only,47,Male,Employed - at work,Full time,0,0,0,1410,0,0
+Florida,"$50,000 to $59,999",White only,49,Male,Employed - at work,Full time,550,100,0,480,0,100
+Indiana,"$35,000 to $39,999",White only,26,Male,Employed - at work,Full time,410,180,0,710,0,180
+Missouri,"$25,000 to $29,999",Black only,45,Male,Employed - at work,Full time,0,480,0,630,0,480
+New York,"$75,000 to $99,999",White only,31,Female,Employed - at work,Part time,285,180,5,595,0,185
+Pennsylvania,"$75,000 to $99,999",White-Asian,28,Male,Employed - at work,Full time,445,150,0,590,0,150
+North Carolina,"$25,000 to $29,999",White only,28,Male,Employed - absent,Part time,0,505,175,540,0,680

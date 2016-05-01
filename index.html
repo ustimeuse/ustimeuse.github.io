@@ -1,3 +1,6 @@
+---
+
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -298,7 +301,7 @@
                 <div class="col-lg-6 col-sm-push-6 col-sm-6">
                     <h2 class="section-heading">Data & Methodology</h2>
                     <p>Our data is derived from American Time Use Survey (ATUS) database, sponsored by the Bureau of Labor Statistics and conducted by the US Census Bureau, tracking the amount of time people spend doing various activities such as sleeping, volunteering, travelling, working, playing sports.</p>
-                    <ul>
+                  <ul>
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
@@ -326,6 +329,14 @@
                             <h2 class="accordion">Data References</h2>
                             <p class="descriptions"> More information can be found at: http://www.bls.gov/tus/atususersguide.pdf</p>
                         </li>
+                        {% for item in site.data.activities %}
+                        <li>
+                          <input type="checkbox" checked>
+                          <i></i>
+                          <h2 class="accordion">{{ item.act }}</h2>
+                          <p class="descriptions">{{ item.detail }}</p>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
 
@@ -595,7 +606,6 @@
     <script src="js/d3.min.js"></script>
     <script src="js/d3.tip.js"></script>
     <script src="js/colorbrewer.js"></script>
-    <script src="js/donut1.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/parallelCoordinates.js"></script>
     <script>
