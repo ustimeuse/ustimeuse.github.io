@@ -54,7 +54,7 @@ var color = d3.scale.linear()
 
 function getText(d,selectedValue) {
     var summary=
-        "<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+        "<p style='font-size: 20px; text-transform: uppercase; font-weight: bold; color: #ff775c'>" + d.properties.NAME +"</p>" +
         "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue]/60,2)+ " hours</p>"
     document.getElementById("content-1").innerHTML=summary;
 }
