@@ -5,11 +5,11 @@
 var act_codes = [
     {"index": "0", "short": "Sleeping", "desc": "Sleeping"},
     {"index": "1", "short": "Personal Care & Tasks", "desc": "Personal Care"},
-    {"index": "2", "short": "Eat & Drink / Shopping", "desc": "Eating and Drinking"},
+    {"index": "2", "short": "Eat/Drink & Shopping", "desc": "Eating and Drinking"},
     {"index": "3", "short": "Education", "desc": "Education"},
     {"index": "4", "short": "Work", "desc": "Work and Work-Related Activities"},
     {"index": "5", "short": "Housework", "desc": "Household Activities"},
-    {"index": "6", "short": "Volunteering / Caring for Others", "desc": "Care for others / Volunteer Activities"},
+    {"index": "6", "short": "Volunteer / Care for Others", "desc": "Care for others / Volunteer Activities"},
     {"index": "7", "short": "Leisure / Sports", "desc": "Socializing, Relaxing, Leisure, Sports, Exercise, and Recreation"},
     {"index": "8", "short": "Religion", "desc": "Religious and Spiritual Activities"},
     {"index": "9", "short": "Misc.", "desc": "Telephone Calls, Other"},
