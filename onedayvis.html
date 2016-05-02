@@ -72,22 +72,7 @@
 
     var treemap_arr = [];
 
-    var time_notes = [
-        { "start_minute": 1, "stop_minute": 40, "note": "The simulation kicks in, based on data from the American Time Use Survey." },
-        { "start_minute": 70, "stop_minute": 120, "note": "Most people are still sleeping this early in the morning, but some are already at work or preparing for the day." },
-        { "start_minute": 180, "stop_minute": 300, "note": "It's wake up time for most. Time to start the day with morning rituals, breakfast and a wonderful commute." },
-        { "start_minute": 360, "stop_minute": 440, "note": "The day is in full swing with work or housework. Stores and services are open so people can run errands, and they take various forms of transportation to get there." },
-        { "start_minute": 480, "stop_minute": 540, "note": "Lunch hour. Many go eat, but there's still activity throughout. You see a small shift at the end of the hour." },
-        { "start_minute": 660, "stop_minute": 720, "note": "Coffee break? Again, at the top of the hour, you see a shift in activity." },
-        { "start_minute": 780, "stop_minute": 830, "note": "With the work day done, it's time to commute home and fix dinner or go out for a while." },
-        { "start_minute": 870, "stop_minute": 890, "note": "Dinner time!" },
-        { "start_minute": 930, "stop_minute": 1010, "note": "Dinner's done. Time for relaxation, TV, games, hobbies and socializing." },
-        { "start_minute": 1080, "stop_minute": 1140, "note": "Winding down for the day. From leisure time, people shift to personal care and sleep." },
-        { "start_minute": 1210, "stop_minute": 1300, "note": "Goodnight. More than 80% of people are asleep and it peaks at 96% around 3:00am." },
-    ];
-    var notes_index = 0;
-
-    var pause = true, isReset = false;
+    var pause = true;
 
     // Load data
     d3.tsv("data/days-simulated-v2.tsv", function(error, data) {
@@ -96,16 +81,12 @@
             var day_array = d.day.split(",");
             var activities = [];
 
-            var treemap_obj = {
-                "name": "timeuse",
-                "children": []
-            };
+            var treemap_obj = [];
 
             for (var i=0; i < day_array.length; i++) {
                 // Duration
                 if (i % 2 == 1) {
                     var act = day_array[i - 1];
-                    var next_act = cat_key[ +day_array[i + 1] ];
 
                     var act_index = activities.findIndex(function (v) {
                         return v.act == act;
@@ -189,12 +170,43 @@
                             break;
                     }
 
-                    treemap_obj.children.push(child_obj);
+                    treemap_obj.push(child_obj);
 
                 }
             }
             sched_objs.push(activities);
-            treemap_arr.push(treemap_obj);
+
+            // clone a
+            var a2 = JSON.parse(JSON.stringify(treemap_obj));
+
+            // make sure elements with the same id are next to each other
+            a2.sort(function (x, y) {
+                if (x['name'] < y['name']) {
+                    return -1;
+                }
+                if (x['name'] > y['name']) {
+                    return 1;
+                }
+                return 0;
+            });
+
+            // iterate over each one, if this one has the same id as the previous one, accumulate
+            // else add to b
+            var lastId;
+            var b = [];
+            for (var i = 0; i < a2.length; i++) {
+                if (lastId == a2[i]['name']) {
+                    b[b.length-1]['size'] += a2[i]['size'];
+                } else {
+                    b[b.length] = (a2[i]);
+                    lastId = a2[i]['name'];
+                }
+            }
+
+            treemap_arr.push({
+                "name": "timeuse",
+                "children": b
+            });
 
         });
 
@@ -639,7 +651,7 @@
                         })
                         .text(function (d) {
                             return d.children ? null : act_codes[d.name].short + ': ' +
-                            (d.value / 60).toFixed(1) + 'hrs';
+                            (d.value / 60).toFixed(1) + 'hrs (' + (d.value/14.4).toFixed() + '%)';
                         });
 
                 node
@@ -654,7 +666,7 @@
                             .style("font-family", "'Open Sans', sans-serif")
                             .html(function () {
                                 return d.children ? null : act_codes[d.name].short + ': ' +
-                                (d.value / 60).toFixed(1) + 'hrs';
+                                (d.value / 60).toFixed(1) + 'hrs (' + (d.value/14.4).toFixed() + '%)';
                             })
                             .style("top", function () {
                                 return (d3.event.pageY) + "px"
