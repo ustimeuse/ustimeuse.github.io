@@ -12,6 +12,20 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     fill: #ff775c;
 }
 
+.bar:hover {
+    fill: #FFAF9C;
+}
+
+.dot {
+    fill: #00cdc0;
+}
+
+.dot:hover {
+    fill: yellow;
+    /*stroke: #008E87;*/
+    cursor: pointer;
+}
+
 #controls {
     margin: 15px 0 20px 25px;
     display: inline-block;
@@ -22,8 +36,22 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     display: inline-block;
 }
 
-text, p, #current_time, h1, .togglebutton {
-    font-family:"Open Sans", sans-serif;
+text, p, #current_time, h1, .togglebutton, .node {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+    color: #ff775c;
+}
+
+.actlabel {
+    font-size: 14px;
+}
+
+#ranking > p {
+    font-size: 13px;
+    line-height: 16px;
 }
 
 /*********************/
@@ -42,6 +70,7 @@ text, p, #current_time, h1, .togglebutton {
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -87,8 +116,7 @@ form {
 }
 
 .node {
-    border: solid 1px white;
-    font: 10px sans-serif;
+    font-size: 10px;
     line-height: 12px;
     overflow: hidden;
     position: absolute;
