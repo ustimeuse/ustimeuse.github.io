@@ -26,6 +26,8 @@ title: Group Differences
   <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
+  <link rel="stylesheet" type="text/css" href="css/style1.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -60,6 +62,16 @@ title: Group Differences
           <li><a onchange="updatePath()" href="#employment"> Employment</a></li>
         </ul>
       </form>
+      <div class="help-tip">
+        <p>The donut graph shows the distribution of different demographic characteristics (gender, family
+        income, employment status, and race) within our dataset. Our data set consists of 4085 observations.
+        We took out any observaton with NIU values for the relevant variables we would like to look at, including
+        employment status, school enrollment, family income, race, and gender.
+        The parallel coordinates allow user to view differences in the average amount of time that different
+        demographic groups spend on various categories of time use. For instance, user can view and compare
+        the average amount of work time, leisure, household activities between female and male, ammong different
+        races, across different family incomes, etc.</p>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -67,7 +79,6 @@ title: Group Differences
       <div id="show_data"></div>
       <div id="updateInfo"></div>
     </div>
-
     <div class="col-md-8">
       <div id="parallel-coordinates"></div>
     </div>

@@ -35,7 +35,6 @@ function processData(d) {
 function loaded(error,map,data) {
     USmap=map;
     timeuse=data;
-
     updateMap();
 }
 
@@ -53,17 +52,9 @@ var colors = ["#fef0d9","#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000"];
 var color = d3.scale.linear()
     .range(colors);
 
-
-// Upon hovering, show text
-//function getText(d,selectedValue) {
-//    return("<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
-//    "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue],2)+ " min</p>");
-//}
-
- //Upon hovering, show text
 function getText(d,selectedValue) {
     var summary=
-        "<p style='font-size: 20px; text-transform: uppercase;'>" + d.properties.NAME +"</p>" +
+        "<p style='font-size: 20px; text-transform: uppercase; font-weight: bold; color: #ff775c'>" + d.properties.NAME +"</p>" +
         "<p>" + selectedValue + ": " + d3.round(d.properties[selectedValue]/60,2)+ " hours</p>"
     document.getElementById("content-1").innerHTML=summary;
 }
@@ -189,13 +180,13 @@ function updateMap(){
         })
         .text(function(d,i) {
             if(i<(leg_labels.length-1) && i!=0){
-                return ((format(leg_labels[i]))+ "-" + (format(leg_labels[i+1])));
+                return ((format(leg_labels[i]/60))+ "-" + (format(leg_labels[i+1]/60)));
             }
             else if (i==0) {
                 return leg_labels[i];
             }
             else{
-                return ((format(leg_labels[i])) + "-" + (format(max)));
+                return ((format(leg_labels[i]/60)) + "-" + (format(max/60)));
             }
         });
 }

@@ -26,6 +26,8 @@ title: Time Use Across America
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -125,32 +127,41 @@ title: Time Use Across America
     <!-- /.container -->
 
 </div>
-<div class="content-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <h2 class="tag text-center">Time Spent on <span id="update">Work</span></h2>
-                <h3 class="mainpoint text-center text-uppercase">[ <span id="state">All States</span> ]</h3>
-                <div id="overlapping-histogram"></div>
-            </div>
-            <div class="col-md-8">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <br>
-                        <label for="rankingType">Category to Map by: </label>
-                        <select class="form-control" id="map-type" onchange="updateMap()">
-                            <option value="Average Work">Average Working Time (min)</option>
-                            <option value="Average Leisure">Average Leisure Time (min)</option>
-                            <option value="Average Personal Care">Average Personal Care Time (min)</option>
-                            <option value="Average Educational Time">Average Education Time (min)</option>
-                        </select>
-                    </div>
-                    <div id="content-1"><p></p><p></p></div>
-                </form>
-                <div id="visualization"></div>
-            </div>
+
+<!-- /.intro-header -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="tag text-center">Time Spent on <span id="update">Work</span></h2>
+            <h3 class="mainpoint text-center text-uppercase">[ <span id="state">All States</span> ]</h3>
+            <div id="overlapping-histogram"></div>
         </div>
-    </div>
+        <div class="col-md-8">
+            <form class="form-inline">
+                <div class="form-group">
+                    <br>
+                    <label for="rankingType">Category to Map by: </label>
+                    <select class="form-control" id="map-type" onchange="updateMap()">
+                        <option value="Average Work">Average Working Time (hrs)</option>
+                        <option value="Average Leisure">Average Leisure Time (hrs)</option>
+                        <option value="Average Personal Care">Average Personal Care Time (hrs)</option>
+                        <option value="Average Educational Time">Average Education Time (hrs)</option>
+                    </select>
+                    <div class="help-tip">
+                        <p>The choropleth map shows average hours in various categories of time use across
+                        different states in the US. Color intensity reflects the  average number of hours.
+                        Hover over each state to see the distributions of hours that females and males in each state spend
+                        for each category of time use in the histogram to the left. </p>
+                    </div>
+                    <br><br><br><br>
+                    <span>
+                        <p>Hover over the map to see the gender breakdown for that state. </p>
+                    </span>
+                </div>
+            </form>
+            <div id="content-1"></div>
+            <div id="visualization"></div>
+
 </div>
 <footer>
     <div class="container">
