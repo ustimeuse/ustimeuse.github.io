@@ -102,6 +102,8 @@ function updateChart(model) {
 $("#donut a").click(function() {
     updateChart(this.href.slice(this.href.indexOf('#') + 1));
     updatePath(this.href.slice(this.href.indexOf('#') + 1));
+    $(this).addClass("active").siblings().removeClass('active');
+
 });
 
 function updateInfo(data){

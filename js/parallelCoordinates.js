@@ -17,11 +17,11 @@ d3.csv("data/group-avgs1.csv", function(error, csv) {
   var data = csv;
 
   for(var i=0; i<data.length; i++){
-    data[i].leisure = +data[i].leisure/60;
-    data[i].pcare = +data[i].pcare/60;
-    data[i].household = +data[i].household/60;
-    data[i].travel = +data[i].travel/60;
-    data[i].work = +data[i].work/60;
+    data[i].leisure = parseFloat(data[i].leisure)/60;
+    data[i].pcare = parseFloat(data[i].pcare)/60;
+    data[i].household = parseFloat(data[i].household)/60;
+    data[i].travel = parseFloat(data[i].travel)/60;
+    data[i].work = parseFloat(data[i].work)/60;
   }
 
   pdata=data;
@@ -51,7 +51,7 @@ function updatePath(selectedValue) {
       //d3.keys(pdata[0])
           .filter(function(d) {
     return d != "Group.1" && d != "type" && (y[d] = d3.scale.linear()
-        //.domain(d3.extent(pdata, function(p) { return +p[d]; }))
+        .domain(d3.extent(pdata, function(p) { return +p[d]; }))
         .domain([1,10.5])
         .range([height, 0]));
   }));
@@ -63,7 +63,7 @@ function updatePath(selectedValue) {
       .data(pdata)
       .enter().append("path")
       .attr("stroke", "#ddd")
-      .attr("stroke-width", 3)
+      .attr("stroke-width", 1)
       .attr("fill", "none")
       .attr("d", path);
 

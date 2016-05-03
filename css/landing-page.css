@@ -133,6 +133,25 @@ ul#tabs li a:hover {
 }
 
 /* Custom */
+a.customselect {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #32c896;
+    border-bottom: solid 5px #238b68;
+    padding: 5px 20px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+a.customselect:hover {
+    background-color: #238b68;
+}
+.customselect.active {
+    background-color: #238b68;
+}
+
 ul#tabs {
     list-style-type: none;
     padding: 0;
