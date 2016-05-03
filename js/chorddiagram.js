@@ -115,7 +115,6 @@ function drawChords (matrix, mmap) {
         return act_codes[d.gname].short + "<br>" + d.gvalue.toFixed() + " total occurences";
     }
 
-
     function mouseover(d, i) {
         d3.select("#tooltip")
             .style("visibility", "visible")

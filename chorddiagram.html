@@ -11,8 +11,6 @@ title: Aggregate Chord Diagram for One Day Simulation
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <!--<link rel="stylesheet" href="css/sim_style.css" type="text/css" media="screen"/>-->
-    <link rel="stylesheet" href="css/chord_style.css" type="text/css" media="screen"/>
     <link href="css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -33,16 +31,43 @@ title: Aggregate Chord Diagram for One Day Simulation
     {% include header.html %}
     {% include intro-header.html %}
     <div class="container">
-        <div class="help-tip">
-            <p>What do people usually do after each activity? How does the flow of activities throughout the day look like?
-                Hover over each activity to view the following activities that people usually engage in and the number of occurrences (frequency)
-                for each following activity. The chord diagram helps viewers learn about the flow of activities throughout the day.</p>
+        <div>
+            <p>Which activity follows another? What do people usually do after each activity? The chord diagram helps viewers learn about the flow of activities throughout the day.
+                Hover over each activity to view the following activities that people usually engage in and the number of occurrences for each following activity in 1000 people.</p>
+            <p>Total # of activity occurrences in 1000 people: 9532.</p>
         </div>
-        <section id="diagram"></section>
-        <div id="tooltip"></div>
+        <iframe style="width: 100%; height: 900px" src="chorddiagramvis.html"></iframe>
     </div>
-    <script src="js/d3.min.js"></script>
-    <script src="js/underscore-min.js"></script>
-    <script src="js/chorddiagram.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#time_management">Motivation</a>
+                        </li>
+                        <li>
+                            <a href="#objectives">Goals</a>
+                        </li>
+                        <li>
+                            <a href="#data">Data</a>
+                        </li>
+
+                        <!--<li>-->
+                        <!--<a href="#insights">Insights</a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="#our_team">Team</a>
+                        </li>
+                        <!--<li>-->
+                        <!--<a href="#references">References</a>-->
+                        <!--</li>-->
+                    </ul>
+                    <p class="copyright text-muted small">Team Triple Treat @ 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
